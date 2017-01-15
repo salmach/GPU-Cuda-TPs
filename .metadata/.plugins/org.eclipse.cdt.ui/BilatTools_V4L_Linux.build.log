@@ -1,0 +1,176 @@
+13:54:24 **** Incremental Build of configuration IntelLinux_parallel for project BilatTools_V4L_Linux ****
+cbicc intel jall 
+
+--------------------------------------------------------
+[Runtime] : intel x86
+--------------------------------------------------------
+
+
+[cuda]        : /usr/local
+
+[jni]         : /usr/lib/jvm
+
+[X11]         : /usr/include/X11
+
+[MKL]         : /opt/intel/mkl
+[Runtime] : Intel : /opt/intel
+
+[boost]       : /opt/api/ext/boost
+
+[opencv]      : /opt/api/ext/opencv
+
+[cpptest]     : /opt/api/ext/cpptest
+
+[gphoto2]     : /opt/api/ext/gphoto2
+
+[urg]         : /opt/api/ext/urg
+
+[wic]         : /opt/api/ext/wic 
+
+[pleora]      : /opt/api/ext/pleora
+
+[Runtime] : BILAT_INFOGRAPHIE           /opt/api/cbi/infographie
+
+     BILAT_TOOLS_JST_HOME             = /opt/api/cbi/infographie/tools
+     BILAT_OPENGL_HOME                = /opt/api/cbi/infographie/opengl
+     BILAT_FENETRAGE_HOME             = /opt/api/cbi/infographie/fenetrage
+     BILAT_IMAGE_HOME                 = /opt/api/cbi/infographie/image
+     BILAT_SURFACE_HOME               = /opt/api/cbi/infographie/surface
+
+[Runtime] : BILAT_TOOLS                 /opt/api/cbi/tools
+
+     BILAT_TOOLS_CPP_HOME             = /opt/api/cbi/tools/bilat_tools_cpp
+     BILAT_TOOLS_OMP_HOME             = /opt/api/cbi/tools/bilat_tools_omp
+     BILAT_TOOLS_CUDA_HOME            = /opt/api/cbi/tools/bilat_tools_cuda
+     BILAT_TOOLS_MKL_HOME             = /opt/api/cbi/tools/bilat_tools_mkl
+     BILAT_TOOLS_OPENCV_HOME          = /opt/api/cbi/tools/bilat_tools_opencv
+     BILAT_TOOLS_V4L_HOME             = /opt/api/cbi/tools/bilat_tools_v4l
+     BILAT_TOOLS_CUDA_IMAGE_HOME      = /opt/api/cbi/tools/bilat_tools_cuda_image
+     BILAT_TOOLS_CUDA_IMAGE_CV_HOME   = /opt/api/cbi/tools/bilat_tools_cuda_image_cv
+     BILAT_TOOLS_IMAGE_HOME           = /opt/api/cbi/tools/bilat_tools_image
+     BILAT_TOOLS_IMAGE_CVHOME         = /opt/api/cbi/tools/bilat_tools_image_cv
+
+[Runtime] : BILAT_CAPTEUR               /opt/api/cbi/capteur
+
+     BILAT_GPHOTO2_HOME               = /opt/api/cbi/capteur/bilat_gphoto2
+     BILAT_LASER_HOME                 = /opt/api/cbi/capteur/bilat_laser
+     BILAT_LIDAR_HOME                 = /opt/api/cbi/capteur/bilat_lidar
+     BILAT_TAU2_HOME                  = /opt/api/cbi/capteur/bilat_tau2
+
+--------------------------------------------------------
+[Runtime] : intel x86 : Ready!
+--------------------------------------------------------
+
+
+[INTEL] : jall
+
+icpc (ICC) 16.0.3 20160415
+Copyright (C) 1985-2016 Intel Corporation.  All rights reserved.
+
+==================================================================================
+[CBI] -> Target Name  : BilatTools_V4L_intel_x86_64
+[CBI] ->
+[CBI] -> Build     	  : /tmp/ramdrive/bilat/Targets/BilatTools_V4L/bin/libBilatTools_V4L_intel_x86_64.so
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : SHARED_LIB
+[CBI] -> Arch	 	  : x86_64
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -O3
+[CBI] ->              : -fPIC
+[CBI] ->              : -fast
+[CBI] ->              : -openmp
+[CBI] ->              : -par-threshold100
+[CBI] ->              : -std=c++11
+[CBI] ->              : -w
+[CBI] ->              : -xHost
+
+[CBI] -> LDFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -shared
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : src/core/01_basNiveau/header/
+[CBI] ->              : src/core/02_tools/tools/
+[CBI] ->              : src/core/03_api/api/
+[CBI] ->              : src/core/03_api/api/RGBA/
+[CBI] ->              : src/core/03_api/api/grayscale/
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> API_INC :
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/001/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/001/INC/namespace_cpu
+
+[CBI] -> API_LIB :
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/001/BIN/intel
+
+[CBI] -> API_BIN :
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/001/BIN/intel
+
+[CBI] -> API_LIBRARIES :
+[CBI] ->              : BilatTools_CPP_001_intel_x86_64
+
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/BilatTools_V4L/bin
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/BilatTools_V4L/obj
+
+[CBI] -> Compilation parallel (32 threads)
+
+[BilatTools_V4L_intel_x86_64] -> icc compiling .cpp : src/main.cpp
+[BilatTools_V4L_intel_x86_64] -> icc compiling .cpp : src/core/02_tools/use/useTools.cpp
+[BilatTools_V4L_intel_x86_64] -> icc compiling .cpp : src/core/02_tools/use/useToolsGrayscale.cpp
+[BilatTools_V4L_intel_x86_64] -> icc compiling .cpp : src/core/02_tools/use/useToolsRGBA.cpp
+[BilatTools_V4L_intel_x86_64] -> icc compiling .cpp : src/core/02_tools/tools/V4LTools.cpp
+[BilatTools_V4L_intel_x86_64] -> icc compiling .cpp : src/core/03_api/api/V4LCapture_A.cpp
+[BilatTools_V4L_intel_x86_64] -> icc compiling .cpp : src/core/03_api/api/RGBA/V4LCaptureRGBA.cpp
+[BilatTools_V4L_intel_x86_64] -> icc compiling .cpp : src/core/03_api/api/grayscale/V4LCaptureGrayScale.cpp
+[BilatTools_V4L_intel_x86_64] -> icc compiling .cpp : src/core/01_basNiveau/c/capture.cpp
+[BilatTools_V4L_intel_x86_64] -> icc compiling .cpp : src/core/01_basNiveau/c/gray.cpp
+[BilatTools_V4L_intel_x86_64] -> icc compiling .cpp : src/core/01_basNiveau/c/util.cpp
+[BilatTools_V4L_intel_x86_64] -> icc compiling .cpp : src/core/01_basNiveau/c/video_device.cpp
+[BilatTools_V4L_intel_x86_64] -> icc compiling .cpp : src/core/01_basNiveau/c/yuv.cpp
+In file included from src/core/03_api/api/RGBA/V4LCaptureRGBA.h(3),
+                 from src/core/03_api/api/RGBA/V4LCaptureRGBA.cpp(1):
+src/core/03_api/api/V4LCapture_A.h(3): catastrophic error: cannot open source file "Capture_I.h"
+  #include "Capture_I.h"
+                        ^
+
+make[1]: *** [/tmp/ramdrive/bilat/Targets/BilatTools_V4L/obj/V4LCaptureRGBA.o] Error 4
+make[1]: *** Waiting for unfinished jobs....
+In file included from src/core/03_api/api/grayscale/V4LCaptureGrayScale.h(3),
+                 from src/core/03_api/api/grayscale/V4LCaptureGrayScale.cpp(1):
+src/core/03_api/api/V4LCapture_A.h(3): catastrophic error: cannot open source file "Capture_I.h"
+  #include "Capture_I.h"
+                        ^
+
+make[1]: *** [/tmp/ramdrive/bilat/Targets/BilatTools_V4L/obj/V4LCaptureGrayScale.o] Error 4
+src/core/02_tools/use/useToolsRGBA.cpp(3): catastrophic error: cannot open source file "opencv2/opencv.hpp"
+  #include <opencv2/opencv.hpp>
+                               ^
+
+In file included from src/core/03_api/api/V4LCapture_A.cpp(3):
+src/core/03_api/api/V4LCapture_A.h(3): catastrophic error: cannot open source file "Capture_I.h"
+  #include "Capture_I.h"
+                        ^
+
+make[1]: *** [/tmp/ramdrive/bilat/Targets/BilatTools_V4L/obj/useToolsRGBA.o] Error 4
+make[1]: *** [/tmp/ramdrive/bilat/Targets/BilatTools_V4L/obj/V4LCapture_A.o] Error 4
+src/core/02_tools/use/useToolsGrayscale.cpp(3): catastrophic error: cannot open source file "opencv2/opencv.hpp"
+  #include <opencv2/opencv.hpp>
+                               ^
+
+make[1]: *** [/tmp/ramdrive/bilat/Targets/BilatTools_V4L/obj/useToolsGrayscale.o] Error 4
+make: *** [jall] Error 2
+
+13:54:25 Build Finished (took 962ms)
+

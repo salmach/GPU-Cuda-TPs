@@ -1,0 +1,297 @@
+16:48:16 **** Build of configuration CudaGCC_parallel for project Tuto_MultiCourbes_Cuda ****
+cbicc cuda jall 
+
+--------------------------------------------------------
+[Runtime] : gcc x86
+--------------------------------------------------------
+
+
+[cuda]        : /usr/local
+
+[jni]         : /usr/lib/jvm
+
+[X11]         : /usr/include/X11
+
+[MKL]         : /opt/intel/mkl
+
+[boost]       : /opt/api/ext/boost
+
+[opencv]      : /opt/api/ext/opencv
+
+[cpptest]     : /opt/api/ext/cpptest
+
+[gphoto2]     : /opt/api/ext/gphoto2
+
+[urg]         : /opt/api/ext/urg
+
+[wic]         : /opt/api/ext/wic 
+
+[pleora]      : /opt/api/ext/pleora
+
+[Runtime] : BILAT_INFOGRAPHIE           /opt/api/cbi/infographie
+
+     BILAT_TOOLS_JST_HOME             = /opt/api/cbi/infographie/tools
+     BILAT_OPENGL_HOME                = /opt/api/cbi/infographie/opengl
+     BILAT_FENETRAGE_HOME             = /opt/api/cbi/infographie/fenetrage
+     BILAT_IMAGE_HOME                 = /opt/api/cbi/infographie/image
+     BILAT_SURFACE_HOME               = /opt/api/cbi/infographie/surface
+
+[Runtime] : BILAT_TOOLS                 /opt/api/cbi/tools
+
+     BILAT_TOOLS_CPP_HOME             = /opt/api/cbi/tools/bilat_tools_cpp
+     BILAT_TOOLS_OMP_HOME             = /opt/api/cbi/tools/bilat_tools_omp
+     BILAT_TOOLS_CUDA_HOME            = /opt/api/cbi/tools/bilat_tools_cuda
+     BILAT_TOOLS_MKL_HOME             = /opt/api/cbi/tools/bilat_tools_mkl
+     BILAT_TOOLS_OPENCV_HOME          = /opt/api/cbi/tools/bilat_tools_opencv
+     BILAT_TOOLS_V4L_HOME             = /opt/api/cbi/tools/bilat_tools_v4l
+     BILAT_TOOLS_CUDA_IMAGE_HOME      = /opt/api/cbi/tools/bilat_tools_cuda_image
+     BILAT_TOOLS_CUDA_IMAGE_CV_HOME   = /opt/api/cbi/tools/bilat_tools_cuda_image_cv
+     BILAT_TOOLS_IMAGE_HOME           = /opt/api/cbi/tools/bilat_tools_image
+     BILAT_TOOLS_IMAGE_CVHOME         = /opt/api/cbi/tools/bilat_tools_image_cv
+
+[Runtime] : BILAT_CAPTEUR               /opt/api/cbi/capteur
+
+     BILAT_GPHOTO2_HOME               = /opt/api/cbi/capteur/bilat_gphoto2
+     BILAT_LASER_HOME                 = /opt/api/cbi/capteur/bilat_laser
+     BILAT_LIDAR_HOME                 = /opt/api/cbi/capteur/bilat_lidar
+     BILAT_TAU2_HOME                  = /opt/api/cbi/capteur/bilat_tau2
+
+--------------------------------------------------------
+[Runtime] : gcc x86 : Ready!
+--------------------------------------------------------
+
+
+g++ (Ubuntu 4.8.4-2ubuntu1~14.04.3) 4.8.4
+Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2016 NVIDIA Corporation
+Built on Wed_May__4_21:01:56_CDT_2016
+Cuda compilation tools, release 8.0, V8.0.26
+
+
+[CUDA GCC] : jall
+
+
+==================================================================================
+[CBI] -> Target Name  : Tuto_Cuda_MultiCourbes_cuda_80_x86_64
+[CBI] ->
+[CBI] -> Build        : /tmp/ramdrive/bilat/Targets/Tuto_Cuda_MultiCourbes/bin/Tuto_Cuda_MultiCourbes_cuda_80_x86_64.run
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	      : EXE
+[CBI] -> Arch	      : x86_64
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking !
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -fopenmp
+[CBI] ->              : -std=c++11
+[CBI] ->              : -O3
+[CBI] ->              : -frerun-loop-opt
+[CBI] ->              : -fomit-frame-pointer
+
+[CBI] -> CXXLDFLAGS (Partial) :
+[CBI] ->
+
+[CBI] -> NVCCFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : --fmad=true
+[CBI] ->              : -arch=sm_20
+[CBI] ->              : -m64
+[CBI] ->              : -std=c++11
+[CBI] ->              : -use_fast_math
+
+[CBI] -> NVCCLDFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -arch=sm_20
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : src/cpp/core/01_warm_up/
+[CBI] ->              : src/cpp/core/01_warm_up/01_MultiCourbe_API/
+[CBI] ->              : src/cpp/core/01_warm_up/02_cuda/host/
+[CBI] ->              : src/cpp/core/01_warm_up/03_math/
+
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> API_INC :
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/206/Bilat_Fenetrage_Displayable/INC
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/206/Bilat_Fenetrage_Displayable/INC/primitives
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/206/Bilat_Fenetrage_FreeGlut_Tools/INC
+[CBI] ->              : /opt/api/cbi/infographie/multicourbes/206/Bilat_MultiCourbes_FreeGlut_Cuda/INC
+[CBI] ->              : /opt/api/cbi/infographie/multicourbes/206/Bilat_MultiCourbes_GL_Cuda/INC
+[CBI] ->              : /opt/api/cbi/infographie/opengl/206/Bilat_OpenGL_Tools/INC
+[CBI] ->              : /opt/api/cbi/infographie/tools/206/Bilat_tools_dll/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/002/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/002/INC/namespace_cpu
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/002/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/002/INC/cudatools
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/002/INC/cudatools/header
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/002/INC/cudatools/header/both
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/002/INC/cudatools/header/device
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/002/INC/cudatools/header/device/curand
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/002/INC/cudatools/header/device/reduction
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/002/INC/cudatools/header/device/synchronisation
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/002/INC/cudatools/header/host
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/002/INC/cudatools/header/mixte
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/002/INC/cudatools/nvidia
+[CBI] ->              : /usr/local/cuda-8.0/include
+[CBI] ->              : /usr/local/cuda-8.0/include/CL
+[CBI] ->              : /usr/local/cuda-8.0/include/crt
+
+[CBI] -> API_BIN :
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/206/Bilat_Fenetrage_Displayable/BIN/gcc
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/206/Bilat_Fenetrage_FreeGlut_Tools/BIN/gcc
+[CBI] ->              : /opt/api/cbi/infographie/multicourbes/206/Bilat_MultiCourbes_FreeGlut_Cuda/BIN/gcc
+[CBI] ->              : /opt/api/cbi/infographie/multicourbes/206/Bilat_MultiCourbes_GL_Cuda/BIN/gcc
+[CBI] ->              : /opt/api/cbi/infographie/opengl/206/Bilat_OpenGL_Tools/BIN/gcc
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/002/BIN/gcc
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/002/BIN/gcc
+[CBI] ->              : /usr/local/cuda-8.0/lib64
+[CBI] ->              : /usr/local/cuda-8.0/lib64/stubs
+
+[CBI] -> API_LIBRARIES_STATIC :
+
+[CBI] -> API_LIBRARIES :
+[CBI] ->              : BilatTools_CPP_002_gcc_x86_64
+[CBI] ->              : BilatTools_Cuda_002_cuda_80_x86_64
+[CBI] ->              : Bilat_Fenetrage_Displayable_206_gcc_x86_64
+[CBI] ->              : Bilat_Fenetrage_FreeGlut_Tools_206_gcc_x86_64
+[CBI] ->              : Bilat_MultiCourbes_FreeGlut_Cuda_206_cuda_80_x86_64
+[CBI] ->              : Bilat_MultiCourbes_GL_Cuda_206_cuda_80_x86_64
+[CBI] ->              : Bilat_OpenGL_Tools_206_gcc_x86_64
+[CBI] ->              : GL
+[CBI] ->              : GLEW
+[CBI] ->              : GLU
+[CBI] ->              : OpenCL
+[CBI] ->              : cublas
+[CBI] ->              : cuda
+[CBI] ->              : cudart
+[CBI] ->              : cufft
+[CBI] ->              : cufftw
+[CBI] ->              : cuinj64
+[CBI] ->              : curand
+[CBI] ->              : cusolver
+[CBI] ->              : cusparse
+[CBI] ->              : glut
+[CBI] ->              : nppc
+[CBI] ->              : nppi
+[CBI] ->              : nppial
+[CBI] ->              : nppicc
+[CBI] ->              : nppicom
+[CBI] ->              : nppidei
+[CBI] ->              : nppif
+[CBI] ->              : nppig
+[CBI] ->              : nppim
+[CBI] ->              : nppist
+[CBI] ->              : nppisu
+[CBI] ->              : nppitc
+[CBI] ->              : npps
+[CBI] ->              : nvToolsExt
+[CBI] ->              : nvblas
+[CBI] ->              : nvgraph
+[CBI] ->              : nvidia-ml
+[CBI] ->              : nvrtc
+[CBI] ->              : nvrtc-builtins
+
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/Tuto_Cuda_MultiCourbes/bin
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/Tuto_Cuda_MultiCourbes/obj
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/Tuto_Cuda_MultiCourbes/cubin
+
+[CBI] -> Compilation parallel (32 threads)
+
+[Tuto_Cuda_MultiCourbes_cuda_80_x86_64] -> g++ARM compiling .cpp : src/main.cpp
+[Tuto_Cuda_MultiCourbes_cuda_80_x86_64] -> g++ARM compiling .cpp : src/cpp/core/mainCore.cpp
+[Tuto_Cuda_MultiCourbes_cuda_80_x86_64] -> g++ARM compiling .cpp : src/cpp/core/01_warm_up/ProviderMultiCourbeMOO.cpp
+[Tuto_Cuda_MultiCourbes_cuda_80_x86_64] -> g++ARM compiling .cpp : src/cpp/core/01_warm_up/01_MultiCourbe_API/MultiCourbesSampleMOO.cpp
+[Tuto_Cuda_MultiCourbes_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/01_warm_up/02_cuda/device/DataProviderSampleKernel.cu
+[Tuto_Cuda_MultiCourbes_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/01_warm_up/02_cuda/host/DataProviderSample.cu
+
+[CBI] -> Linking to   : /tmp/ramdrive/bilat/Targets/Tuto_Cuda_MultiCourbes/bin/Tuto_Cuda_MultiCourbes_cuda_80_x86_64.run
+
+[CBI] -> Library Link :
+[CBI] ->
+[CBI] ->              : -lBilatTools_CPP_002_gcc_x86_64
+[CBI] ->              : -lBilatTools_Cuda_002_cuda_80_x86_64
+[CBI] ->              : -lBilat_Fenetrage_Displayable_206_gcc_x86_64
+[CBI] ->              : -lBilat_Fenetrage_FreeGlut_Tools_206_gcc_x86_64
+[CBI] ->              : -lBilat_MultiCourbes_FreeGlut_Cuda_206_cuda_80_x86_64
+[CBI] ->              : -lBilat_MultiCourbes_GL_Cuda_206_cuda_80_x86_64
+[CBI] ->              : -lBilat_OpenGL_Tools_206_gcc_x86_64
+[CBI] ->              : -lGL
+[CBI] ->              : -lGLEW
+[CBI] ->              : -lGLU
+[CBI] ->              : -lOpenCL
+[CBI] ->              : -lcublas
+[CBI] ->              : -lcuda
+[CBI] ->              : -lcudart
+[CBI] ->              : -lcufft
+[CBI] ->              : -lcufftw
+[CBI] ->              : -lcuinj64
+[CBI] ->              : -lcurand
+[CBI] ->              : -lcusolver
+[CBI] ->              : -lcusparse
+[CBI] ->              : -lglut
+[CBI] ->              : -lgomp
+[CBI] ->              : -lnppc
+[CBI] ->              : -lnppi
+[CBI] ->              : -lnppial
+[CBI] ->              : -lnppicc
+[CBI] ->              : -lnppicom
+[CBI] ->              : -lnppidei
+[CBI] ->              : -lnppif
+[CBI] ->              : -lnppig
+[CBI] ->              : -lnppim
+[CBI] ->              : -lnppist
+[CBI] ->              : -lnppisu
+[CBI] ->              : -lnppitc
+[CBI] ->              : -lnpps
+[CBI] ->              : -lnvToolsExt
+[CBI] ->              : -lnvblas
+[CBI] ->              : -lnvgraph
+[CBI] ->              : -lnvidia-ml
+[CBI] ->              : -lnvrtc
+[CBI] ->              : -lnvrtc-builtins
+
+
+==================================================================================
+[CBI] -> Target Name  : Tuto_Cuda_MultiCourbes_cuda_80_x86_64
+[CBI] -> Location     : /tmp/ramdrive/bilat/Targets/Tuto_Cuda_MultiCourbes/bin/Tuto_Cuda_MultiCourbes_cuda_80_x86_64.run
+[CBI] -> Deploy 	  : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : x86_64
+[CBI] -> OS	 	      : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Compilateur  : g++ && nvcc
+[CBI] -> Task		  : End Compiling-Linking !
+[CBI] -> Time		  : 1 (s)
+==================================================================================
+
+
+[CBI] -> Deploying      : ../RELEASE/bin/Tuto_Cuda_MultiCourbes_cuda_80_x86_64.run
+
+[CBI] -> Symlink Project Inc
+[CBI] -> To update code completion : ctrl-shift-s   or   gui/index/rebuild
+
+
+
+[CBI] -> Tuto_Cuda_MultiCourbes_cuda_80_x86_64 : End ALL!
+
+
+16:48:18 Build Finished (took 1s.924ms)
+

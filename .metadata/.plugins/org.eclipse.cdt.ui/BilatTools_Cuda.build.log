@@ -1,0 +1,265 @@
+03:41:29 **** Incremental Build of configuration CudaGCC_parallel for project BilatTools_Cuda ****
+Info: Configuration "CudaGCC_parallel" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+cbicc cuda jall 
+
+--------------------------------------------------------
+[Runtime] : gcc x86
+--------------------------------------------------------
+
+
+[cuda]        : /usr/local
+
+[jni]         : /usr/lib/jvm
+
+[X11]         : /usr/include/X11
+
+[MKL]         : /opt/intel/mkl
+
+[boost]       : /opt/api/ext/boost
+
+[opencv]      : /opt/api/ext/opencv
+
+[cpptest]     : /opt/api/ext/cpptest
+
+[gphoto2]     : /opt/api/ext/gphoto2
+
+[urg]         : /opt/api/ext/urg
+
+[wic]         : /opt/api/ext/wic 
+
+[pleora]      : /opt/api/ext/pleora
+
+[Runtime] : BILAT_INFOGRAPHIE           /opt/api/cbi/infographie
+
+     BILAT_TOOLS_JST_HOME             = /opt/api/cbi/infographie/tools
+     BILAT_OPENGL_HOME                = /opt/api/cbi/infographie/opengl
+     BILAT_FENETRAGE_HOME             = /opt/api/cbi/infographie/fenetrage
+     BILAT_IMAGE_HOME                 = /opt/api/cbi/infographie/image
+     BILAT_SURFACE_HOME               = /opt/api/cbi/infographie/surface
+
+[Runtime] : BILAT_TOOLS                 /opt/api/cbi/tools
+
+     BILAT_TOOLS_CPP_HOME             = /opt/api/cbi/tools/bilat_tools_cpp
+     BILAT_TOOLS_OMP_HOME             = /opt/api/cbi/tools/bilat_tools_omp
+     BILAT_TOOLS_CUDA_HOME            = /opt/api/cbi/tools/bilat_tools_cuda
+     BILAT_TOOLS_MKL_HOME             = /opt/api/cbi/tools/bilat_tools_mkl
+     BILAT_TOOLS_OPENCV_HOME          = /opt/api/cbi/tools/bilat_tools_opencv
+     BILAT_TOOLS_V4L_HOME             = /opt/api/cbi/tools/bilat_tools_v4l
+     BILAT_TOOLS_CUDA_IMAGE_HOME      = /opt/api/cbi/tools/bilat_tools_cuda_image
+     BILAT_TOOLS_CUDA_IMAGE_CV_HOME   = /opt/api/cbi/tools/bilat_tools_cuda_image_cv
+     BILAT_TOOLS_IMAGE_HOME           = /opt/api/cbi/tools/bilat_tools_image
+     BILAT_TOOLS_IMAGE_CVHOME         = /opt/api/cbi/tools/bilat_tools_image_cv
+
+[Runtime] : BILAT_CAPTEUR               /opt/api/cbi/capteur
+
+     BILAT_GPHOTO2_HOME               = /opt/api/cbi/capteur/bilat_gphoto2
+     BILAT_LASER_HOME                 = /opt/api/cbi/capteur/bilat_laser
+     BILAT_LIDAR_HOME                 = /opt/api/cbi/capteur/bilat_lidar
+     BILAT_TAU2_HOME                  = /opt/api/cbi/capteur/bilat_tau2
+
+--------------------------------------------------------
+[Runtime] : gcc x86 : Ready!
+--------------------------------------------------------
+
+
+g++ (Ubuntu 4.8.4-2ubuntu1~14.04.3) 4.8.4
+Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2016 NVIDIA Corporation
+Built on Wed_May__4_21:01:56_CDT_2016
+Cuda compilation tools, release 8.0, V8.0.26
+
+
+[CUDA GCC] : jall
+
+
+==================================================================================
+[CBI] -> Target Name  : BilatTools_Cuda_001_cuda_80_x86_64
+[CBI] ->
+[CBI] -> Build        : /tmp/ramdrive/bilat/Targets/BilatTools_Cuda_001/bin/libBilatTools_Cuda_001_cuda_80_x86_64.so
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	      : SHARED_LIB
+[CBI] -> Arch	      : x86_64
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking !
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+[CBI] ->              : /opt/api/ext/cpptest/112/LIB_STATIC/gcc
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -fPIC
+[CBI] ->              : -fopenmp
+[CBI] ->              : -std=c++11
+[CBI] ->              : -O3
+[CBI] ->              : -frerun-loop-opt
+[CBI] ->              : -fomit-frame-pointer
+
+[CBI] -> CXXLDFLAGS (Partial) :
+[CBI] ->
+
+[CBI] -> NVCCFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : --fmad=true
+[CBI] ->              : -arch=sm_20
+[CBI] ->              : -m64
+[CBI] ->              : -std=c++11
+[CBI] ->              : -use_fast_math
+
+[CBI] -> NVCCLDFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -arch=sm_20
+[CBI] ->              : -shared
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : src/core/cudatools/header/both/
+[CBI] ->              : src/core/cudatools/header/device/
+[CBI] ->              : src/core/cudatools/header/device/curand/
+[CBI] ->              : src/core/cudatools/header/device/reduction/
+[CBI] ->              : src/core/cudatools/header/device/synchronisation/
+[CBI] ->              : src/core/cudatools/header/host/
+[CBI] ->              : src/core/cudatools/header/mixte/
+[CBI] ->              : src/core/cudatools/nvidia/
+[CBI] ->              : src/use/
+
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> API_INC :
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/001/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/001/INC/namespace_cpu
+[CBI] ->              : /opt/api/ext/cpptest/112/INC
+[CBI] ->              : /opt/api/ext/cpptest/112/INC/extension
+[CBI] ->              : /usr/local/cuda-8.0/include
+[CBI] ->              : /usr/local/cuda-8.0/include/CL
+[CBI] ->              : /usr/local/cuda-8.0/include/crt
+
+[CBI] -> API_LIB :
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/001/BIN/gcc
+[CBI] ->              : /usr/local/cuda-8.0/lib64
+[CBI] ->              : /usr/local/cuda-8.0/lib64/stubs
+
+[CBI] -> API_BIN :
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/001/BIN/gcc
+[CBI] ->              : /usr/local/cuda-8.0/lib64
+[CBI] ->              : /usr/local/cuda-8.0/lib64/stubs
+
+[CBI] -> API_LIBRARIES :
+[CBI] ->              : BilatTools_CPP_001_gcc_x86_64
+[CBI] ->              : OpenCL
+[CBI] ->              : cublas
+[CBI] ->              : cuda
+[CBI] ->              : cudart
+[CBI] ->              : cufft
+[CBI] ->              : cufftw
+[CBI] ->              : cuinj64
+[CBI] ->              : curand
+[CBI] ->              : cusolver
+[CBI] ->              : cusparse
+[CBI] ->              : nppc
+[CBI] ->              : nppi
+[CBI] ->              : nppial
+[CBI] ->              : nppicc
+[CBI] ->              : nppicom
+[CBI] ->              : nppidei
+[CBI] ->              : nppif
+[CBI] ->              : nppig
+[CBI] ->              : nppim
+[CBI] ->              : nppist
+[CBI] ->              : nppisu
+[CBI] ->              : nppitc
+[CBI] ->              : npps
+[CBI] ->              : nvToolsExt
+[CBI] ->              : nvblas
+[CBI] ->              : nvgraph
+[CBI] ->              : nvidia-ml
+[CBI] ->              : nvrtc
+[CBI] ->              : nvrtc-builtins
+
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/BilatTools_Cuda_001/bin
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/BilatTools_Cuda_001/obj
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/BilatTools_Cuda_001/cubin
+
+[CBI] -> Compilation parallel (32 threads)
+
+[BilatTools_Cuda_001_cuda_80_x86_64] -> g++ARM compiling .cpp : src/main.cpp
+[BilatTools_Cuda_001_cuda_80_x86_64] -> g++ARM compiling .cpp : src/use/mainCPP.cpp
+[BilatTools_Cuda_001_cuda_80_x86_64] -> g++ARM compiling .cpp : src/use/use.cpp
+[BilatTools_Cuda_001_cuda_80_x86_64] -> g++ARM compiling .cpp : src/core/cudatools/header/host/Options.cpp
+[BilatTools_Cuda_001_cuda_80_x86_64] -> g++ARM compiling .cpp : src/core/cudatools/cpp/host/cudaTools.cpp
+[BilatTools_Cuda_001_cuda_80_x86_64] -> g++ARM compiling .cpp : src/core/cudatools/cpp/host/Device.cpp
+[BilatTools_Cuda_001_cuda_80_x86_64] -> g++ARM compiling .cpp : src/core/cudatools/cpp/host/Grid.cpp
+[BilatTools_Cuda_001_cuda_80_x86_64] -> nvcc compiling .cu : src/use/mainCU.cu
+
+[CBI] -> Linking to   : /tmp/ramdrive/bilat/Targets/BilatTools_Cuda_001/bin/libBilatTools_Cuda_001_cuda_80_x86_64.so
+
+[CBI] -> Library Link :
+[CBI] ->
+[CBI] ->              : -lBilatTools_CPP_001_gcc_x86_64
+[CBI] ->              : -lCpp_Test_112_gcc_x86_64
+[CBI] ->              : -lOpenCL
+[CBI] ->              : -lcublas
+[CBI] ->              : -lcuda
+[CBI] ->              : -lcudart
+[CBI] ->              : -lcufft
+[CBI] ->              : -lcufftw
+[CBI] ->              : -lcuinj64
+[CBI] ->              : -lcurand
+[CBI] ->              : -lcusolver
+[CBI] ->              : -lcusparse
+[CBI] ->              : -lgomp
+[CBI] ->              : -lnppc
+[CBI] ->              : -lnppi
+[CBI] ->              : -lnppial
+[CBI] ->              : -lnppicc
+[CBI] ->              : -lnppicom
+[CBI] ->              : -lnppidei
+[CBI] ->              : -lnppif
+[CBI] ->              : -lnppig
+[CBI] ->              : -lnppim
+[CBI] ->              : -lnppist
+[CBI] ->              : -lnppisu
+[CBI] ->              : -lnppitc
+[CBI] ->              : -lnpps
+[CBI] ->              : -lnvToolsExt
+[CBI] ->              : -lnvblas
+[CBI] ->              : -lnvgraph
+[CBI] ->              : -lnvidia-ml
+[CBI] ->              : -lnvrtc
+[CBI] ->              : -lnvrtc-builtins
+
+
+==================================================================================
+[CBI] -> Target Name  : BilatTools_Cuda_001_cuda_80_x86_64
+[CBI] -> Location     : /tmp/ramdrive/bilat/Targets/BilatTools_Cuda_001/bin/libBilatTools_Cuda_001_cuda_80_x86_64.so
+[CBI] -> Deploy 	  : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : SHARED_LIB
+[CBI] -> Arch	 	  : x86_64
+[CBI] -> OS	 	      : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Compilateur  : g++) && nvcc
+[CBI] -> Task		  : End Compiling-Linking !
+[CBI] -> Time		  : 3 (s)
+==================================================================================
+
+
+[CBI] -> Deploying      : ../RELEASE/bin/libBilatTools_Cuda_001_cuda_80_x86_64.so
+
+[CBI] -> BilatTools_Cuda_001_cuda_80_x86_64 : End ALL!
+
+
+03:41:32 Build Finished (took 3s.930ms)
+

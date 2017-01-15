@@ -1,0 +1,355 @@
+18:36:39 **** Incremental Build of configuration GCC_ARM_parallel for project Tuto_Image_JNI ****
+cbicc gcc arm jall 
+
+--------------------------------------------------------
+Cross Compilation 		       
+--------------------------------------------------------
+
+PLATFORME = jetson
+API       = /opt/arm/jetson
+
+--------------------------------------------------------
+[Runtime] : gcc arm
+--------------------------------------------------------
+
+
+
+[cuda]        : /opt/arm/32/cuda
+
+[jni]         : /opt/api/ext/jni
+
+[X11]         : /usr/include/X11
+[X11]         : 
+
+[MKL]         : /opt/intel/mkl
+
+[cula]        : /usr/local/cula
+
+[boost]       : /opt/api/ext/boost
+
+[opencv]      : /opt/api/ext/opencv
+[opencv]      : RPATH_LINK : /opt/arm/32/cuda/cuda-6.5/lib:/opt/arm/32/L4T_1404_240/usr_lib
+
+[cpptest]     : /opt/api/ext/cpptest
+
+[gphoto2]     : /opt/api/ext/gphoto2
+
+[urg]         : /opt/api/ext/urg
+
+[wic]         : /opt/api/ext/wic 
+
+
+[pleora]      : /opt/api/ext/pleora
+
+[Runtime] : BILAT_INFOGRAPHIE           /opt/api/cbi/infographie
+
+     BILAT_TOOLS_JST_HOME             = /opt/api/cbi/infographie/tools
+     BILAT_OPENGL_HOME                = /opt/api/cbi/infographie/opengl
+     BILAT_FENETRAGE_HOME             = /opt/api/cbi/infographie/fenetrage
+     BILAT_IMAGE_HOME                 = /opt/api/cbi/infographie/image
+     BILAT_SURFACE_HOME               = /opt/api/cbi/infographie/surface
+
+[Runtime] : BILAT_TOOLS                 /opt/api/cbi/tools
+
+     BILAT_TOOLS_CPP_HOME             = /opt/api/cbi/tools/bilat_tools_cpp
+     BILAT_TOOLS_OMP_HOME             = /opt/api/cbi/tools/bilat_tools_omp
+     BILAT_TOOLS_CUDA_HOME            = /opt/api/cbi/tools/bilat_tools_cuda
+     BILAT_TOOLS_MKL_HOME             = /opt/api/cbi/tools/bilat_tools_mkl
+     BILAT_TOOLS_OPENCV_HOME          = /opt/api/cbi/tools/bilat_tools_opencv
+     BILAT_TOOLS_V4L_HOME             = /opt/api/cbi/tools/bilat_tools_v4l
+     BILAT_TOOLS_CUDA_IMAGE_HOME      = /opt/api/cbi/tools/bilat_tools_cuda_image
+     BILAT_TOOLS_CUDA_IMAGE_CV_HOME   = /opt/api/cbi/tools/bilat_tools_cuda_image_cv
+     BILAT_TOOLS_IMAGE_HOME           = /opt/api/cbi/tools/bilat_tools_image
+     BILAT_TOOLS_IMAGE_CVHOME         = /opt/api/cbi/tools/bilat_tools_image_cv
+
+[Runtime] : BILAT_CAPTEUR               /opt/api/cbi/capteur
+
+     BILAT_GPHOTO2_HOME               = /opt/api/cbi/capteur/bilat_gphoto2
+     BILAT_LASER_HOME                 = /opt/api/cbi/capteur/bilat_laser
+     BILAT_LIDAR_HOME                 = /opt/api/cbi/capteur/bilat_lidar
+     BILAT_TAU2_HOME                  = /opt/api/cbi/capteur/bilat_tau2
+
+--------------------------------------------------------
+[Runtime] : gcc arm : Ready!
+--------------------------------------------------------
+
+
+arm-linux-gnueabihf-g++-4.8 (Ubuntu/Linaro 4.8.4-2ubuntu1~14.04.1) 4.8.4
+Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+[Make] : GCC : jall
+
+==================================================================================
+[CBI] -> Target Name  : Tuto_Image_JNI_gcc_jetson_ARM_32
+[CBI] ->
+[CBI] -> Build     	  : /tmp/ramdrive/bilat/Targets/Tuto_Image_JNI/bin/libTuto_Image_JNI_gcc_jetson_ARM_32.so
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : SHARED_LIB
+[CBI] -> Arch	 	  : ARM_32
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -O3
+[CBI] ->              : -fPIC
+[CBI] ->              : -fopenmp
+[CBI] ->              : -fvisibility=hidden
+[CBI] ->              : -std=c++11
+
+[CBI] -> LDFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -shared
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : src/cpp/core/01_Hello/01_toScenario/
+[CBI] ->              : src/cpp/core/01_Hello/03_scenario_omp/
+[CBI] ->              : src/cpp/core/01_Hello/04_imageAPI/
+[CBI] ->              : src/cpp/core/01_Hello/05_math/
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> API_INC :
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/205/Bilat_Fenetrage_Canvas_JNI/INC
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/205/Bilat_Fenetrage_Canvas_JNI/INC/private
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/205/Bilat_Fenetrage_Displayable/INC
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/205/Bilat_Fenetrage_Displayable/INC/primitives
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/205/Bilat_Fenetrage_Displayable_GL/INC
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/205/Bilat_Fenetrage_Displayable_GL/INC/primitives
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_GL/INC
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_GL/INC/common
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_GL/INC/cpu
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_JNI/INC
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_JNI/INC/common
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_JNI/INC/cpu
+[CBI] ->              : /opt/api/cbi/infographie/opengl/205/Bilat_OpenGL_Tools/INC
+[CBI] ->              : /opt/api/cbi/infographie/tools/205/Bilat_tools_dll/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/001/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/001/INC/namespace_cpu
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/001/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/001/INC/OMP_Tools
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/001/INC/OMP_Tools/header
+[CBI] ->              : /opt/api/ext/jni/java-8-oracle/inc
+[CBI] ->              : /opt/api/ext/jni/java-8-oracle/inc/linux
+
+[CBI] -> API_LIB :
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/205/Bilat_Fenetrage_Canvas_JNI/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/205/Bilat_Fenetrage_Displayable/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/205/Bilat_Fenetrage_Displayable_GL/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_GL/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_JNI/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/infographie/opengl/205/Bilat_OpenGL_Tools/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/001/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/001/BIN/gcc_arm
+[CBI] ->              : /opt/api/ext/jni/java-8-oracle/lib
+[CBI] ->              : /opt/api/ext/jni/java-8-oracle/lib/client
+[CBI] ->              : /opt/api/ext/jni/java-8-oracle/lib/jli
+
+[CBI] -> API_BIN :
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/205/Bilat_Fenetrage_Canvas_JNI/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/205/Bilat_Fenetrage_Displayable/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/205/Bilat_Fenetrage_Displayable_GL/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_GL/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_JNI/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/infographie/opengl/205/Bilat_OpenGL_Tools/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/001/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/001/BIN/gcc_arm
+
+[CBI] -> API_LIBRARIES :
+[CBI] ->              : BilatTools_CPP_001_gcc_jetson_ARM_32
+[CBI] ->              : BilatTools_OMP_001_gcc_jetson_ARM_32
+[CBI] ->              : Bilat_Fenetrage_Canvas_JNI_205_gcc_jetson_ARM_32
+[CBI] ->              : Bilat_Fenetrage_Displayable_205_gcc_jetson_ARM_32
+[CBI] ->              : Bilat_Fenetrage_Displayable_GL_205_gcc_jetson_ARM_32
+[CBI] ->              : Bilat_Image_GL_205_gcc_jetson_ARM_32
+[CBI] ->              : Bilat_Image_JNI_205_gcc_jetson_ARM_32
+[CBI] ->              : Bilat_OpenGL_Tools_205_gcc_jetson_ARM_32
+[CBI] ->              : GL
+[CBI] ->              : GLEW
+[CBI] ->              : GLU
+[CBI] ->              : attach
+[CBI] ->              : awt
+[CBI] ->              : awt_headless
+[CBI] ->              : awt_xawt
+[CBI] ->              : bci
+[CBI] ->              : dcpr
+[CBI] ->              : dt_socket
+[CBI] ->              : fontmanager
+[CBI] ->              : hprof
+[CBI] ->              : instrument
+[CBI] ->              : j2gss
+[CBI] ->              : j2pcsc
+[CBI] ->              : j2pkcs11
+[CBI] ->              : jaas_unix
+[CBI] ->              : java
+[CBI] ->              : java_crw_demo
+[CBI] ->              : jawt
+[CBI] ->              : jdwp
+[CBI] ->              : jfr
+[CBI] ->              : jli
+[CBI] ->              : jpeg
+[CBI] ->              : jsdt
+[CBI] ->              : jsig
+[CBI] ->              : jsound
+[CBI] ->              : jsoundalsa
+[CBI] ->              : jvm
+[CBI] ->              : kcms
+[CBI] ->              : lcms
+[CBI] ->              : management
+[CBI] ->              : mlib_image
+[CBI] ->              : net
+[CBI] ->              : nio
+[CBI] ->              : npt
+[CBI] ->              : resource
+[CBI] ->              : saproc
+[CBI] ->              : sctp
+[CBI] ->              : splashscreen
+[CBI] ->              : sunec
+[CBI] ->              : t2k
+[CBI] ->              : unpack
+[CBI] ->              : verify
+[CBI] ->              : zip
+
+
+[CBI] -> Compilation parallel (8 threads)
+
+[Tuto_Image_JNI_gcc_jetson_ARM_32] -> g++ARM compiling .cpp : src/cpp/core/01_Hello/01_toScenario/hello.cpp
+[Tuto_Image_JNI_gcc_jetson_ARM_32] -> g++ARM compiling .cpp : src/cpp/core/01_Hello/03_scenario_omp/ImageScenarioHelloOMP.cpp
+[Tuto_Image_JNI_gcc_jetson_ARM_32] -> g++ARM compiling .cpp : src/cpp/core/01_Hello/04_imageAPI/HelloImageMOO.cpp
+src/cpp/core/01_Hello/04_imageAPI/HelloImageMOO.cpp:10:25: fatal error: IndiceTools.h: No such file or directory
+ #include "IndiceTools.h"
+                         ^
+compilation terminated.
+make[1]: *** [/tmp/ramdrive/bilat/Targets/Tuto_Image_JNI/obj/HelloImageMOO.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+In file included from src/cpp/core/01_Hello/04_imageAPI/HelloImageMOO.h:6:0,
+                 from src/cpp/core/01_Hello/03_scenario_omp/ImageScenarioHelloOMP.h:5,
+                 from src/cpp/core/01_Hello/03_scenario_omp/ImageScenarioHelloOMP.cpp:1:
+src/cpp/core/01_Hello/05_math/HelloMath.h:44:13: error: ‘uchar4’ has not been declared
+  void color(uchar4* ptrColorIJ,int i, int j, float t)
+             ^
+src/cpp/core/01_Hello/05_math/HelloMath.h: In member function ‘void HelloMath::color(int*, int, int, float)’:
+src/cpp/core/01_Hello/05_math/HelloMath.h:52:18: error: request for member ‘x’ in ‘* ptrColorIJ’, which is of non-class type ‘int’
+      ptrColorIJ->x = levelGris;
+                  ^
+src/cpp/core/01_Hello/05_math/HelloMath.h:53:18: error: request for member ‘y’ in ‘* ptrColorIJ’, which is of non-class type ‘int’
+      ptrColorIJ->y = levelGris;
+                  ^
+src/cpp/core/01_Hello/05_math/HelloMath.h:54:18: error: request for member ‘z’ in ‘* ptrColorIJ’, which is of non-class type ‘int’
+      ptrColorIJ->z = levelGris;
+                  ^
+src/cpp/core/01_Hello/05_math/HelloMath.h:56:18: error: request for member ‘w’ in ‘* ptrColorIJ’, which is of non-class type ‘int’
+      ptrColorIJ->w = 255; // opaque
+                  ^
+In file included from src/cpp/core/01_Hello/03_scenario_omp/ImageScenarioHelloOMP.h:5:0,
+                 from src/cpp/core/01_Hello/03_scenario_omp/ImageScenarioHelloOMP.cpp:1:
+src/cpp/core/01_Hello/04_imageAPI/HelloImageMOO.h: At global scope:
+src/cpp/core/01_Hello/04_imageAPI/HelloImageMOO.h:44:25: error: ‘uchar4’ has not been declared
+  virtual void fillImage(uchar4* ptrTabPixels,int w,int h,const DomaineMath& domaineMath);
+                         ^
+src/cpp/core/01_Hello/04_imageAPI/HelloImageMOO.h:44:64: error: ‘DomaineMath’ does not name a type
+  virtual void fillImage(uchar4* ptrTabPixels,int w,int h,const DomaineMath& domaineMath);
+                                                                ^
+In file included from src/cpp/core/01_Hello/04_imageAPI/HelloImageMOO.h:6:0,
+                 from src/cpp/core/01_Hello/03_scenario_omp/ImageScenarioHelloOMP.h:5,
+                 from src/cpp/core/01_Hello/01_toScenario/hello.cpp:1:
+src/cpp/core/01_Hello/05_math/HelloMath.h:44:13: error: ‘uchar4’ has not been declared
+  void color(uchar4* ptrColorIJ,int i, int j, float t)
+             ^
+src/cpp/core/01_Hello/04_imageAPI/HelloImageMOO.h:44:77: error: ISO C++ forbids declaration of ‘domaineMath’ with no type [-fpermissive]
+  virtual void fillImage(uchar4* ptrTabPixels,int w,int h,const DomaineMath& domaineMath);
+                                                                             ^
+src/cpp/core/01_Hello/04_imageAPI/HelloImageMOO.h:62:18: error: ‘uchar4’ has not been declared
+  void launch_OMP(uchar4* ptrTabPixels, int w, int h);
+                  ^
+src/cpp/core/01_Hello/04_imageAPI/HelloImageMOO.h:64:24: error: ‘uchar4’ has not been declared
+  void entrelacementOMP(uchar4* ptrImageGL,int w, int h);
+                        ^
+src/cpp/core/01_Hello/04_imageAPI/HelloImageMOO.h:65:18: error: ‘uchar4’ has not been declared
+  void forAutoOMP(uchar4* ptrImageGL,int w, int h);
+                  ^
+src/cpp/core/01_Hello/05_math/HelloMath.h: In member function ‘void HelloMath::color(int*, int, int, float)’:
+src/cpp/core/01_Hello/05_math/HelloMath.h:52:18: error: request for member ‘x’ in ‘* ptrColorIJ’, which is of non-class type ‘int’
+      ptrColorIJ->x = levelGris;
+                  ^
+src/cpp/core/01_Hello/05_math/HelloMath.h:53:18: error: request for member ‘y’ in ‘* ptrColorIJ’, which is of non-class type ‘int’
+      ptrColorIJ->y = levelGris;
+                  ^
+src/cpp/core/01_Hello/05_math/HelloMath.h:54:18: error: request for member ‘z’ in ‘* ptrColorIJ’, which is of non-class type ‘int’
+      ptrColorIJ->z = levelGris;
+                  ^
+src/cpp/core/01_Hello/05_math/HelloMath.h:56:18: error: request for member ‘w’ in ‘* ptrColorIJ’, which is of non-class type ‘int’
+      ptrColorIJ->w = 255; // opaque
+                  ^
+In file included from src/cpp/core/01_Hello/03_scenario_omp/ImageScenarioHelloOMP.h:5:0,
+                 from src/cpp/core/01_Hello/01_toScenario/hello.cpp:1:
+src/cpp/core/01_Hello/04_imageAPI/HelloImageMOO.h: At global scope:
+src/cpp/core/01_Hello/04_imageAPI/HelloImageMOO.h:44:25: error: ‘uchar4’ has not been declared
+  virtual void fillImage(uchar4* ptrTabPixels,int w,int h,const DomaineMath& domaineMath);
+                         ^
+src/cpp/core/01_Hello/04_imageAPI/HelloImageMOO.h:44:64: error: ‘DomaineMath’ does not name a type
+  virtual void fillImage(uchar4* ptrTabPixels,int w,int h,const DomaineMath& domaineMath);
+                                                                ^
+src/cpp/core/01_Hello/04_imageAPI/HelloImageMOO.h:44:77: error: ISO C++ forbids declaration of ‘domaineMath’ with no type [-fpermissive]
+  virtual void fillImage(uchar4* ptrTabPixels,int w,int h,const DomaineMath& domaineMath);
+                                                                             ^
+src/cpp/core/01_Hello/04_imageAPI/HelloImageMOO.h:62:18: error: ‘uchar4’ has not been declared
+  void launch_OMP(uchar4* ptrTabPixels, int w, int h);
+                  ^
+src/cpp/core/01_Hello/04_imageAPI/HelloImageMOO.h:64:24: error: ‘uchar4’ has not been declared
+  void entrelacementOMP(uchar4* ptrImageGL,int w, int h);
+                        ^
+src/cpp/core/01_Hello/04_imageAPI/HelloImageMOO.h:65:18: error: ‘uchar4’ has not been declared
+  void forAutoOMP(uchar4* ptrImageGL,int w, int h);
+                  ^
+In file included from src/cpp/core/01_Hello/01_toScenario/hello.cpp:1:0:
+src/cpp/core/01_Hello/03_scenario_omp/ImageScenarioHelloOMP.h:51:2: error: ‘CanvasImageViewers’ does not name a type
+  CanvasImageViewers* ptrImageViewer;
+  ^
+In file included from src/cpp/core/01_Hello/03_scenario_omp/ImageScenarioHelloOMP.cpp:1:0:
+src/cpp/core/01_Hello/03_scenario_omp/ImageScenarioHelloOMP.h:51:2: error: ‘CanvasImageViewers’ does not name a type
+  CanvasImageViewers* ptrImageViewer;
+  ^
+src/cpp/core/01_Hello/03_scenario_omp/ImageScenarioHelloOMP.cpp: In constructor ‘ImageScenarioHelloOMP::ImageScenarioHelloOMP(int, int, float)’:
+src/cpp/core/01_Hello/03_scenario_omp/ImageScenarioHelloOMP.cpp:21:45: error: cannot allocate an object of abstract type ‘HelloImageMOO’
+     ptrHelloMOO = new HelloImageMOO(w, h, dt);
+                                             ^
+In file included from src/cpp/core/01_Hello/03_scenario_omp/ImageScenarioHelloOMP.h:5:0,
+                 from src/cpp/core/01_Hello/03_scenario_omp/ImageScenarioHelloOMP.cpp:1:
+src/cpp/core/01_Hello/04_imageAPI/HelloImageMOO.h:16:7: note:   because the following virtual functions are pure within ‘HelloImageMOO’:
+ class HelloImageMOO: public cpu::Image_RGBA_uchar4
+       ^
+In file included from /opt/api/cbi/infographie/image/205/Bilat_Image_GL/INC/cpu/Image_CPU.h:6:0,
+                 from src/cpp/core/01_Hello/04_imageAPI/HelloImageMOO.h:4,
+                 from src/cpp/core/01_Hello/03_scenario_omp/ImageScenarioHelloOMP.h:5,
+                 from src/cpp/core/01_Hello/03_scenario_omp/ImageScenarioHelloOMP.cpp:1:
+/opt/api/cbi/infographie/image/205/Bilat_Image_GL/INC/common/Image_A.h:60:15: note: 	void Image_A<T, ColorModel, PixelFormat, DomaineMath>::fillImage(T*, int, int, const DomaineMath&) [with T = cpu::uchar4; ColorModel ColorModel = (ColorModel)0u; int PixelFormat = 5121; DomaineMath = cpu::DomaineMath]
+  virtual void fillImage(T* ptrPixel, int w, int h, const DomaineMath& domaineMath) = 0;
+               ^
+src/cpp/core/01_Hello/03_scenario_omp/ImageScenarioHelloOMP.cpp:23:5: error: ‘ptrImageViewer’ was not declared in this scope
+     ptrImageViewer = new cpu::CanvasImageViewers(ptrHelloMOO, option);
+     ^
+src/cpp/core/01_Hello/03_scenario_omp/ImageScenarioHelloOMP.cpp: In destructor ‘virtual ImageScenarioHelloOMP::~ImageScenarioHelloOMP()’:
+src/cpp/core/01_Hello/03_scenario_omp/ImageScenarioHelloOMP.cpp:29:12: error: ‘ptrImageViewer’ was not declared in this scope
+     delete ptrImageViewer;
+            ^
+src/cpp/core/01_Hello/03_scenario_omp/ImageScenarioHelloOMP.cpp: In member function ‘virtual int ImageScenarioHelloOMP::getCanvasNativeID()’:
+src/cpp/core/01_Hello/03_scenario_omp/ImageScenarioHelloOMP.cpp:45:12: error: ‘ptrImageViewer’ was not declared in this scope
+     return ptrImageViewer->getCanvasNativeID();
+            ^
+make[1]: *** [/tmp/ramdrive/bilat/Targets/Tuto_Image_JNI/obj/ImageScenarioHelloOMP.o] Error 1
+make[1]: *** [/tmp/ramdrive/bilat/Targets/Tuto_Image_JNI/obj/hello.o] Error 1
+make: *** [jall] Error 2
+
+18:36:40 Build Finished (took 973ms)
+

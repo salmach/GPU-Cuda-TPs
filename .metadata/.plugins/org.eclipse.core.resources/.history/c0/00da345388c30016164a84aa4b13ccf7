@@ -1,0 +1,30 @@
+#include "ReductionTools.h"
+#include "cudaTools.h"
+#include "cudaTools.h"
+#include <iostream>
+#include <assert.h>
+
+using std::cout;
+using std::endl;
+
+//host facultatif  __global__
+bool testReductionTool(void);
+
+__global__  static void KernelReductionTools(float* all);
+
+
+__global__ void kernelReductionTools(float* all);
+{
+
+
+}
+
+
+//TODO
+//code cote host
+//malloc
+//memset
+
+//faire fichier cu aussi pour appeler les fcts device dedans
+
+//faire cpp test !!  tests unitaires

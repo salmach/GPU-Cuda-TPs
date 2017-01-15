@@ -1,0 +1,1 @@
+/home/mse4/CUDA/code/WCuda/Student_OMP_Image//src/core/02_Mandelbrot_Julia/a_animable/math/JuliaMath.h

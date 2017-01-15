@@ -1,0 +1,55 @@
+#include "Indice2D.h"
+
+using namespace gpu;
+
+
+
+class ReductionTools
+    {
+    public:
+	template <typename T>
+
+	__device__ static void reductionADD(T* tabSM, T* ptrDevResultat)
+	    {
+
+	    reductionIntraBlock(tabSM)
+	    reductionInterBlock(tabSM,ptrDevResultat)
+	    }
+
+    private:
+
+	template <typename T>
+	__device__ static void reductionIntraBlock(T* tabSM)
+	    {
+	    int n = Indice2D::nbThreadLocal();
+	    int half = n/2;
+	    while (n >= 1)
+		{
+		squeezing(tabSM, half);
+		half/=2;
+		synchronize();
+		}
+	    }
+
+	__device__
+	void squeezing(T* tabSM,int half)
+	    {
+	    const int TIDLOCAL = Indice2D::tidLocal();
+	    if (TIDLOCAL < half)
+		{
+		tabSM[TIDLOCAL]+= tabSM[TIDLOCAL+half]
+		}
+	    }
+
+	template <typename T>
+	__device__ static void reductionInterblock(T* tabSM, T* ptrDevResultat)
+	    {
+	    //Not sure name of variable
+	    const int TIDLOCAL = Indice2D::tidLocal();
+
+	    if(TIDLOCAL == 0)
+		{
+		    atomicAdd(ptrDevResultat, tabSM[0] );
+		}
+	    }
+    }

@@ -1,0 +1,1 @@
+/opt/cbi/make/private/api/cpp/api_cbi/infographie/cbi_image/bilat_image_jni.mk

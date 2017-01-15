@@ -1,0 +1,10 @@
+17:48:26 **** Build of configuration MinGW_parallel for project BilatUtil_CPP ****
+Info: Configuration "MinGW_parallel" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+makeMinGW jall 
+Cannot run program "makeMinGW": Unknown reason
+
+Error: Program "makeMinGW" not found in PATH
+PATH=[/bin:/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/eclipse:/opt/VirtualGL/bin:/opt/TurboVNC/bin/:/opt/google/chrome:/usr/local/cuda/bin:/usr/local/etc/cbi/dev/make]
+
+17:48:26 Build Finished (took 3ms)
+

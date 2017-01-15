@@ -1,0 +1,335 @@
+18:37:01 **** Build of configuration CudaGCC_ARM_parallel for project Tuto_Image_Cuda_JNI ****
+cbicc cuda arm jall 
+
+--------------------------------------------------------
+Cross Compilation 		       
+--------------------------------------------------------
+
+PLATFORME = jetson
+API       = /opt/arm/jetson
+
+--------------------------------------------------------
+[Runtime] : gcc arm
+--------------------------------------------------------
+
+
+
+[cuda]        : /opt/arm/32/cuda
+
+[jni]         : /opt/api/ext/jni
+
+[X11]         : /usr/include/X11
+[X11]         : 
+
+[MKL]         : /opt/intel/mkl
+
+[cula]        : /usr/local/cula
+
+[boost]       : /opt/api/ext/boost
+
+[opencv]      : /opt/api/ext/opencv
+[opencv]      : RPATH_LINK : /opt/arm/32/cuda/cuda-6.5/lib:/opt/arm/32/L4T_1404_240/usr_lib
+
+[cpptest]     : /opt/api/ext/cpptest
+
+[gphoto2]     : /opt/api/ext/gphoto2
+
+[urg]         : /opt/api/ext/urg
+
+[wic]         : /opt/api/ext/wic 
+
+
+[pleora]      : /opt/api/ext/pleora
+
+[Runtime] : BILAT_INFOGRAPHIE           /opt/api/cbi/infographie
+
+     BILAT_TOOLS_JST_HOME             = /opt/api/cbi/infographie/tools
+     BILAT_OPENGL_HOME                = /opt/api/cbi/infographie/opengl
+     BILAT_FENETRAGE_HOME             = /opt/api/cbi/infographie/fenetrage
+     BILAT_IMAGE_HOME                 = /opt/api/cbi/infographie/image
+     BILAT_SURFACE_HOME               = /opt/api/cbi/infographie/surface
+
+[Runtime] : BILAT_TOOLS                 /opt/api/cbi/tools
+
+     BILAT_TOOLS_CPP_HOME             = /opt/api/cbi/tools/bilat_tools_cpp
+     BILAT_TOOLS_OMP_HOME             = /opt/api/cbi/tools/bilat_tools_omp
+     BILAT_TOOLS_CUDA_HOME            = /opt/api/cbi/tools/bilat_tools_cuda
+     BILAT_TOOLS_MKL_HOME             = /opt/api/cbi/tools/bilat_tools_mkl
+     BILAT_TOOLS_OPENCV_HOME          = /opt/api/cbi/tools/bilat_tools_opencv
+     BILAT_TOOLS_V4L_HOME             = /opt/api/cbi/tools/bilat_tools_v4l
+     BILAT_TOOLS_CUDA_IMAGE_HOME      = /opt/api/cbi/tools/bilat_tools_cuda_image
+     BILAT_TOOLS_CUDA_IMAGE_CV_HOME   = /opt/api/cbi/tools/bilat_tools_cuda_image_cv
+     BILAT_TOOLS_IMAGE_HOME           = /opt/api/cbi/tools/bilat_tools_image
+     BILAT_TOOLS_IMAGE_CVHOME         = /opt/api/cbi/tools/bilat_tools_image_cv
+
+[Runtime] : BILAT_CAPTEUR               /opt/api/cbi/capteur
+
+     BILAT_GPHOTO2_HOME               = /opt/api/cbi/capteur/bilat_gphoto2
+     BILAT_LASER_HOME                 = /opt/api/cbi/capteur/bilat_laser
+     BILAT_LIDAR_HOME                 = /opt/api/cbi/capteur/bilat_lidar
+     BILAT_TAU2_HOME                  = /opt/api/cbi/capteur/bilat_tau2
+
+--------------------------------------------------------
+[Runtime] : gcc arm : Ready!
+--------------------------------------------------------
+
+
+arm-linux-gnueabihf-g++-4.8 (Ubuntu/Linaro 4.8.4-2ubuntu1~14.04.1) 4.8.4
+Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2014 NVIDIA Corporation
+Built on Thu_Jul_17_21:41:27_CDT_2014
+Cuda compilation tools, release 6.5, V6.5.12
+
+
+[CUDA GCC] : jall
+
+
+==================================================================================
+[CBI] -> Target Name  : Tuto_Image_Cuda_JNI_cuda_65_jetson_ARM_32
+[CBI] ->
+[CBI] -> Build        : /tmp/ramdrive/bilat/Targets/Tuto_Image_Cuda_JNI/bin/libTuto_Image_Cuda_JNI_cuda_65_jetson_ARM_32.so
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	      : SHARED_LIB
+[CBI] -> Arch	      : ARM_32
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking !
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -fPIC
+[CBI] ->              : -fvisibility=hidden
+[CBI] ->              : -fopenmp
+[CBI] ->              : -O3
+[CBI] ->              : -std=c++0x
+
+[CBI] -> CXXLDFLAGS (Partial) :
+[CBI] ->
+
+[CBI] -> NVCCFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : --fmad=true
+[CBI] ->              : -arch=sm_20
+[CBI] ->              : -ccbin
+[CBI] ->              : -m32
+[CBI] ->              : -std=c++11
+[CBI] ->              : -target-cpu-arch
+[CBI] ->              : -use_fast_math
+[CBI] ->              : ARM
+[CBI] ->              : g++ARM
+
+[CBI] -> NVCCLDFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -arch=sm_20
+[CBI] ->              : -ccbin
+[CBI] ->              : -m32
+[CBI] ->              : -shared
+[CBI] ->              : -target-cpu-arch
+[CBI] ->              : ARM
+[CBI] ->              : g++ARM
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : src/cpp/core/01_Hello/01_toScenario/
+[CBI] ->              : src/cpp/core/01_Hello/02_scenario_cuda/
+[CBI] ->              : src/cpp/core/01_Hello/04_imageAPI/cuda/
+[CBI] ->              : src/cpp/core/01_Hello/05_math/
+
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> API_INC :
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/205/Bilat_Fenetrage_Canvas_JNI/INC
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/205/Bilat_Fenetrage_Canvas_JNI/INC/private
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/205/Bilat_Fenetrage_Displayable/INC
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/205/Bilat_Fenetrage_Displayable/INC/primitives
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/205/Bilat_Fenetrage_Displayable_GL/INC
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/205/Bilat_Fenetrage_Displayable_GL/INC/primitives
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_GL/INC
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_GL/INC/common
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_GL/INC/cpu
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_GL_Cuda/INC
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_GL_Cuda/INC/gpu
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_JNI/INC
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_JNI/INC/common
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_JNI/INC/cpu
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_JNI_Cuda/INC
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_JNI_Cuda/INC/gpu
+[CBI] ->              : /opt/api/cbi/infographie/opengl/205/Bilat_OpenGL_Tools/INC
+[CBI] ->              : /opt/api/cbi/infographie/tools/205/Bilat_tools_dll/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/001/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/001/INC/namespace_cpu
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/001/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/001/INC/cudatools
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/001/INC/cudatools/header
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/001/INC/cudatools/header/both
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/001/INC/cudatools/header/device
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/001/INC/cudatools/header/device/curand
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/001/INC/cudatools/header/device/reduction
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/001/INC/cudatools/header/device/synchronisation
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/001/INC/cudatools/header/host
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/001/INC/cudatools/header/mixte
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/001/INC/cudatools/nvidia
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/001/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/001/INC/OMP_Tools
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/001/INC/OMP_Tools/header
+[CBI] ->              : /opt/api/ext/jni/java-8-oracle/inc
+[CBI] ->              : /opt/api/ext/jni/java-8-oracle/inc/linux
+
+[CBI] -> API_LIB :
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/205/Bilat_Fenetrage_Canvas_JNI/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/205/Bilat_Fenetrage_Displayable/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/205/Bilat_Fenetrage_Displayable_GL/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_GL/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_GL_Cuda/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_JNI/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_JNI_Cuda/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/infographie/opengl/205/Bilat_OpenGL_Tools/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/001/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/001/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/001/BIN/gcc_arm
+[CBI] ->              : /opt/api/ext/jni/java-8-oracle/lib
+[CBI] ->              : /opt/api/ext/jni/java-8-oracle/lib/client
+[CBI] ->              : /opt/api/ext/jni/java-8-oracle/lib/jli
+[CBI] ->              : /opt/arm/32/cuda/cuda-6.5/lib
+[CBI] ->              : /opt/arm/32/cuda/cuda-6.5/lib/stubs
+
+[CBI] -> API_BIN :
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/205/Bilat_Fenetrage_Canvas_JNI/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/205/Bilat_Fenetrage_Displayable/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/infographie/fenetrage/205/Bilat_Fenetrage_Displayable_GL/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_GL/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_GL_Cuda/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_JNI/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/infographie/image/205/Bilat_Image_JNI_Cuda/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/infographie/opengl/205/Bilat_OpenGL_Tools/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/001/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/001/BIN/gcc_arm
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/001/BIN/gcc_arm
+[CBI] ->              : /opt/arm/32/cuda/cuda-6.5/lib
+[CBI] ->              : /opt/arm/32/cuda/cuda-6.5/lib/stubs
+
+[CBI] -> API_LIBRARIES :
+[CBI] ->              : BilatTools_CPP_001_gcc_jetson_ARM_32
+[CBI] ->              : BilatTools_Cuda_001_cuda_65_jetson_ARM_32
+[CBI] ->              : BilatTools_OMP_001_gcc_jetson_ARM_32
+[CBI] ->              : Bilat_Fenetrage_Canvas_JNI_205_gcc_jetson_ARM_32
+[CBI] ->              : Bilat_Fenetrage_Displayable_205_gcc_jetson_ARM_32
+[CBI] ->              : Bilat_Fenetrage_Displayable_GL_205_gcc_jetson_ARM_32
+[CBI] ->              : Bilat_Image_GL_205_gcc_jetson_ARM_32
+[CBI] ->              : Bilat_Image_GL_Cuda_205_gcc_65_jetson_ARM_32
+[CBI] ->              : Bilat_Image_JNI_205_gcc_jetson_ARM_32
+[CBI] ->              : Bilat_Image_JNI_Cuda_205_gcc_65_jetson_ARM_32
+[CBI] ->              : Bilat_OpenGL_Tools_205_gcc_jetson_ARM_32
+[CBI] ->              : GL
+[CBI] ->              : GLEW
+[CBI] ->              : GLU
+[CBI] ->              : attach
+[CBI] ->              : awt
+[CBI] ->              : awt_headless
+[CBI] ->              : awt_xawt
+[CBI] ->              : bci
+[CBI] ->              : cublas
+[CBI] ->              : cuda
+[CBI] ->              : cudart
+[CBI] ->              : cudnn
+[CBI] ->              : cufft
+[CBI] ->              : cufftw
+[CBI] ->              : cuinj32
+[CBI] ->              : curand
+[CBI] ->              : cusparse
+[CBI] ->              : dcpr
+[CBI] ->              : dt_socket
+[CBI] ->              : fontmanager
+[CBI] ->              : hprof
+[CBI] ->              : instrument
+[CBI] ->              : j2gss
+[CBI] ->              : j2pcsc
+[CBI] ->              : j2pkcs11
+[CBI] ->              : jaas_unix
+[CBI] ->              : java
+[CBI] ->              : java_crw_demo
+[CBI] ->              : jawt
+[CBI] ->              : jdwp
+[CBI] ->              : jfr
+[CBI] ->              : jli
+[CBI] ->              : jpeg
+[CBI] ->              : jsdt
+[CBI] ->              : jsig
+[CBI] ->              : jsound
+[CBI] ->              : jsoundalsa
+[CBI] ->              : jvm
+[CBI] ->              : kcms
+[CBI] ->              : lcms
+[CBI] ->              : management
+[CBI] ->              : mlib_image
+[CBI] ->              : net
+[CBI] ->              : nio
+[CBI] ->              : nppc
+[CBI] ->              : nppi
+[CBI] ->              : npps
+[CBI] ->              : npt
+[CBI] ->              : nvToolsExt
+[CBI] ->              : resource
+[CBI] ->              : saproc
+[CBI] ->              : sctp
+[CBI] ->              : splashscreen
+[CBI] ->              : sunec
+[CBI] ->              : t2k
+[CBI] ->              : unpack
+[CBI] ->              : verify
+[CBI] ->              : zip
+
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/Tuto_Image_Cuda_JNI/bin
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/Tuto_Image_Cuda_JNI/obj
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/Tuto_Image_Cuda_JNI/cubin
+
+[CBI] -> Compilation parallel (8 threads)
+
+[Tuto_Image_Cuda_JNI_cuda_65_jetson_ARM_32] -> g++ARM compiling .cpp : src/cpp/core/01_Hello/00_JNI/hello_jni.cpp
+[Tuto_Image_Cuda_JNI_cuda_65_jetson_ARM_32] -> g++ARM compiling .cpp : src/cpp/core/01_Hello/01_toScenario/hello.cpp
+[Tuto_Image_Cuda_JNI_cuda_65_jetson_ARM_32] -> g++ARM compiling .cpp : src/cpp/core/01_Hello/04_imageAPI/cuda/HelloImageCudaMOO.cpp
+[Tuto_Image_Cuda_JNI_cuda_65_jetson_ARM_32] -> g++ARM compiling .cpp : src/cpp/core/01_Hello/02_scenario_cuda/ImageScenarioHelloCuda.cpp
+[Tuto_Image_Cuda_JNI_cuda_65_jetson_ARM_32] -> nvcc compiling .cu : src/cpp/core/01_Hello/05_cuda_kernel/hello_cuda.cu
+In file included from src/cpp/core/01_Hello/02_scenario_cuda/ImageScenarioHelloCuda.h:5:0,
+                 from src/cpp/core/01_Hello/01_toScenario/hello.cpp:1:
+src/cpp/core/01_Hello/04_imageAPI/cuda/HelloImageCudaMOO.h:4:19: fatal error: Image.h: No such file or directory
+ #include "Image.h"
+                   ^
+compilation terminated.
+In file included from src/cpp/core/01_Hello/02_scenario_cuda/ImageScenarioHelloCuda.h:5:0,
+                 from src/cpp/core/01_Hello/02_scenario_cuda/ImageScenarioHelloCuda.cpp:1:
+src/cpp/core/01_Hello/04_imageAPI/cuda/HelloImageCudaMOO.h:4:19: fatal error: Image.h: No such file or directory
+ #include "Image.h"
+                   ^
+compilation terminated.
+In file included from src/cpp/core/01_Hello/04_imageAPI/cuda/HelloImageCudaMOO.cpp:6:0:
+src/cpp/core/01_Hello/04_imageAPI/cuda/HelloImageCudaMOO.h:4:19: fatal error: Image.h: No such file or directory
+ #include "Image.h"
+                   ^
+compilation terminated.
+make[1]: *** [/tmp/ramdrive/bilat/Targets/Tuto_Image_Cuda_JNI/obj/hello.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+make[1]: *** [/tmp/ramdrive/bilat/Targets/Tuto_Image_Cuda_JNI/obj/ImageScenarioHelloCuda.o] Error 1
+make[1]: *** [/tmp/ramdrive/bilat/Targets/Tuto_Image_Cuda_JNI/obj/HelloImageCudaMOO.o] Error 1
+src/cpp/core/01_Hello/05_cuda_kernel/hello_cuda.cu:5:25: fatal error: IndiceTools.h: No such file or directory
+ #include "IndiceTools.h"
+                         ^
+compilation terminated.
+make[1]: *** [/tmp/ramdrive/bilat/Targets/Tuto_Image_Cuda_JNI/obj/hello_cuda.o] Error 1
+make: *** [jall] Error 2
+
+18:37:02 Build Finished (took 622ms)
+

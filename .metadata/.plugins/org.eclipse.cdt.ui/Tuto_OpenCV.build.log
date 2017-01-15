@@ -1,0 +1,732 @@
+17:21:44 **** Incremental Build of configuration IntelLinux_parallel for project Tuto_OpenCV ****
+cbicc intel jall 
+
+--------------------------------------------------------
+[Runtime] : intel x86
+--------------------------------------------------------
+
+
+[cuda]        : /usr/local
+
+[jni]         : /usr/lib/jvm
+
+[X11]         : /usr/include/X11
+
+[MKL]         : /opt/intel/mkl
+[Runtime] : Intel : /opt/intel
+
+[boost]       : /opt/api/ext/boost
+
+[opencv]      : /opt/api/ext/opencv
+
+[cpptest]     : /opt/api/ext/cpptest
+
+[gphoto2]     : /opt/api/ext/gphoto2
+
+[urg]         : /opt/api/ext/urg
+
+[wic]         : /opt/api/ext/wic 
+
+[pleora]      : /opt/api/ext/pleora
+
+[Runtime] : BILAT_INFOGRAPHIE           /opt/api/cbi/infographie
+
+     BILAT_TOOLS_JST_HOME             = /opt/api/cbi/infographie/tools
+     BILAT_OPENGL_HOME                = /opt/api/cbi/infographie/opengl
+     BILAT_FENETRAGE_HOME             = /opt/api/cbi/infographie/fenetrage
+     BILAT_IMAGE_HOME                 = /opt/api/cbi/infographie/image
+     BILAT_SURFACE_HOME               = /opt/api/cbi/infographie/surface
+
+[Runtime] : BILAT_TOOLS                 /opt/api/cbi/tools
+
+     BILAT_TOOLS_CPP_HOME             = /opt/api/cbi/tools/bilat_tools_cpp
+     BILAT_TOOLS_OMP_HOME             = /opt/api/cbi/tools/bilat_tools_omp
+     BILAT_TOOLS_CUDA_HOME            = /opt/api/cbi/tools/bilat_tools_cuda
+     BILAT_TOOLS_MKL_HOME             = /opt/api/cbi/tools/bilat_tools_mkl
+     BILAT_TOOLS_OPENCV_HOME          = /opt/api/cbi/tools/bilat_tools_opencv
+     BILAT_TOOLS_V4L_HOME             = /opt/api/cbi/tools/bilat_tools_v4l
+     BILAT_TOOLS_CUDA_IMAGE_HOME      = /opt/api/cbi/tools/bilat_tools_cuda_image
+     BILAT_TOOLS_CUDA_IMAGE_CV_HOME   = /opt/api/cbi/tools/bilat_tools_cuda_image_cv
+     BILAT_TOOLS_IMAGE_HOME           = /opt/api/cbi/tools/bilat_tools_image
+     BILAT_TOOLS_IMAGE_CVHOME         = /opt/api/cbi/tools/bilat_tools_image_cv
+
+[Runtime] : BILAT_CAPTEUR               /opt/api/cbi/capteur
+
+     BILAT_GPHOTO2_HOME               = /opt/api/cbi/capteur/bilat_gphoto2
+     BILAT_LASER_HOME                 = /opt/api/cbi/capteur/bilat_laser
+     BILAT_LIDAR_HOME                 = /opt/api/cbi/capteur/bilat_lidar
+     BILAT_TAU2_HOME                  = /opt/api/cbi/capteur/bilat_tau2
+
+--------------------------------------------------------
+[Runtime] : intel x86 : Ready!
+--------------------------------------------------------
+
+
+[INTEL] : jall
+
+icpc (ICC) 17.0.0 20160721
+Copyright (C) 1985-2016 Intel Corporation.  All rights reserved.
+
+==================================================================================
+[CBI] -> Target Name  : Tuto_OpenCV_intel_x86_64
+[CBI] ->
+[CBI] -> Build     	  : /tmp/ramdrive/bilat/Targets/Tuto_OpenCV/bin/Tuto_OpenCV_intel_x86_64.run
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : x86_64
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -O3
+[CBI] ->              : -fast
+[CBI] ->              : -openmp
+[CBI] ->              : -par-threshold100
+[CBI] ->              : -parallel
+[CBI] ->              : -std=c++11
+[CBI] ->              : -w
+[CBI] ->              : -xHost
+
+[CBI] -> LDFLAGS (Partial) :
+[CBI] ->
+
+[CBI] -> INC_PATH (auto detect):
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> API_INC :
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/002/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/002/INC/namespace_cpu
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/002/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/002/INC/capture
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/002/INC/capture/video
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/002/INC/capture/webcam
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/002/INC/show
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/002/INC/show/shapeOverlay
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/002/INC/show/shapeOverlay/appearance
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/002/INC/show/shapeOverlay/drawer
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/002/INC/show/shapeOverlay/shape
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/002/INC/show/view
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/002/INC/show/view/viewer
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/002/INC/show/view/viewerMat
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/002/INC/tools
+[CBI] ->              : /opt/api/ext/opencv/310/include
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/calib3d
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/core
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/core/cuda
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/core/cuda/detail
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/core/hal
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/features2d
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/flann
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/highgui
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/imgcodecs
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/imgproc
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/imgproc/detail
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/ml
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/objdetect
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/photo
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/shape
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/stitching
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/stitching/detail
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/superres
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/video
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/videoio
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/videostab
+
+[CBI] -> API_BIN :
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/002/BIN/intel
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_opencv/002/BIN/intel
+[CBI] ->              : /opt/api/ext/opencv/310/lib
+[CBI] ->              : /opt/api/ext/opencv/310/lib/pkgconfig
+
+[CBI] -> API_LIBRARIES_STATIC :
+
+[CBI] -> API_LIBRARIES :
+[CBI] ->              : BilatTools_CPP_002_intel_x86_64
+[CBI] ->              : BilatTools_OpenCV_002_intel_x86_64
+[CBI] ->              : opencv_calib3d_gcc484
+[CBI] ->              : opencv_core_gcc484
+[CBI] ->              : opencv_features2d_gcc484
+[CBI] ->              : opencv_flann_gcc484
+[CBI] ->              : opencv_highgui_gcc484
+[CBI] ->              : opencv_imgcodecs_gcc484
+[CBI] ->              : opencv_imgproc_gcc484
+[CBI] ->              : opencv_ml_gcc484
+[CBI] ->              : opencv_objdetect_gcc484
+[CBI] ->              : opencv_photo_gcc484
+[CBI] ->              : opencv_shape_gcc484
+[CBI] ->              : opencv_stitching_gcc484
+[CBI] ->              : opencv_superres_gcc484
+[CBI] ->              : opencv_video_gcc484
+[CBI] ->              : opencv_videoio_gcc484
+[CBI] ->              : opencv_videostab_gcc484
+
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/Tuto_OpenCV/bin
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/Tuto_OpenCV/obj
+
+[CBI] -> Compilation parallel (32 threads)
+
+[Tuto_OpenCV_intel_x86_64] -> icc compiling .cpp : src/tuto/main.cpp
+[Tuto_OpenCV_intel_x86_64] -> icc compiling .cpp : src/tuto/capture/useCapture.cpp
+[Tuto_OpenCV_intel_x86_64] -> icc compiling .cpp : src/tuto/capture/useVideo.cpp
+[Tuto_OpenCV_intel_x86_64] -> icc compiling .cpp : src/tuto/capture/useWebcam.cpp
+[Tuto_OpenCV_intel_x86_64] -> icc compiling .cpp : src/tuto/shapeOverlay/01_tuto_simple.cpp
+[Tuto_OpenCV_intel_x86_64] -> icc compiling .cpp : src/tuto/shapeOverlay/02_tuto_all_shape.cpp
+[Tuto_OpenCV_intel_x86_64] -> icc compiling .cpp : src/tuto/shapeOverlay/03_tuto_transparance.cpp
+[Tuto_OpenCV_intel_x86_64] -> icc compiling .cpp : src/tuto/shapeOverlay/04_tuto_bigline.cpp
+[Tuto_OpenCV_intel_x86_64] -> icc compiling .cpp : src/tuto/shapeOverlay/useShapeOverlay.cpp
+
+[CBI] -> Linking to   : /tmp/ramdrive/bilat/Targets/Tuto_OpenCV/bin/Tuto_OpenCV_intel_x86_64.run
+
+[CBI] -> Library Link :
+[CBI] ->              : -lBilatTools_CPP_002_intel_x86_64
+[CBI] ->              : -lBilatTools_OpenCV_002_intel_x86_64
+[CBI] ->              : -liomp5
+[CBI] ->              : -lopencv_calib3d_gcc484
+[CBI] ->              : -lopencv_core_gcc484
+[CBI] ->              : -lopencv_features2d_gcc484
+[CBI] ->              : -lopencv_flann_gcc484
+[CBI] ->              : -lopencv_highgui_gcc484
+[CBI] ->              : -lopencv_imgcodecs_gcc484
+[CBI] ->              : -lopencv_imgproc_gcc484
+[CBI] ->              : -lopencv_ml_gcc484
+[CBI] ->              : -lopencv_objdetect_gcc484
+[CBI] ->              : -lopencv_photo_gcc484
+[CBI] ->              : -lopencv_shape_gcc484
+[CBI] ->              : -lopencv_stitching_gcc484
+[CBI] ->              : -lopencv_superres_gcc484
+[CBI] ->              : -lopencv_video_gcc484
+[CBI] ->              : -lopencv_videoio_gcc484
+[CBI] ->              : -lopencv_videostab_gcc484
+ipo: warning #11021: unresolved deflateInit_
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_imgcodecs_gcc484.so
+ipo: warning #11021: unresolved deflateInit2_
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_imgcodecs_gcc484.so
+ipo: warning #11021: unresolved compress
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_imgcodecs_gcc484.so
+ipo: warning #11021: unresolved uncompress
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_imgcodecs_gcc484.so
+ipo: warning #11021: unresolved deflate
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_imgcodecs_gcc484.so
+ipo: warning #11021: unresolved deflateEnd
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_imgcodecs_gcc484.so
+ipo: warning #11021: unresolved crc32
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_imgcodecs_gcc484.so
+ipo: warning #11021: unresolved inflateSync
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_imgcodecs_gcc484.so
+ipo: warning #11021: unresolved inflate
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_imgcodecs_gcc484.so
+ipo: warning #11021: unresolved inflateInit_
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_imgcodecs_gcc484.so
+ipo: warning #11021: unresolved inflateEnd
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_imgcodecs_gcc484.so
+ipo: warning #11021: unresolved inflateReset
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_imgcodecs_gcc484.so
+ipo: warning #11021: unresolved deflateReset
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_imgcodecs_gcc484.so
+ipo: warning #11021: unresolved adler32
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_imgcodecs_gcc484.so
+ipo: warning #11021: unresolved deflateParams
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_imgcodecs_gcc484.so
+ipo: warning #11021: unresolved gzeof
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_core_gcc484.so
+ipo: warning #11021: unresolved gzrewind
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_core_gcc484.so
+ipo: warning #11021: unresolved gzopen
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_core_gcc484.so
+ipo: warning #11021: unresolved gzclose
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_core_gcc484.so
+ipo: warning #11021: unresolved gzgets
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_core_gcc484.so
+ipo: warning #11021: unresolved gzputs
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_core_gcc484.so
+ipo: warning #11021: unresolved g_time_val_add
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_widget_queue_draw
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_file_chooser_add_filter
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved g_return_if_fail_warning
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved g_type_register_static_simple
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_file_filter_add_pattern
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved g_timeout_add
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gdk_pixbuf_new_from_data
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gdk_window_get_height
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_widget_get_parent_window
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_style_attach
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_widget_get_type
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_window_resize
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved g_cond_broadcast
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved g_type_check_instance_cast
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved g_usleep
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_widget_get_window
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved g_get_current_time
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved g_type_class_peek
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_window_set_geometry_hints
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_widget_get_style
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_widget_queue_resize
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_range_set_range
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_widget_set_window
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gdk_window_new
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_widget_set_allocation
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_range_get_type
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_scale_set_digits
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_file_chooser_set_filter
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_container_get_type
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_window_move
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved g_thread_self
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_widget_get_allocated_width
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_label_new
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved g_cond_new
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_window_set_title
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_container_add
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_widget_get_allocation
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_box_get_type
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_file_filter_new
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved g_signal_connect_data
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gtk_vbox_new
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_widget_destroy
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_box_pack_start
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_file_chooser_set_current_name
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_file_chooser_get_type
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_widget_get_visual
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gdk_window_get_width
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_widget_add_events
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_box_pack_end
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_range_set_value
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved g_thread_create
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved g_mutex_lock
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_main_iteration_do
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_window_new
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved g_thread_yield
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved g_free
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gtk_scale_get_type
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gdk_window_move_resize
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved g_mutex_unlock
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_file_chooser_get_filename
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_dialog_get_type
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved g_mutex_new
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_range_get_value
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved g_type_check_instance_is_a
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gtk_window_set_resizable
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_dialog_run
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_file_chooser_dialog_new
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_widget_get_realized
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_widget_show
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved g_object_unref
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gtk_window_unfullscreen
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_file_filter_set_name
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gdk_window_set_user_data
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_scale_set_draw_value
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved cairo_paint
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_window_get_title
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_widget_new
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_file_chooser_set_do_overwrite_confirmation
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_init
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved g_cond_timed_wait
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_hbox_new
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_widget_set_style
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_widget_get_allocated_height
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_widget_get_events
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_window_fullscreen
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved g_type_check_class_cast
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_hscale_new_with_range
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gdk_cairo_set_source_pixbuf
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_widget_set_realized
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_style_set_background
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved g_cond_wait
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gtk_window_get_type
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved g_source_remove
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_highgui_gcc484.so
+ipo: warning #11021: unresolved gst_structure_get_fraction
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_app_src_set_caps
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_element_link_many
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_buffer_map
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_element_link
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_camera_enumerate
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_app_sink_set_max_buffers
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_capture_stop
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_element_query_duration
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_element_get_type
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_get_image_size_from_video_mode
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved v4l2_munmap
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_object_get_name
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_pad_get_current_caps
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved g_error_free
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_feature_whitebalance_get_value
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_message_parse_state_changed
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_pad_link
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_object_unref
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_element_get_state
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_element_set_state
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_video_get_supported_framerates
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_app_sink_is_eos
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved g_filename_to_uri
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_buffer_unmap
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_bus_have_pending
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_element_factory_find
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_video_get_mode
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_video_set_mode
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_fraction_get_type
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_sample_get_caps
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_element_query_position
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_app_sink_set_caps
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_app_src_set_size
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_structure_get_name
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_new
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_get_color_coding_bit_size
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_camera_free
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_element_make_from_uri
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved g_strdup
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_video_set_transmission
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_uri_is_valid
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved g_value_get_object
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_deinterlace_stereo
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_video_set_iso_speed
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_camera_new
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_sample_get_buffer
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved v4l1_ioctl
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_mini_object_is_writable
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_capture_get_fileno
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved v4l1_mmap
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_structure_get_int
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_app_src_set_stream_type
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_iterator_free
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_debayer_frames
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_iterator_next
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_pipeline_new
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_encoding_video_profile_new
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_structure_remove_field
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_free
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_set_control_registers
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_element_get_bus
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_caps_new_simple
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved v4l1_open
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_feature_get_all
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_video_set_operation_mode
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_app_sink_set_emit_signals
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved v4l2_mmap
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_iterator_resync
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_message_parse_stream_status
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved v4l2_open
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_parse_launch
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_capture_dequeue
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_feature_set_value
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_get_color_coding_from_video_mode
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_capture_is_frame_corrupt
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_bin_get_type
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved g_object_set
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_feature_get_value
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved g_object_get
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_caps_fixate
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_buffer_new_allocate
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_mini_object_unref
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_message_parse_error
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_feature_set_mode
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved v4l1_munmap
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_init
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_convert_frames
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_caps_from_string
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_feature_set_absolute_control
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_feature_whitebalance_set_value
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_object_ref
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_feature_set_power
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved v4l2_close
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved _gst_caps_type
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_camera_free_list
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_riff_create_video_caps
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_app_sink_get_type
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_bus_pop
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_bin_add_many
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_capture_enqueue
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_caps_get_structure
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_app_src_end_of_stream
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_element_seek_simple
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_mini_object_make_writable
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved v4l1_close
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_video_set_framerate
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_bus_timed_pop_filtered
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_app_src_push_buffer
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_capture_setup
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved v4l2_ioctl
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_element_factory_make
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_element_get_static_pad
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_get_control_registers
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved dc1394_video_get_supported_modes
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_encoding_container_profile_new
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_bin_iterate_elements
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_structure_get_string
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved g_value_unset
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_is_missing_plugin_message
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_encoding_container_profile_add_profile
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_bin_iterate_sources
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_app_sink_get_max_buffers
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_app_src_get_type
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_object_get_type
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_app_sink_pull_sample
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_uri_get_protocol
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_app_sink_set_drop
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+ipo: warning #11021: unresolved gst_caps_set_simple
+        Referenced in /opt/api/ext/opencv/310/lib/libopencv_videoio_gcc484.so
+
+==================================================================================
+[CBI] -> Target Name  : Tuto_OpenCV_intel_x86_64
+[CBI] -> Location     : /tmp/ramdrive/bilat/Targets/Tuto_OpenCV/bin/Tuto_OpenCV_intel_x86_64.run
+[CBI] -> Deploy 	  : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : EXE
+[CBI] -> Arch	 	  : x86_64
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Compilateur  : icc
+[CBI] -> Task	      : End Compiling-Linking !
+[CBI] -> Time		  : 2 (s)
+==================================================================================
+
+
+[CBI] -> Symlink Project Inc
+[CBI] -> To update code completion : ctrl-shift-s   or   gui/index/rebuild
+
+
+
+[CBI] -> Deploying    : ../RELEASE/bin/Tuto_OpenCV_intel_x86_64.run
+
+[CBI] -> Tuto_OpenCV_intel_x86_64 : End ALL!
+
+
+17:21:46 Build Finished (took 1s.933ms)
+

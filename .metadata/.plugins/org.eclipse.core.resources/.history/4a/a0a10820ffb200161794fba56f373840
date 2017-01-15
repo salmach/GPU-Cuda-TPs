@@ -1,0 +1,89 @@
+#include <math.h>
+#include "MathTools.h"
+
+#include "Calibreur_GPU.h"
+#include "ColorTools_GPU.h"
+#include "Sphere.h"
+
+using namespace gpu;
+
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+class RayTracingMath
+    {
+
+	/*--------------------------------------*\
+	|*		Constructor		*|
+	 \*-------------------------------------*/
+
+    public:
+
+	__device__ RayTracingMath(Sphere* ptrDevSpheres, int n, float t) :
+
+	    {
+	    this->ptrDevSpheres = ptrDevSpheres;
+	    this->n = n;
+	    this->t = t;
+	    }
+
+	// constructeur copie automatique car pas pointeur dans
+	//	RayTracingMath
+	// 	calibreur
+	// 	IntervalF
+
+	__device__
+		 virtual ~RayTracingMath()
+	    {
+	    // rien
+	    }
+
+	/*--------------------------------------*\
+	|*		Methodes		*|
+	 \*-------------------------------------*/
+
+    public:
+
+	__device__
+	void colorXY(uchar4* ptrColor, float x, float y, float t)
+	    {
+	    float z = f(x, y, t);
+
+	    calibreur.calibrer(z);
+	    float hue01 = z;
+
+	    ColorTools::HSB_TO_RVB(hue01, ptrColor); // update color
+
+	    ptrColor->w = 255; // opaque
+	    }
+
+    private:
+
+	__device__
+	float f(float x, float y, float t)
+	    {
+	    return sinf(x * n + t) * cosf(y * n + t);
+	    }
+
+	/*--------------------------------------*\
+	|*		Attributs		*|
+	 \*-------------------------------------*/
+
+    private:
+
+	// Input
+	int n;
+	Sphere* ptrDevSpheres;
+	float t;
+
+
+    };
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/

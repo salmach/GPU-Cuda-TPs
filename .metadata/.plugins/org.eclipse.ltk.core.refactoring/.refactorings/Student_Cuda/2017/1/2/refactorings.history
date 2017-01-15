@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Student_Cuda/src/cpp/core/04_Montecarlo/host&apos; to &apos;moo&apos;" description="Rename resource &apos;host&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/cpp/core/04_Montecarlo/host" name="moo" stamp="1484050467416" updateReferences="true"/>
+</session>

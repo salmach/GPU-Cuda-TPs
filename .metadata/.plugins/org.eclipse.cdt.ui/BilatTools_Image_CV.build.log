@@ -1,0 +1,162 @@
+11:58:50 **** Build of configuration MinGW_parallel for project BilatTools_Image_CV ****
+Info: Configuration "MinGW_parallel" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+makeMinGW.bat jall 
+init make
+init API-EXT
+init API-EXT end
+init API-CBI
+init API-CBI-IMAGE
+init API-CBI-TOOLS
+init API-CBI end
+
+[MINGW] : jall  
+
+Set MinGW environement x64
+ 
+g++ (x86_64-posix-seh, Built by MinGW-W64 project) 6.1.0
+Copyright (C) 2016 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+==================================================================================
+[CBI] -> Target Name  : BilatTools_Image_OpenCV_001_mingw_64
+[CBI] ->
+[CBI] -> Build     	  : Q:/bilat/Targets/BilatTools_Image_OpenCV_001/bin/libBilatTools_Image_OpenCV_001_mingw_64.dll
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : SHARED_LIB
+[CBI] -> Arch	 	  : 64
+[CBI] -> OS	 		  : Win
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -O3
+[CBI] ->              : -fgcse
+[CBI] ->              : -fomit-frame-pointer
+[CBI] ->              : -fopenmp
+[CBI] ->              : -frerun-loop-opt
+[CBI] ->              : -march=native
+[CBI] ->              : -std=c++11
+
+[CBI] -> LDFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -Wl,--out-implib,Q:/bilat/Targets/BilatTools_Image_OpenCV_001/bin/libBilatTools_Image_OpenCV_001_mingw_64.dll.a
+[CBI] ->              : -Wl,--output-def,Q:/bilat/Targets/BilatTools_Image_OpenCV_001/bin/libBilatTools_Image_OpenCV_001_mingw_64.def
+[CBI] ->              : -shared
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : src/core/opencv/cpu/
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> API_INC :
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/tools/BilatTools_CPP/001/INC
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/tools/BilatTools_CPP/001/INC/namespace_cpu
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/tools/BilatTools_OpenCV/001/INC
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/tools/BilatTools_OpenCV/001/INC/capture
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/tools/BilatTools_OpenCV/001/INC/capture/video
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/tools/BilatTools_OpenCV/001/INC/capture/webcam
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/tools/BilatTools_OpenCV/001/INC/show
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/tools/BilatTools_OpenCV/001/INC/show/shapeOverlay
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/tools/BilatTools_OpenCV/001/INC/show/shapeOverlay/appearance
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/tools/BilatTools_OpenCV/001/INC/show/shapeOverlay/drawer
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/tools/BilatTools_OpenCV/001/INC/show/shapeOverlay/shape
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/tools/BilatTools_OpenCV/001/INC/show/view
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/tools/BilatTools_OpenCV/001/INC/show/view/viewer
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/tools/BilatTools_OpenCV/001/INC/show/view/viewerMat
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/tools/BilatTools_OpenCV/001/INC/tools
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/ext/OpenCV/310/include
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/ext/OpenCV/310/include/opencv2
+
+[CBI] -> API_LIB :
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/tools/BilatTools_CPP/001/LIB/mingw
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/tools/BilatTools_OpenCV/001/LIB/mingw
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/ext/OpenCV/310/mingw/lib
+
+[CBI] -> API_BIN :
+[CBI] ->              : d:\Dropbox\00_CBI_WIN\Soft_API\cbi\tools\BilatTools_CPP\001\BIN\mingw
+[CBI] ->              : d:\Dropbox\00_CBI_WIN\Soft_API\cbi\tools\BilatTools_OpenCV\001\BIN\mingw
+[CBI] ->              : d:\Dropbox\00_CBI_WIN\Soft_API\ext\OpenCV\310\mingw\bin
+
+[CBI] -> API_LIBRARIES :
+[CBI] ->              : BilatTools_CPP_001_mingw_64
+[CBI] ->              : BilatTools_OpenCV_001_mingw_64
+[CBI] ->              : opencv_calib3d310_mingw530
+[CBI] ->              : opencv_core310_mingw530
+[CBI] ->              : opencv_features2d310_mingw530
+[CBI] ->              : opencv_flann310_mingw530
+[CBI] ->              : opencv_highgui310_mingw530
+[CBI] ->              : opencv_imgcodecs310_mingw530
+[CBI] ->              : opencv_imgproc310_mingw530
+[CBI] ->              : opencv_ml310_mingw530
+[CBI] ->              : opencv_objdetect310_mingw530
+[CBI] ->              : opencv_photo310_mingw530
+[CBI] ->              : opencv_shape310_mingw530
+[CBI] ->              : opencv_stitching310_mingw530
+[CBI] ->              : opencv_superres310_mingw530
+[CBI] ->              : opencv_ts310_mingw530
+[CBI] ->              : opencv_video310_mingw530
+[CBI] ->              : opencv_videoio310_mingw530
+[CBI] ->              : opencv_videostab310_mingw530
+
+
+[CBI] -> Compilation parallel (6 threads)
+
+[BilatTools_Image_OpenCV_001_mingw_64] -> g++ compiling .cpp : src/core/opencv/cpu/OpencvTools_CPU.cpp
+
+[BilatTools_Image_OpenCV_001_mingw_64] -> Linking to   : Q:/bilat/Targets/BilatTools_Image_OpenCV_001/bin/libBilatTools_Image_OpenCV_001_mingw_64.dll
+
+[BilatTools_Image_OpenCV_001_mingw_64] -> Library Link :
+
+[CBI] ->              : -lBilatTools_CPP_001_mingw_64
+[CBI] ->              : -lBilatTools_OpenCV_001_mingw_64
+[CBI] ->              : -lgomp
+[CBI] ->              : -lopencv_calib3d310_mingw530
+[CBI] ->              : -lopencv_core310_mingw530
+[CBI] ->              : -lopencv_features2d310_mingw530
+[CBI] ->              : -lopencv_flann310_mingw530
+[CBI] ->              : -lopencv_highgui310_mingw530
+[CBI] ->              : -lopencv_imgcodecs310_mingw530
+[CBI] ->              : -lopencv_imgproc310_mingw530
+[CBI] ->              : -lopencv_ml310_mingw530
+[CBI] ->              : -lopencv_objdetect310_mingw530
+[CBI] ->              : -lopencv_photo310_mingw530
+[CBI] ->              : -lopencv_shape310_mingw530
+[CBI] ->              : -lopencv_stitching310_mingw530
+[CBI] ->              : -lopencv_superres310_mingw530
+[CBI] ->              : -lopencv_ts310_mingw530
+[CBI] ->              : -lopencv_video310_mingw530
+[CBI] ->              : -lopencv_videoio310_mingw530
+[CBI] ->              : -lopencv_videostab310_mingw530
+
+
+==================================================================================
+[CBI] -> Target Name  : BilatTools_Image_OpenCV_001_mingw_64
+[CBI] -> Location     : Q:/bilat/Targets/BilatTools_Image_OpenCV_001/bin/libBilatTools_Image_OpenCV_001_mingw_64.dll
+[CBI] -> Deploy 	  : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : SHARED_LIB
+[CBI] -> Arch	 	  : 64
+[CBI] -> OS	 		  : Win
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Compilateur  : MINGW (g++)
+[CBI] -> Task	      : End Compiling-Linking !
+[CBI] -> Time		  : 2 (s)
+==================================================================================
+
+
+[CBI] -> Deploying    : ../RELEASE/bin/libBilatTools_Image_OpenCV_001_mingw_64.dll
+
+[CBI] -> BilatTools_Image_OpenCV_001_mingw_64 : End ALL!
+
+
+11:58:53 Build Finished (took 3s.580ms)
+

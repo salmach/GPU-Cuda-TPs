@@ -1,0 +1,1 @@
+/opt/cbi/make/private/api/cpp/version/bilat_infographie_version.mk

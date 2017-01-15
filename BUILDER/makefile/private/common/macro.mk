@@ -1,0 +1,1 @@
+/opt/cbi/make/private/common/macro.mk

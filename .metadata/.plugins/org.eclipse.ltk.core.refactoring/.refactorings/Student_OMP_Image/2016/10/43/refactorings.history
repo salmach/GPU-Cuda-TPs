@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Student_OMP_Image/src/core/02_Mandelbrot_Julia/b_provider/Fractaleprovider.cpp&apos; to &apos;FractaleProvider.cpp&apos;" description="Rename resource &apos;Fractaleprovider.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/core/02_Mandelbrot_Julia/b_provider/Fractaleprovider.cpp" name="FractaleProvider.cpp" stamp="1477046584257" updateReferences="true"/>
+</session>

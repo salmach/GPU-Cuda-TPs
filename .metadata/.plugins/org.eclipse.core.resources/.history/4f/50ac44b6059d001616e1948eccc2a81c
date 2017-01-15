@@ -1,0 +1,115 @@
+#pragma once
+
+#include <math.h>
+#include "MathTools.h"
+
+#include "Calibreur_CPU.h"
+#include "ColorTools_CPU.h"
+using namespace cpu;
+
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+class FractaleMath
+    {
+
+	/*--------------------------------------*\
+	|*		Constructor		*|
+	 \*-------------------------------------*/
+
+    public:
+
+	FractaleMath(uint n) :
+		calibreur(Interval<float>(0, 120), Interval<float>(0, 1))
+	    {
+	    this->n = n;
+	    }
+
+	// constructeur copie automatique car pas pointeur dans
+	//	FractaleMath
+	// 	calibreur
+	// 	IntervalF
+
+	virtual ~FractaleMath()
+	    {
+	    // rien
+	    }
+
+	/*--------------------------------------*\
+	|*		Methodes		*|
+	 \*-------------------------------------*/
+
+    public:
+	void colorXY(uchar4* ptrColor, float x, float y)
+	    {
+
+	    int k = calculIndice(x, y); 	    //k indice
+
+	    if (k < n)
+		{
+		float hue01 = k;
+		calibreur.calibrer(hue01);
+
+		ColorTools::HSB_TO_RVB(hue01, ptrColor); // update color
+		}
+	    else
+		{
+		ptrColor->x = 0;
+		ptrColor->y = 0;
+		ptrColor->z = 0;
+		}
+	    ptrColor->w = 255; // opaque
+	    }
+
+    private:
+	int calculIndice(float x, float y)
+	    {
+
+	    float a = 0;
+	    float b = 0;
+	    int i = 0;
+
+	    for (int i = 0; i++; i >= n)
+		{
+		float aCopy = a;
+		a = ((a * a) - (b * b)) + x;
+		b = 2 * aCopy * b + y;
+
+		if (isDivergent(x, y))
+		    {
+		    return i;
+		    }
+		}
+	    return i;
+
+	    }
+
+    private:
+	bool isDivergent(float x, float y)
+	    {
+	    return ((x * x) + (y * y)) > 4;
+
+	    }
+
+	/*--------------------------------------*\
+	|*		Attributs		*|
+	 \*-------------------------------------*/
+
+    private:
+
+	// Input
+	uint n;
+
+	// Tools
+	Calibreur<float> calibreur;
+
+    };
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/

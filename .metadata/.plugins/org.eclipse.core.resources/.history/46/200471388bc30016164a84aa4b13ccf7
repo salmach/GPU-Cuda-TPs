@@ -1,0 +1,59 @@
+#include "ReductionTools.h"
+#include "cudaTools.h"
+#include "cudaTools.h"
+#include <iostream>
+#include <assert.h>
+
+using std::cout;
+using std::endl;
+
+//host facultatif  __global__
+bool testReductionTools(void);
+
+__global__  static void KernelReductionTools(float* all);
+
+
+
+__global__ void kernelReductionTools(float* all);
+    {
+    extern __shared__ float tabSM[];
+    tabSM[indice2D::tidLocal()] = 1;
+    ReductionTools::reductionADD(tabSM, all)
+    }
+
+
+__host__ bool TestReductionTools(void)
+    {
+
+    const int MP = Device::getMPCount();
+    const int CORE_MP = Device::getCoreCountMP();
+    const int DIM = 4;
+
+
+    const size_t S = sizeof(float);
+
+
+    dim3 dg = dim3(MP,DIM,1);
+    dim3 db = dim3(CORE_MP,DIM,1);
+
+    HANDLE_ERROR();
+
+    kernelReductionTools<<<dg,db,SIZE_SM>>>(ptrDevTotal);  // asynchrone !!
+
+
+
+
+
+    }
+
+
+
+
+//TODO
+//code cote host
+//malloc
+//memset
+
+//faire fichier cu aussi pour appeler les fcts device dedans
+
+//faire cpp test !!  tests unitaires

@@ -1,0 +1,158 @@
+11:58:27 **** Build of configuration MinGW_parallel for project BilatTools_Image ****
+Info: Configuration "MinGW_parallel" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+makeMinGW.bat jall 
+init make
+init API-EXT
+init API-EXT end
+init API-CBI
+init API-CBI-IMAGE
+init API-CBI-TOOLS
+init API-CBI end
+
+[MINGW] : jall  
+
+Set MinGW environement x64
+ 
+g++ (x86_64-posix-seh, Built by MinGW-W64 project) 6.1.0
+Copyright (C) 2016 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+==================================================================================
+[CBI] -> Target Name  : BilatTools_Image_001_mingw_64
+[CBI] ->
+[CBI] -> Build     	  : Q:/bilat/Targets/BilatTools_Image_001/bin/libBilatTools_Image_001_mingw_64.dll
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : SHARED_LIB
+[CBI] -> Arch	 	  : 64
+[CBI] -> OS	 		  : Win
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -O3
+[CBI] ->              : -fgcse
+[CBI] ->              : -fomit-frame-pointer
+[CBI] ->              : -fopenmp
+[CBI] ->              : -frerun-loop-opt
+[CBI] ->              : -march=native
+[CBI] ->              : -std=c++11
+
+[CBI] -> LDFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -Wl,--out-implib,Q:/bilat/Targets/BilatTools_Image_001/bin/libBilatTools_Image_001_mingw_64.dll.a
+[CBI] ->              : -Wl,--output-def,Q:/bilat/Targets/BilatTools_Image_001/bin/libBilatTools_Image_001_mingw_64.def
+[CBI] ->              : -shared
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : src/core/tools/imp/
+[CBI] ->              : src/core/tools/imp/api_animateur/
+[CBI] ->              : src/core/tools/imp/api_image_link/
+[CBI] ->              : src/core/tools/imp/api_viewer/
+[CBI] ->              : src/core/tools/spec/
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> API_INC :
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/image/fenetrage/201/Bilat_Fenetrage_Displayable/INC
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/image/fenetrage/201/Bilat_Fenetrage_Displayable/INC/primitives
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/image/fenetrage/201/Bilat_Fenetrage_Displayable_GL/INC
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/image/fenetrage/201/Bilat_Fenetrage_Displayable_GL/INC/primitives
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/image/image/201/Bilat_Image_GL/INC
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/image/image/201/Bilat_Image_GL/INC/common
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/image/image/201/Bilat_Image_GL/INC/cpu
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/image/opengl/201/Bilat_OpenGL_Tools/INC
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/image/tools/201/dll/INC
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/tools/BilatTools_CPP/001/INC
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/tools/BilatTools_CPP/001/INC/namespace_cpu
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/tools/BilatTools_OMP/001/INC
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/tools/BilatTools_OMP/001/INC/OMP_Tools
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/tools/BilatTools_OMP/001/INC/OMP_Tools/header
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/ext/Glew/001/INC
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/ext/Glew/001/INC/GL
+
+[CBI] -> API_LIB :
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/image/fenetrage/201/Bilat_Fenetrage_Displayable/LIB/mingw
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/image/fenetrage/201/Bilat_Fenetrage_Displayable_GL/LIB/mingw
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/image/image/201/Bilat_Image_GL/LIB/mingw
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/image/opengl/201/Bilat_OpenGL_Tools/LIB/mingw
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/tools/BilatTools_CPP/001/LIB/mingw
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/cbi/tools/BilatTools_OMP/001/BIN/mingw
+[CBI] ->              : d:/Dropbox/00_CBI_WIN/Soft_API/ext/Glew/001/LIB/mingw
+
+[CBI] -> API_BIN :
+[CBI] ->              : d:\Dropbox\00_CBI_WIN\Soft_API\cbi\image\fenetrage\201\Bilat_Fenetrage_Displayable\BIN\mingw
+[CBI] ->              : d:\Dropbox\00_CBI_WIN\Soft_API\cbi\image\fenetrage\201\Bilat_Fenetrage_Displayable_GL\BIN\mingw
+[CBI] ->              : d:\Dropbox\00_CBI_WIN\Soft_API\cbi\image\image\201\Bilat_Image_GL\BIN\mingw
+[CBI] ->              : d:\Dropbox\00_CBI_WIN\Soft_API\cbi\image\opengl\201\Bilat_OpenGL_Tools\BIN\mingw
+[CBI] ->              : d:\Dropbox\00_CBI_WIN\Soft_API\cbi\tools\BilatTools_CPP\001\BIN\mingw
+[CBI] ->              : d:\Dropbox\00_CBI_WIN\Soft_API\cbi\tools\BilatTools_OMP\001\LIB\mingw
+[CBI] ->              : d:\Dropbox\00_CBI_WIN\Soft_API\ext\Glew\001\BIN\visual
+
+[CBI] -> API_LIBRARIES :
+[CBI] ->              : BilatTools_CPP_001_mingw_64
+[CBI] ->              : Bilat_Fenetrage_Displayable_201_mingw_64
+[CBI] ->              : Bilat_Fenetrage_Displayable_GL_201_mingw_64
+[CBI] ->              : Bilat_Image_GL_201_mingw_64
+[CBI] ->              : Bilat_OpenGL_Tools_201_mingw_64
+[CBI] ->              : gdi32
+[CBI] ->              : glew64
+[CBI] ->              : glu32
+[CBI] ->              : kernel32
+[CBI] ->              : opengl32
+[CBI] ->              : user32
+
+
+[CBI] -> Compilation parallel (6 threads)
+
+[BilatTools_Image_001_mingw_64] -> g++ compiling .cpp : src/main.cpp
+[BilatTools_Image_001_mingw_64] -> g++ compiling .cpp : src/core/tools/imp/Settings_CPU.cpp
+
+[BilatTools_Image_001_mingw_64] -> Linking to   : Q:/bilat/Targets/BilatTools_Image_001/bin/libBilatTools_Image_001_mingw_64.dll
+
+[BilatTools_Image_001_mingw_64] -> Library Link :
+
+[CBI] ->              : -lBilatTools_CPP_001_mingw_64
+[CBI] ->              : -lBilat_Fenetrage_Displayable_201_mingw_64
+[CBI] ->              : -lBilat_Fenetrage_Displayable_GL_201_mingw_64
+[CBI] ->              : -lBilat_Image_GL_201_mingw_64
+[CBI] ->              : -lBilat_OpenGL_Tools_201_mingw_64
+[CBI] ->              : -lgdi32
+[CBI] ->              : -lglew64
+[CBI] ->              : -lglu32
+[CBI] ->              : -lgomp
+[CBI] ->              : -lkernel32
+[CBI] ->              : -lopengl32
+[CBI] ->              : -luser32
+
+
+==================================================================================
+[CBI] -> Target Name  : BilatTools_Image_001_mingw_64
+[CBI] -> Location     : Q:/bilat/Targets/BilatTools_Image_001/bin/libBilatTools_Image_001_mingw_64.dll
+[CBI] -> Deploy 	  : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : SHARED_LIB
+[CBI] -> Arch	 	  : 64
+[CBI] -> OS	 		  : Win
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Compilateur  : MINGW (g++)
+[CBI] -> Task	      : End Compiling-Linking !
+[CBI] -> Time		  : 1 (s)
+==================================================================================
+
+
+[CBI] -> Deploying    : ../RELEASE/bin/libBilatTools_Image_001_mingw_64.dll
+
+[CBI] -> BilatTools_Image_001_mingw_64 : End ALL!
+
+
+11:58:31 Build Finished (took 3s.428ms)
+

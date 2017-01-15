@@ -1,0 +1,84 @@
+#include "Indice2D.h"
+#include "cudaTools.h"
+
+#include "IndiceTools_GPU.h"
+#include "DomaineMath_GPU.h"
+using namespace gpu;
+
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Imported	 	*|
+ \*-------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+__global__ void rayTracingKernel(uchar4* ptrDevPixels, uint w, uint h, DomaineMath domaineMath, float t);
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+/*----------------------------------------------------------------------*\
+ |*			Implementation 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+__global__ void rayTracingKernel(uchar4* ptrDevPixels, uint w, uint h, DomaineMath domaineMath,float t)
+    {
+
+    //DamierMath damierMath = DamierMath(n);
+
+    const int TID = Indice2D::tid();
+    const int NB_THREAD = Indice2D::nbThread();
+    const int WH = w * h;
+
+    double x;
+    double y;
+
+    int i;// in [0,h[
+    int j;// in [0,w[
+
+    int s = TID;
+    while (s < WH)
+	{
+
+
+	//float hCarre(float2 xySol)
+	//bool isEnDessous(float hCarre)
+	//float dz(float hCarre)
+	//float distance(float dz)
+	//float brightness(float dz)
+
+
+	IndiceTools::toIJ(s, w, &i, &j); // update (i, j)
+
+	// (i,j) domaine ecran
+	// (x,y) domaine math
+	domaineMath.toXY(i, j, &x, &y); //  (i,j) -> (x,y)
+
+
+	s += NB_THREAD;
+	}
+*/
+    }
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/
+

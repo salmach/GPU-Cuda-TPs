@@ -1,0 +1,245 @@
+12:25:06 **** Incremental Build of configuration GCC_parallel for project BilatTools_OpenCV ****
+cbicc gcc jall 
+
+--------------------------------------------------------
+[Runtime] : gcc x86
+--------------------------------------------------------
+
+
+[cuda]        : /usr/local
+
+[jni]         : /usr/lib/jvm
+
+[X11]         : /usr/include/X11
+
+[MKL]         : /opt/intel/mkl
+
+[boost]       : /opt/api/ext/boost
+
+[opencv]      : /opt/api/ext/opencv
+
+[cpptest]     : /opt/api/ext/cpptest
+
+[gphoto2]     : /opt/api/ext/gphoto2
+
+[urg]         : /opt/api/ext/urg
+
+[wic]         : /opt/api/ext/wic 
+
+[pleora]      : /opt/api/ext/pleora
+
+[Runtime] : BILAT_INFOGRAPHIE           /opt/api/cbi/infographie
+
+     BILAT_TOOLS_JST_HOME             = /opt/api/cbi/infographie/tools
+     BILAT_OPENGL_HOME                = /opt/api/cbi/infographie/opengl
+     BILAT_FENETRAGE_HOME             = /opt/api/cbi/infographie/fenetrage
+     BILAT_IMAGE_HOME                 = /opt/api/cbi/infographie/image
+     BILAT_SURFACE_HOME               = /opt/api/cbi/infographie/surface
+
+[Runtime] : BILAT_TOOLS                 /opt/api/cbi/tools
+
+     BILAT_TOOLS_CPP_HOME             = /opt/api/cbi/tools/bilat_tools_cpp
+     BILAT_TOOLS_OMP_HOME             = /opt/api/cbi/tools/bilat_tools_omp
+     BILAT_TOOLS_CUDA_HOME            = /opt/api/cbi/tools/bilat_tools_cuda
+     BILAT_TOOLS_MKL_HOME             = /opt/api/cbi/tools/bilat_tools_mkl
+     BILAT_TOOLS_OPENCV_HOME          = /opt/api/cbi/tools/bilat_tools_opencv
+     BILAT_TOOLS_V4L_HOME             = /opt/api/cbi/tools/bilat_tools_v4l
+     BILAT_TOOLS_CUDA_IMAGE_HOME      = /opt/api/cbi/tools/bilat_tools_cuda_image
+     BILAT_TOOLS_CUDA_IMAGE_CV_HOME   = /opt/api/cbi/tools/bilat_tools_cuda_image_cv
+     BILAT_TOOLS_IMAGE_HOME           = /opt/api/cbi/tools/bilat_tools_image
+     BILAT_TOOLS_IMAGE_CVHOME         = /opt/api/cbi/tools/bilat_tools_image_cv
+
+[Runtime] : BILAT_CAPTEUR               /opt/api/cbi/capteur
+
+     BILAT_GPHOTO2_HOME               = /opt/api/cbi/capteur/bilat_gphoto2
+     BILAT_LASER_HOME                 = /opt/api/cbi/capteur/bilat_laser
+     BILAT_LIDAR_HOME                 = /opt/api/cbi/capteur/bilat_lidar
+     BILAT_TAU2_HOME                  = /opt/api/cbi/capteur/bilat_tau2
+
+--------------------------------------------------------
+[Runtime] : gcc x86 : Ready!
+--------------------------------------------------------
+
+
+g++ (Ubuntu 4.8.4-2ubuntu1~14.04.3) 4.8.4
+Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+[Make] : GCC : jall
+
+==================================================================================
+[CBI] -> Target Name  : BilatTools_OpenCV_001_gcc_x86_64
+[CBI] ->
+[CBI] -> Build     	  : /tmp/ramdrive/bilat/Targets/BilatTools_OpenCV_001/bin/libBilatTools_OpenCV_001_gcc_x86_64.so
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : SHARED_LIB
+[CBI] -> Arch	 	  : x86_64
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -O3
+[CBI] ->              : -fPIC
+[CBI] ->              : -fomit-frame-pointer
+[CBI] ->              : -fopenmp
+[CBI] ->              : -frerun-loop-opt
+[CBI] ->              : -march=native
+[CBI] ->              : -std=c++11
+
+[CBI] -> LDFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -shared
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : src/core/capture/
+[CBI] ->              : src/core/capture/video/
+[CBI] ->              : src/core/capture/webcam/
+[CBI] ->              : src/core/show/shapeOverlay/
+[CBI] ->              : src/core/show/shapeOverlay/appearance/
+[CBI] ->              : src/core/show/shapeOverlay/drawer/
+[CBI] ->              : src/core/show/shapeOverlay/shape/
+[CBI] ->              : src/core/show/view/
+[CBI] ->              : src/core/show/view/viewer/
+[CBI] ->              : src/core/show/view/viewerMat/
+[CBI] ->              : src/core/tools/
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> API_INC :
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/001/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/001/INC/namespace_cpu
+[CBI] ->              : /opt/api/ext/opencv/310/include
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/calib3d
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/core
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/core/cuda
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/core/cuda/detail
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/core/hal
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/features2d
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/flann
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/highgui
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/imgcodecs
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/imgproc
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/imgproc/detail
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/ml
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/objdetect
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/photo
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/shape
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/stitching
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/stitching/detail
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/superres
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/video
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/videoio
+[CBI] ->              : /opt/api/ext/opencv/310/include/opencv2/videostab
+
+[CBI] -> API_LIB :
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/001/BIN/gcc
+[CBI] ->              : /opt/api/ext/opencv/310/lib
+[CBI] ->              : /opt/api/ext/opencv/310/lib/pkgconfig
+
+[CBI] -> API_BIN :
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/001/BIN/gcc
+[CBI] ->              : /opt/api/ext/opencv/310/lib
+[CBI] ->              : /opt/api/ext/opencv/310/lib/pkgconfig
+
+[CBI] -> API_LIBRARIES :
+[CBI] ->              : BilatTools_CPP_001_gcc_x86_64
+[CBI] ->              : opencv_calib3d_gcc484
+[CBI] ->              : opencv_core_gcc484
+[CBI] ->              : opencv_features2d_gcc484
+[CBI] ->              : opencv_flann_gcc484
+[CBI] ->              : opencv_highgui_gcc484
+[CBI] ->              : opencv_imgcodecs_gcc484
+[CBI] ->              : opencv_imgproc_gcc484
+[CBI] ->              : opencv_ml_gcc484
+[CBI] ->              : opencv_objdetect_gcc484
+[CBI] ->              : opencv_photo_gcc484
+[CBI] ->              : opencv_shape_gcc484
+[CBI] ->              : opencv_stitching_gcc484
+[CBI] ->              : opencv_superres_gcc484
+[CBI] ->              : opencv_video_gcc484
+[CBI] ->              : opencv_videoio_gcc484
+[CBI] ->              : opencv_videostab_gcc484
+
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/BilatTools_OpenCV_001/bin
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/BilatTools_OpenCV_001/obj
+
+[CBI] -> Compilation parallel (32 threads)
+
+[BilatTools_OpenCV_001_gcc_x86_64] -> g++ compiling .cpp : src/main.cpp
+[BilatTools_OpenCV_001_gcc_x86_64] -> g++ compiling .cpp : src/core/show/shapeOverlay/drawer/LineDrawer.cpp
+[BilatTools_OpenCV_001_gcc_x86_64] -> g++ compiling .cpp : src/core/show/shapeOverlay/drawer/ShapeDrawer.cpp
+[BilatTools_OpenCV_001_gcc_x86_64] -> g++ compiling .cpp : src/core/show/shapeOverlay/drawer/ShapeDrawerTransparant.cpp
+[BilatTools_OpenCV_001_gcc_x86_64] -> g++ compiling .cpp : src/core/show/shapeOverlay/appearance/AppearanceShape.cpp
+[BilatTools_OpenCV_001_gcc_x86_64] -> g++ compiling .cpp : src/core/show/shapeOverlay/shape/Circle.cpp
+[BilatTools_OpenCV_001_gcc_x86_64] -> g++ compiling .cpp : src/core/show/shapeOverlay/shape/Line.cpp
+[BilatTools_OpenCV_001_gcc_x86_64] -> g++ compiling .cpp : src/core/show/shapeOverlay/shape/Polygon.cpp
+[BilatTools_OpenCV_001_gcc_x86_64] -> g++ compiling .cpp : src/core/show/shapeOverlay/shape/Rectangle.cpp
+[BilatTools_OpenCV_001_gcc_x86_64] -> g++ compiling .cpp : src/core/show/shapeOverlay/shape/Shape.cpp
+[BilatTools_OpenCV_001_gcc_x86_64] -> g++ compiling .cpp : src/core/show/shapeOverlay/shape/ShapeGroup.cpp
+[BilatTools_OpenCV_001_gcc_x86_64] -> g++ compiling .cpp : src/core/show/shapeOverlay/shape/Triangle.cpp
+[BilatTools_OpenCV_001_gcc_x86_64] -> g++ compiling .cpp : src/core/show/view/FactoryImageViewer.cpp
+[BilatTools_OpenCV_001_gcc_x86_64] -> g++ compiling .cpp : src/core/show/view/viewer/CVViewerUcharBGR.cpp
+[BilatTools_OpenCV_001_gcc_x86_64] -> g++ compiling .cpp : src/core/show/view/viewerMat/CVViewerMatBGR.cpp
+[BilatTools_OpenCV_001_gcc_x86_64] -> g++ compiling .cpp : src/core/capture/webcam/CVCaptureWebcam.cpp
+[BilatTools_OpenCV_001_gcc_x86_64] -> g++ compiling .cpp : src/core/capture/video/CVCaptureVideo.cpp
+[BilatTools_OpenCV_001_gcc_x86_64] -> g++ compiling .cpp : src/core/tools/OpencvTools.cpp
+
+[BilatTools_OpenCV_001_gcc_x86_64] -> Linking to   : /tmp/ramdrive/bilat/Targets/BilatTools_OpenCV_001/bin/libBilatTools_OpenCV_001_gcc_x86_64.so
+
+[BilatTools_OpenCV_001_gcc_x86_64] -> Library Link :
+
+[CBI] ->              : -lBilatTools_CPP_001_gcc_x86_64
+[CBI] ->              : -lgomp
+[CBI] ->              : -lopencv_calib3d_gcc484
+[CBI] ->              : -lopencv_core_gcc484
+[CBI] ->              : -lopencv_features2d_gcc484
+[CBI] ->              : -lopencv_flann_gcc484
+[CBI] ->              : -lopencv_highgui_gcc484
+[CBI] ->              : -lopencv_imgcodecs_gcc484
+[CBI] ->              : -lopencv_imgproc_gcc484
+[CBI] ->              : -lopencv_ml_gcc484
+[CBI] ->              : -lopencv_objdetect_gcc484
+[CBI] ->              : -lopencv_photo_gcc484
+[CBI] ->              : -lopencv_shape_gcc484
+[CBI] ->              : -lopencv_stitching_gcc484
+[CBI] ->              : -lopencv_superres_gcc484
+[CBI] ->              : -lopencv_video_gcc484
+[CBI] ->              : -lopencv_videoio_gcc484
+[CBI] ->              : -lopencv_videostab_gcc484
+
+
+==================================================================================
+[CBI] -> Target Name  : BilatTools_OpenCV_001_gcc_x86_64
+[CBI] -> Location     : /tmp/ramdrive/bilat/Targets/BilatTools_OpenCV_001/bin/libBilatTools_OpenCV_001_gcc_x86_64.so
+[CBI] -> Deploy 	  : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : SHARED_LIB
+[CBI] -> Arch	 	  : x86_64
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Compilateur  : g++ (g++)
+[CBI] -> Task	      : End Compiling-Linking !
+[CBI] -> Time		  : 1 (s)
+==================================================================================
+
+
+[CBI] -> Deploying    : ../RELEASE/bin/libBilatTools_OpenCV_001_gcc_x86_64.so
+
+[CBI] -> BilatTools_OpenCV_001_gcc_x86_64 : End ALL!
+
+
+12:25:07 Build Finished (took 1s.733ms)
+

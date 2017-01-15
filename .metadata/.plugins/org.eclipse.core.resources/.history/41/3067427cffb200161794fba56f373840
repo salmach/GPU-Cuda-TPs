@@ -1,0 +1,79 @@
+#include <math.h>
+#include "MathTools.h"
+
+#include "Calibreur_GPU.h"
+#include "ColorTools_GPU.h"
+#include "Sphere.h"
+
+using namespace gpu;
+
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+class RayTracingMath
+    {
+
+	/*--------------------------------------*\
+	|*		Constructor		*|
+	 \*-------------------------------------*/
+
+    public:
+
+	__device__ RayTracingMath(Sphere* ptrDevSpheres, int n, float t) :
+
+	    {
+	    this->ptrDevSpheres = ptrDevSpheres;
+	    this->n = n;
+	    this->t = t;
+	    }
+
+	__device__
+		 virtual ~RayTracingMath(void)
+	    {
+	    // rien
+	    }
+
+	/*--------------------------------------*\
+	|*		Methodes		*|
+	 \*-------------------------------------*/
+
+    public:
+
+	__device__
+	void colorXY(uchar4* ptrColor, float x, float y)
+	    {
+	    float z = 0;
+
+
+	    }
+
+    private:
+
+	__device__
+	float f(float x, float y, float t)
+	    {
+	    return sinf(x * n + t) * cosf(y * n + t);
+	    }
+
+	/*--------------------------------------*\
+	|*		Attributs		*|
+	 \*-------------------------------------*/
+
+    private:
+
+	// Input
+	int n;
+	Sphere* ptrDevSpheres;
+	float t;
+
+
+    };
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/

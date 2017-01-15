@@ -1,0 +1,351 @@
+17:48:12 **** Incremental Build of configuration CudaGCC_ARM_parallel for project BilatTools_Cuda_Image_CV ****
+Info: Configuration "CudaGCC_ARM_parallel" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+cbicc cuda arm jall 
+
+--------------------------------------------------------
+Cross Compilation 		       
+--------------------------------------------------------
+
+PLATFORME = jetson
+API       = /opt/arm/jetson
+
+--------------------------------------------------------
+[Runtime] : gcc arm
+--------------------------------------------------------
+
+
+
+[cuda]
+   LIB        : /opt/arm/jetson/cuda/XXX/lib
+
+
+[cula]
+   INC        : /usr/local/cula/XXX/include
+   BIN        : /usr/local/cula/XXX/lib64
+
+[Runtime] : MKL   : /opt/intel/mkl/lib/intel64
+
+
+[jni]
+   INC        : /opt/arm/jetson/jni/XXX/inc
+   BIN        : /opt/arm/jetson/jni/XXX/lib:lib/client:lib/jli
+
+[Runtime] : X11        : 
+
+
+[boost]
+   INC        : /opt/api/ext/boost/XXX/include:include/boost
+   BIN        : /opt/api/ext/boost/XXX/lib
+
+
+[opencv]
+   INC        : /opt/arm/jetson/opencv/XXX/include
+   BIN        : /opt/arm/jetson/opencv/XXX/lib
+   RPATH_LINK : /opt/arm/jetson/cuda/65/lib:/opt/arm/jetson/usr_lib/L4T_1404_240/lib
+
+
+[cpptest]
+   INC        : /opt/api/ext/cpptest/XXX/INC
+   BIN        : /opt/api/ext/cpptest/XXX/LIB_STATIC/gcc_arm
+
+
+[gphoto2]
+   INC        : /opt/api/ext/gphoto2/XXX/include
+   BIN        : /opt/api/ext/gphoto2/XXX/lib
+
+
+[urg]         : /opt/arm/jetson/urg
+[workswell-wic]                 /opt/arm/jetson/workswell_wic 
+[pleora]             /opt/arm/jetson/pleora
+[pleora]             RAPTH-LINK : genicam/bin/Linux32_ARM/
+
+[Runtime] : BILAT_TOOLS
+   BILAT_TOOLS_HOME                 = /opt/api/cbi/tools
+   BILAT_TOOLS_CPP_HOME             = /opt/api/cbi/tools/bilat_tools_cpp
+   BILAT_TOOLS_OMP_HOME             = /opt/api/cbi/tools/bilat_tools_omp
+   BILAT_TOOLS_CUDA_HOME            = /opt/api/cbi/tools/bilat_tools_cuda
+   BILAT_TOOLS_MKL_HOME             = /opt/api/cbi/tools/bilat_tools_mkl
+   BILAT_TOOLS_OPENCV_HOME          = /opt/api/cbi/tools/bilat_tools_opencv
+   BILAT_TOOLS_CUDA_IMAGE_HOME      = /opt/api/cbi/tools/bilat_tools_cuda_image
+   BILAT_TOOLS_CUDA_IMAGE_CV_HOME   = /opt/api/cbi/tools/bilat_tools_cuda_image_cv
+   BILAT_TOOLS_IMAGE_HOME           = /opt/api/cbi/tools/bilat_tools_image
+   BILAT_TOOLS_IMAGE_CVHOME         = /opt/api/cbi/tools/bilat_tools_image_cv
+[bilat-laser]         : /opt/api/cbi/capteur/laser
+[bilat-lidar]         : /opt/api/cbi/capteur/lidar
+[bilat-tau2]          : /opt/api/cbi/capteur/tau2
+
+[bilat-gphoto2]
+   INC        : /opt/api/cbi/capteur/gphoto2/XXX/INC
+   BIN        : /opt/api/cbi/capteur/gphoto2/XXX/BIN/gcc_arm
+
+
+--------------------------------------------------------
+[Runtime] : gcc arm : Ready!
+--------------------------------------------------------
+
+
+arm-linux-gnueabihf-g++-4.8 (Ubuntu/Linaro 4.8.4-2ubuntu1~14.04.1) 4.8.4
+Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2014 NVIDIA Corporation
+Built on Thu_Jul_17_21:41:27_CDT_2014
+Cuda compilation tools, release 6.5, V6.5.12
+
+
+[CUDA GCC] : jall
+
+
+==================================================================================
+[CBI] -> Target Name  : BilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32
+[CBI] ->
+[CBI] -> Build        : /tmp/ramdrive/bilat/Targets/BilatTools_Image_OpenCV_Cuda_001/bin/libBilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32.so
+[CBI] -> Deploy       : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	      : SHARED_LIB
+[CBI] -> Arch	      : ARM_32
+[CBI] -> OS	 		  : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Task		  : Compiling-Linking !
+==================================================================================
+
+[CBI] -> SRC AUX (Recursif) :
+[CBI] ->
+[CBI] ->              : ../BilatTools_CPP/src/core
+[CBI] ->              : ../BilatTools_OpenCV/src/core
+
+[CBI] -> CXXFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -fPIC
+[CBI] ->              : -O3
+[CBI] ->              : -std=c++0x
+
+[CBI] -> CXXLDFLAGS (Partial) :
+[CBI] ->
+
+[CBI] -> NVCCFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : --fmad=true
+[CBI] ->              : -arch=sm_20
+[CBI] ->              : -ccbin
+[CBI] ->              : -m32
+[CBI] ->              : -std=c++11
+[CBI] ->              : -target-cpu-arch
+[CBI] ->              : -use_fast_math
+[CBI] ->              : ARM
+[CBI] ->              : g++ARM
+
+[CBI] -> NVCCLDFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -arch=sm_20
+[CBI] ->              : -ccbin
+[CBI] ->              : -m32
+[CBI] ->              : -shared
+[CBI] ->              : -target-cpu-arch
+[CBI] ->              : ARM
+[CBI] ->              : g++ARM
+
+[CBI] -> INC_PATH (auto detect):
+[CBI] ->              : ../BilatTools_CPP/src/core/tools/header/
+[CBI] ->              : ../BilatTools_CPP/src/core/tools/header/namespace_cpu/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/capture/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/capture/video/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/capture/webcam/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/shapeOverlay/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/shapeOverlay/appearance/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/shapeOverlay/drawer/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/shapeOverlay/shape/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/view/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/view/viewer/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/show/view/viewerMat/
+[CBI] ->              : ../BilatTools_OpenCV/src/core/tools/
+[CBI] ->              : src/core/opencv/
+
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> LIB_PATH (auto detect):
+
+[CBI] -> API_INC :
+[CBI] ->              : /opt/arm/jetson/opencv/2413/include
+[CBI] ->              : /opt/arm/jetson/opencv/2413/include/opencv
+[CBI] ->              : /opt/arm/jetson/opencv/2413/include/opencv2
+[CBI] ->              : /opt/arm/jetson/opencv/2413/include/opencv2/calib3d
+[CBI] ->              : /opt/arm/jetson/opencv/2413/include/opencv2/contrib
+[CBI] ->              : /opt/arm/jetson/opencv/2413/include/opencv2/core
+[CBI] ->              : /opt/arm/jetson/opencv/2413/include/opencv2/detection_based_tracker
+[CBI] ->              : /opt/arm/jetson/opencv/2413/include/opencv2/esm_panorama
+[CBI] ->              : /opt/arm/jetson/opencv/2413/include/opencv2/facedetect
+[CBI] ->              : /opt/arm/jetson/opencv/2413/include/opencv2/features2d
+[CBI] ->              : /opt/arm/jetson/opencv/2413/include/opencv2/flann
+[CBI] ->              : /opt/arm/jetson/opencv/2413/include/opencv2/gpu
+[CBI] ->              : /opt/arm/jetson/opencv/2413/include/opencv2/gpu/device
+[CBI] ->              : /opt/arm/jetson/opencv/2413/include/opencv2/gpu/device/detail
+[CBI] ->              : /opt/arm/jetson/opencv/2413/include/opencv2/highgui
+[CBI] ->              : /opt/arm/jetson/opencv/2413/include/opencv2/imgproc
+[CBI] ->              : /opt/arm/jetson/opencv/2413/include/opencv2/imuvstab
+[CBI] ->              : /opt/arm/jetson/opencv/2413/include/opencv2/imuvstab/detail
+[CBI] ->              : /opt/arm/jetson/opencv/2413/include/opencv2/legacy
+[CBI] ->              : /opt/arm/jetson/opencv/2413/include/opencv2/ml
+[CBI] ->              : /opt/arm/jetson/opencv/2413/include/opencv2/objdetect
+[CBI] ->              : /opt/arm/jetson/opencv/2413/include/opencv2/photo
+[CBI] ->              : /opt/arm/jetson/opencv/2413/include/opencv2/stitching
+[CBI] ->              : /opt/arm/jetson/opencv/2413/include/opencv2/stitching/detail
+[CBI] ->              : /opt/arm/jetson/opencv/2413/include/opencv2/superres
+[CBI] ->              : /opt/arm/jetson/opencv/2413/include/opencv2/tegra
+[CBI] ->              : /opt/arm/jetson/opencv/2413/include/opencv2/ts
+[CBI] ->              : /opt/arm/jetson/opencv/2413/include/opencv2/video
+[CBI] ->              : /opt/arm/jetson/opencv/2413/include/opencv2/videostab
+[CBI] ->              : /opt/arm/jetson/opencv/2413/include/opencv2/vstab
+
+[CBI] -> API_LIB :
+[CBI] ->              : /opt/arm/jetson/cuda/65/lib
+[CBI] ->              : /opt/arm/jetson/cuda/65/lib/stubs
+[CBI] ->              : /opt/arm/jetson/opencv/2413/lib
+
+[CBI] -> API_BIN :
+[CBI] ->              : /opt/arm/jetson/cuda/65/lib
+[CBI] ->              : /opt/arm/jetson/cuda/65/lib/stubs
+[CBI] ->              : /opt/arm/jetson/opencv/2413/lib
+
+[CBI] -> API_LIBRARIES :
+[CBI] ->              : cublas
+[CBI] ->              : cuda
+[CBI] ->              : cudart
+[CBI] ->              : cudnn
+[CBI] ->              : cufft
+[CBI] ->              : cufftw
+[CBI] ->              : cuinj32
+[CBI] ->              : curand
+[CBI] ->              : cusparse
+[CBI] ->              : nppc
+[CBI] ->              : nppi
+[CBI] ->              : npps
+[CBI] ->              : nvToolsExt
+[CBI] ->              : opencv_calib3d
+[CBI] ->              : opencv_contrib
+[CBI] ->              : opencv_core
+[CBI] ->              : opencv_detection_based_tracker
+[CBI] ->              : opencv_esm_panorama
+[CBI] ->              : opencv_facedetect
+[CBI] ->              : opencv_features2d
+[CBI] ->              : opencv_flann
+[CBI] ->              : opencv_gpu
+[CBI] ->              : opencv_highgui
+[CBI] ->              : opencv_imgproc
+[CBI] ->              : opencv_imuvstab
+[CBI] ->              : opencv_legacy
+[CBI] ->              : opencv_ml
+[CBI] ->              : opencv_objdetect
+[CBI] ->              : opencv_photo
+[CBI] ->              : opencv_stitching
+[CBI] ->              : opencv_superres
+[CBI] ->              : opencv_tegra
+[CBI] ->              : opencv_video
+[CBI] ->              : opencv_videostab
+[CBI] ->              : opencv_vstab
+
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/BilatTools_Image_OpenCV_Cuda_001/bin
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/BilatTools_Image_OpenCV_Cuda_001/obj
+[CBI] -> Create folder : /tmp/ramdrive/bilat/Targets/BilatTools_Image_OpenCV_Cuda_001/cubin
+
+[CBI] -> Compilation parallel (8 threads)
+
+[BilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32] -> g++ARM compiling .cpp : src/core/opencv/OpencvTools_GPU.cpp
+[BilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32] -> g++ARM compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/AleaTools.cpp
+[BilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32] -> g++ARM compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/Chrono.cpp
+[BilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32] -> g++ARM compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/LimitsTools.cpp
+[BilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32] -> g++ARM compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/MathTools.cpp
+[BilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32] -> g++ARM compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/Fps.cpp
+[BilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32] -> g++ARM compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/Progress.cpp
+[BilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32] -> g++ARM compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/StringTools.cpp
+[BilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32] -> g++ARM compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/TabTools.cpp
+[BilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32] -> g++ARM compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/namespace_cpu/ColorTools_CPU.cpp
+[BilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32] -> g++ARM compiling .cpp : ../BilatTools_CPP/src/core/tools/cpp/namespace_cpu/IndiceTools_CPU.cpp
+[BilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32] -> g++ARM compiling .cpp : ../BilatTools_OpenCV/src/core/tools/OpencvTools.cpp
+[BilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32] -> g++ARM compiling .cpp : ../BilatTools_OpenCV/src/core/capture/video/CVCaptureVideo.cpp
+[BilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32] -> g++ARM compiling .cpp : ../BilatTools_OpenCV/src/core/capture/webcam/CVCaptureWebcam.cpp
+[BilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32] -> g++ARM compiling .cpp : ../BilatTools_OpenCV/src/core/show/view/FactoryImageViewer.cpp
+[BilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32] -> g++ARM compiling .cpp : ../BilatTools_OpenCV/src/core/show/view/viewer/CVViewerUcharBGR.cpp
+[BilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32] -> g++ARM compiling .cpp : ../BilatTools_OpenCV/src/core/show/view/viewerMat/CVViewerMatBGR.cpp
+[BilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32] -> g++ARM compiling .cpp : ../BilatTools_OpenCV/src/core/show/shapeOverlay/appearance/AppearanceShape.cpp
+[BilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32] -> g++ARM compiling .cpp : ../BilatTools_OpenCV/src/core/show/shapeOverlay/drawer/LineDrawer.cpp
+[BilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32] -> g++ARM compiling .cpp : ../BilatTools_OpenCV/src/core/show/shapeOverlay/drawer/ShapeDrawer.cpp
+[BilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32] -> g++ARM compiling .cpp : ../BilatTools_OpenCV/src/core/show/shapeOverlay/drawer/ShapeDrawerTransparant.cpp
+[BilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32] -> g++ARM compiling .cpp : ../BilatTools_OpenCV/src/core/show/shapeOverlay/shape/Circle.cpp
+[BilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32] -> g++ARM compiling .cpp : ../BilatTools_OpenCV/src/core/show/shapeOverlay/shape/Line.cpp
+[BilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32] -> g++ARM compiling .cpp : ../BilatTools_OpenCV/src/core/show/shapeOverlay/shape/Polygon.cpp
+[BilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32] -> g++ARM compiling .cpp : ../BilatTools_OpenCV/src/core/show/shapeOverlay/shape/Rectangle.cpp
+[BilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32] -> g++ARM compiling .cpp : ../BilatTools_OpenCV/src/core/show/shapeOverlay/shape/Shape.cpp
+[BilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32] -> g++ARM compiling .cpp : ../BilatTools_OpenCV/src/core/show/shapeOverlay/shape/ShapeGroup.cpp
+[BilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32] -> g++ARM compiling .cpp : ../BilatTools_OpenCV/src/core/show/shapeOverlay/shape/Triangle.cpp
+
+[CBI] -> Linking to   : /tmp/ramdrive/bilat/Targets/BilatTools_Image_OpenCV_Cuda_001/bin/libBilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32.so
+
+[CBI] -> Library Link :
+[CBI] ->
+[CBI] ->              : -lcublas
+[CBI] ->              : -lcuda
+[CBI] ->              : -lcudart
+[CBI] ->              : -lcudnn
+[CBI] ->              : -lcufft
+[CBI] ->              : -lcufftw
+[CBI] ->              : -lcuinj32
+[CBI] ->              : -lcurand
+[CBI] ->              : -lcusparse
+[CBI] ->              : -lnppc
+[CBI] ->              : -lnppi
+[CBI] ->              : -lnpps
+[CBI] ->              : -lnvToolsExt
+[CBI] ->              : -lopencv_calib3d
+[CBI] ->              : -lopencv_contrib
+[CBI] ->              : -lopencv_core
+[CBI] ->              : -lopencv_detection_based_tracker
+[CBI] ->              : -lopencv_esm_panorama
+[CBI] ->              : -lopencv_facedetect
+[CBI] ->              : -lopencv_features2d
+[CBI] ->              : -lopencv_flann
+[CBI] ->              : -lopencv_gpu
+[CBI] ->              : -lopencv_highgui
+[CBI] ->              : -lopencv_imgproc
+[CBI] ->              : -lopencv_imuvstab
+[CBI] ->              : -lopencv_legacy
+[CBI] ->              : -lopencv_ml
+[CBI] ->              : -lopencv_objdetect
+[CBI] ->              : -lopencv_photo
+[CBI] ->              : -lopencv_stitching
+[CBI] ->              : -lopencv_superres
+[CBI] ->              : -lopencv_tegra
+[CBI] ->              : -lopencv_video
+[CBI] ->              : -lopencv_videostab
+[CBI] ->              : -lopencv_vstab
+[CBI] ->              : -rpath-link=/opt/arm/jetson/cuda/65/lib:/opt/arm/jetson/usr_lib/L4T_1404_240/lib
+
+
+==================================================================================
+[CBI] -> Target Name  : BilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32
+[CBI] -> Location     : /tmp/ramdrive/bilat/Targets/BilatTools_Image_OpenCV_Cuda_001/bin/libBilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32.so
+[CBI] -> Deploy 	  : ../RELEASE/bin
+[CBI] ->
+[CBI] -> Type	 	  : SHARED_LIB
+[CBI] -> Arch	 	  : ARM_32
+[CBI] -> OS	 	      : Linux
+[CBI] -> User	 	  : bilat
+[CBI] ->
+[CBI] -> Compilateur  : g++) && nvcc
+[CBI] -> Task		  : End Compiling-Linking !
+[CBI] -> Time		  : 5 (s)
+==================================================================================
+
+
+[CBI] -> Deploying      : ../RELEASE/bin/libBilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32.so
+
+[CBI] -> BilatTools_Image_OpenCV_Cuda_001_gcc_cuda_65_jetson_ARM_32 : End ALL!
+
+
+17:48:17 Build Finished (took 5s.220ms)
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;Student_Cuda_Image/src/cpp/core/03_RayTracing/math/RaytracingMath.h&apos;" deleteContents="false" description="Delete resource &apos;Student_Cuda_Image/src/cpp/core/03_RayTracing/math/RaytracingMath.h&apos;" element1="/Student_Cuda_Image/src/cpp/core/03_RayTracing/math/RaytracingMath.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1484249294802"/>
+</session>
