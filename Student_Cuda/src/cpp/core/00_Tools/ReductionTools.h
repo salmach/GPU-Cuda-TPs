@@ -10,8 +10,8 @@ class ReductionTools
 	__device__ static void reductionADD(T* tabSM, T* ptrDevResultat)
 	    {
 
-	    reductionIntraBlock(tabSM);
-	    reductionInterBlock(tabSM,ptrDevResultat);
+	    reductionIntraBlock<T>(tabSM);
+	    reductionInterBlock<T>(tabSM,ptrDevResultat);
 	    }
 
     private:
@@ -23,7 +23,7 @@ class ReductionTools
 	    int half = n/2;
 	    const int TIDLOCAL = Indice2D::tidLocal();
 
-	    while (n >= 1)
+	    while (half >= 1)
 		{
 		if (TIDLOCAL < half)
 		{

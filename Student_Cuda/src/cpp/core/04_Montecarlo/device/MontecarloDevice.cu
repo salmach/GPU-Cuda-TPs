@@ -1,20 +1,24 @@
 #include <stdio.h>
 #include <Indice2D.h>
+#include <chrono>
+
 #include "curand_kernel.h"
 #include "Calibreur_GPU.h"
+#include "Grid.h"
 
+#include "Montecarlo.h"
 #include "ReductionTools.h"
 
 using namespace gpu;
 
 __global__ void setup_kernel(curandState* ptrDevGenerators, int deviceId);
-__global__ void work_kernel(curandState* ptrDevGenerators, uint* ptrDevTotal, uint n);
+__global__ void work_kernel(curandState* ptrDevGenerators, ullong* ptrDevTotal, ullong n);
 static __device__ bool isInside(float x, float y, float m, float(*fct)(float));
 static __device__ float f(float x);
 static __device__ float g(float x);
 
 // Make this function compatible in mono / multi GPU
-__global__ void setup_kernel(curandState* ptrDevGenerators, int deviceId)
+__global__ void setup_kernel(curandState* ptrDevGenerators, int deviceId, bool useClock)
     {
     const int TID = Indice2D::tid();
 
@@ -22,23 +26,23 @@ __global__ void setup_kernel(curandState* ptrDevGenerators, int deviceId)
     int deltaSequence = deviceId * 100;
     int deltaOffset = deviceId * 100;
 
-    int seed = 1234 + deltaSeed;
+    int seed = (useClock) ? clock64() + deltaSeed : 1234 + deltaSeed;
     int sequenceNumber = TID + deltaSequence;
     int offset = deltaOffset;
 
     curand_init(seed, sequenceNumber, offset, &ptrDevGenerators[TID]);
     }
 
-__global__ void work_kernel(curandState* ptrDevGenerators, uint* ptrDevTotal, uint n)
+__global__ void work_kernel(curandState* ptrDevGenerators, ullong* ptrDevTotal, ullong n)
     {
-    extern __shared__ uint tabSM[];
+    extern __shared__ ullong tabSM[];
 
     const int TID = Indice2D::tid();
     const int NB_THREAD = Indice2D::nbThread();
     curandState localGenerator = ptrDevGenerators[TID];
 
-    uint somme = 0;
-    int s = TID;
+    ullong somme = 0;
+    ullong s = TID;
 
     // ATTENTION: dépend de la fonction utilisée dans isInside()
     // m >= y Max de la fonction

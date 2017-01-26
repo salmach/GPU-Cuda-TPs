@@ -6,12 +6,9 @@ using std::cout;
 using std::endl;
 
 
-/*--------------------------------------*\
- |*		Imported	 	*|
- \*-------------------------------------*/
-
 //extern bool useHello(void);
 //extern bool useAddVecteur(void);
+extern bool useSlice(void);
 extern bool testReductionTools(void);
 extern bool useMontecarloMono(void);
 extern bool useMontecarloMulti(void);
@@ -40,6 +37,7 @@ int mainCore()
     bool isOk = true;
     //isOk &= useHello();
     //isOk &=useAddVecteur();
+    //isOk &= useSlice();
     //isOk &=testReductionTools();
     //isOk &= useMontecarloMono();
     isOk &= useMontecarloMulti();

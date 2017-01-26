@@ -1,5 +1,5 @@
-
 #include <iostream>
+#include <climits>
 #include <omp.h>
 #include "Grid.h"
 #include "Device.h"
@@ -9,9 +9,10 @@
 using std::cout;
 using std::endl;
 
+const ullong FLECHETTES = 1000000000;
+
 bool useMontecarloMono()
     {
-    const uint FLECHETTES = 1000000000;
 //    const int MP = Device::getMPCount();
 //    const int CORE_MP = Device::getCoreCountMP();
 //    const int DIM = 4;
@@ -30,8 +31,8 @@ bool useMontecarloMono()
     Montecarlo montecarlo(grid, FLECHETTES);
     montecarlo.run();
     // % de fléchettes dans la zone * aire de l'ensemble de la fonction utilisée (soit 2)
-    float piHat = ( ((float)montecarlo.resultat / (float)FLECHETTES) * 2.0 ) * 2.0;
-    cout << "Flèchettes dans la zone: " << montecarlo.resultat << " sur " << FLECHETTES << endl;
+    float piHat = (float)montecarlo.resultat / (float)FLECHETTES * 4.0;
+    cout << "Fléchettes dans la zone: " << montecarlo.resultat << " sur " << FLECHETTES << endl;
     cout << "Resultat: " << piHat << endl;
 
     return true;
@@ -39,7 +40,6 @@ bool useMontecarloMono()
 
 bool useMontecarloMulti()
     {
-    const uint FLECHETTES = 1000000000;
 //    const int MP = Device::getMPCount();
 //    const int CORE_MP = Device::getCoreCountMP();
 //    const int DIM = 4;
@@ -53,8 +53,8 @@ bool useMontecarloMulti()
     Grid grid(dg,db);
 
     int nbDevices = Device::getDeviceCount();
-    uint total = 0;
-    uint result[nbDevices];
+    ullong total = 0;
+    ullong result[nbDevices];
 
     cout << "[Start Montecarlo Multi]" << endl;
 
@@ -63,7 +63,7 @@ bool useMontecarloMulti()
 	{
 	HANDLE_ERROR(cudaSetDevice(id));
 
-	uint fracFlechettes = (id < nbDevices-1) ? (FLECHETTES/nbDevices) : (FLECHETTES/nbDevices)+(FLECHETTES%nbDevices);
+	ullong fracFlechettes = (id < nbDevices-1) ? (FLECHETTES/nbDevices) : (FLECHETTES/nbDevices)+(FLECHETTES%nbDevices);
 
 	Montecarlo montecarlo(grid, fracFlechettes);
 	montecarlo.run();
@@ -76,8 +76,8 @@ bool useMontecarloMulti()
 	}
 
     // % de fléchettes dans la zone * aire de l'ensemble de la fonction utilisée (soit 2)
-    float piHat = ( ((float)total / (float)FLECHETTES) * 2 ) * 2;
-    cout << "Flèchettes dans la zone: " << total << " sur " << FLECHETTES << endl;
+    float piHat = (float)total / (float)FLECHETTES * 4.0;
+    cout << "Fléchettes dans la zone: " << total << " sur " << FLECHETTES << endl;
     cout << "Resultat: " << piHat << endl;
 
     return true;

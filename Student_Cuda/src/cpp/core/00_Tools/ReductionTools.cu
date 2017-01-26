@@ -1,6 +1,5 @@
 #include "ReductionTools.h"
 #include "cudaTools.h"
-#include "cudaTools.h"
 #include <iostream>
 #include <assert.h>
 
@@ -41,9 +40,9 @@ __host__ bool testReductionTools(void)
     HANDLE_ERROR(cudaMalloc(&ptrDevTotal, S));
     HANDLE_ERROR(cudaMemset(ptrDevTotal, 0, S));  // l'interBlock
 
-
+    Device::lastCudaError("kernelReductionTools (before)"); // temp debug
     kernelReductionTools<<<dg,db,SIZE_SM>>>(ptrDevTotal);  // asynchrone !!
-    // Device::lastCudaError("kernelReductionTools (after)"); // temp debug
+    Device::lastCudaError("kernelReductionTools (after)"); // temp debug
 
     HANDLE_ERROR(cudaMemcpy(&ptrTotal, ptrDevTotal, S, cudaMemcpyDeviceToHost));
 

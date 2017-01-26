@@ -1,18 +1,21 @@
 #pragma once
+#define MONTE_DEBUG
 
 #include "cudaTools.h"
 #include "curand_kernel.h"
 
+typedef unsigned long long int ullong;
+
 class Montecarlo
     {
     public:
-	Montecarlo (const Grid& grid, uint n);
+	Montecarlo (const Grid& grid, ullong n);
 	virtual ~Montecarlo (void);
 
     public:
 	void setDeviceId(int id);
 	void run();
-	uint resultat;
+	ullong resultat;
 
     private:
 	// Inputs
@@ -20,6 +23,6 @@ class Montecarlo
 	dim3 db;
 	int deviceId;
 	curandState* ptrDevGenerators;
-	uint* ptrDevTotal;
-	uint nbFleches;
+	ullong* ptrDevTotal;
+	ullong nbFleches;
     };
