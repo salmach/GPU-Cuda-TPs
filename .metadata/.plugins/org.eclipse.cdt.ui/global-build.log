@@ -1,5 +1,5 @@
-19:59:25 **** Incremental Build of configuration GCC for project Student_OMP ****
-cbicc gcc all 
+20:13:00 **** Incremental Build of configuration GCC_parallel for project Student_OMP ****
+cbicc gcc jall 
 
 --------------------------------------------------------
 [Runtime] : gcc x86
@@ -72,7 +72,7 @@ This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 
-[Make] : GCC : all
+[Make] : GCC : jall
 
 ==================================================================================
 [CBI] -> Target Name  : Student_OMP_gcc_x86_64
@@ -132,38 +132,16 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 [CBI] ->              : BilatTools_OMP_002_gcc_x86_64
 
 
-[Student_OMP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/03_Montecarlo/usePIMonteCarlo.cpp
+[CBI] -> Compilation parallel (32 threads)
 
-[CBI] -> Linking to   : /tmp/ramdrive/mse4/Targets/Student_OMP/bin/Student_OMP_gcc_x86_64.run
-
-[CBI] -> Library Link :
-[CBI] ->              : -lBilatTools_CPP_002_gcc_x86_64
-[CBI] ->              : -lBilatTools_OMP_002_gcc_x86_64
-[CBI] ->              : -lCpp_Test_112_gcc_x86_64
-[CBI] ->              : -lgomp
-
-==================================================================================
-[CBI] -> Target Name  : Student_OMP_gcc_x86_64
-[CBI] -> Location     : /tmp/ramdrive/mse4/Targets/Student_OMP/bin/Student_OMP_gcc_x86_64.run
-[CBI] -> Deploy 	  : ../RELEASE/bin
-[CBI] ->
-[CBI] -> Type	 	  : EXE
-[CBI] -> Arch	 	  : x86_64
-[CBI] -> OS	 		  : Linux
-[CBI] -> User	 	  : mse4
-[CBI] ->
-[CBI] -> Compilateur  : g++
-[CBI] -> Task	      : End Compiling-Linking !
-[CBI] -> Time		  : 0 (s)
-==================================================================================
-
-
-[CBI] -> Deploying    : ../RELEASE/bin/Student_OMP_gcc_x86_64.run
+make[1]: Nothing to be done for `compilelink'.
 
 [CBI] -> Symlink Project Inc
 [CBI] -> To update code completion : ctrl-shift-s   or   gui/index/rebuild
 
 
+
+[CBI] -> Deploying    : ../RELEASE/bin/Student_OMP_gcc_x86_64.run
 
 [CBI] -> Student_OMP_gcc_x86_64 : End ALL!
 

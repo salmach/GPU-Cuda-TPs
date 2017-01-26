@@ -3,7 +3,6 @@
 #include <iostream>
 #include "cudaTools.h"
 #include "Device.h"
-#include "Chrono.h"
 
 using std::cout;
 using std::endl;
@@ -55,12 +54,9 @@ __host__ bool helloCudaRef(void) //__host__ facultatif
     Grid grid(dg,db);
 
 
-    Device::lastCudaError("kernel Reference(before)"); // temp debug
-    Chrono chrono;
-    chrono.start();
+    Device::lastCudaError("kernelHello Ref(before)"); // temp debug
     kernelRef<<<dg,db>>>();  // asynchrone !!
-    chrono.stop();
-    Device::lastCudaError("kernel Reference(after)"); // temp debug
+    Device::lastCudaError("kernelHello Ref(after)"); // temp debug
 
     return true;
     }
@@ -77,10 +73,10 @@ __global__ void kernelRef(void)
     int i1;
     int i2;
 
+    chrono.start();
     i2 = i1;
 
-    int temp;
-    HANDLE_ERROR(cudaMemcpy(&i2, this->i1, sizeof(int), cudaMemcpyDeviceToDevice));
+    chrono.stop();
 
     doSomethingHello();
     }
