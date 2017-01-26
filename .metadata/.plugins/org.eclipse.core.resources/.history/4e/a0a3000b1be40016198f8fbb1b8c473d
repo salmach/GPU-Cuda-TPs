@@ -16,13 +16,13 @@
  |*		Public			*|
  \*-------------------------------------*/
 
-bool isPiMonteCarloOMPEntrelacerPromotionTab_Ok(int n);
+bool isPiMonteCarloOMPforAtomic_Ok(int n);
 
 /*--------------------------------------*\
  |*		Private			*|
  \*-------------------------------------*/
 
-static double piMonteCarloOMPEntrelacerPromotionTab(int n);
+static double piMonteCarloOMPforAtomic(int n);
 
 /*----------------------------------------------------------------------*\
  |*			Implementation 					*|
@@ -32,9 +32,9 @@ static double piMonteCarloOMPEntrelacerPromotionTab(int n);
  |*		Public			*|
  \*-------------------------------------*/
 
-bool isPiMonteCarloOMPEntrelacerPromotionTab_Ok(int n)
+bool isPiMonteCarloOMPforAtomic_Ok(int n)
     {
-    return isAlgoPIMonteCarlo_OK(piMonteCarloOMPEntrelacerPromotionTab, n, "Pi Montecarlo OMP Entrelacer promotionTab");
+    return isAlgoPIMonteCarlo_OK(piMonteCarloOMPforAtomic, n, "Pi Montecarlo OMP for atomic");
     }
 
 /*--------------------------------------*\
@@ -42,55 +42,42 @@ bool isPiMonteCarloOMPEntrelacerPromotionTab_Ok(int n)
  \*-------------------------------------*/
 
 /**
- * pattern cuda : excellent!
+ * synchronisation couteuse!
  */
-double piMonteCarloOMPEntrelacerPromotionTab(int n)
+double piMonteCarloOMPforAtomic(int n)
     {
-    const int NBTHREAD = OmpTools::getNbThread();
-    int* tabSommeSousLaCourbeThread = new int[NBTHREAD];
+
+    double somme = 0;
+    int sommeSousLaCourbe = 0;
     double* xAlea = new double[n];
     double* yAlea = new double[n];
     double m = 1.0;
     double xmin = -1.0;
     double xmax = 1.0;
-    AleaTools aleaTools = AleaTools();
 
-    for (int i = 0; i < NBTHREAD; i++)
-	{
-	tabSommeSousLaCourbeThread[i] = 0;
-	}
     for (int i = 0; i < n; i++)
 	{
 
+	AleaTools aleaTools = AleaTools();
 	xAlea[i] = aleaTools.uniformeAB(xmin, xmax);
-		yAlea[i] = aleaTools.uniformeAB(0.0, m);
+	yAlea[i] = aleaTools.uniformeAB(0.0, m);
+
 	}
 
-#pragma omp parallel
+    // Par défaut tout est shared
+#pragma omp parallel for
+    for (int i = 0; i < n; i++)
 	{
-	int tid = omp_get_thread_num();
-	int i = tid;
-
-	while (i < n)
+	double x = xAlea[i];
+	double y = yAlea[i];
+	if (sqrt(1 - x * x) > y)
 	    {
-	    double x = xAlea[i];
-	    double y = yAlea[i];
-	    if (sqrt(1 - x * x) > y)
-		{
-		tabSommeSousLaCourbeThread[tid]++;
-		}
-	    i += NBTHREAD;
+#pragma omp atomic
+	    sommeSousLaCourbe++;
+
 	    }
 	}
-
-    int sommeSousLaCourbe = 0;
-    for (int i = 0; i < NBTHREAD; i++)
-	{
-	sommeSousLaCourbe += tabSommeSousLaCourbeThread[i];
-	}
-    delete[] tabSommeSousLaCourbeThread;
     return 2 * ((((double) sommeSousLaCourbe) / n) * (xmax - xmin) * m);
-
     }
 
 /*----------------------------------------------------------------------*\

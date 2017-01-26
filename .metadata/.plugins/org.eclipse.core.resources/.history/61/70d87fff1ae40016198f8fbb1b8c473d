@@ -16,13 +16,13 @@
  |*		Public			*|
  \*-------------------------------------*/
 
-bool isPiMonteCarloOMPEntrelacerPromotionTab_Ok(int n);
+bool isPiMonteCarloOMPEntrelacerAtomic_Ok(int n);
 
 /*--------------------------------------*\
  |*		Private			*|
  \*-------------------------------------*/
 
-static double piMonteCarloOMPEntrelacerPromotionTab(int n);
+static double piMonteCarloOMPEntrelacerAtomic(int n);
 
 /*----------------------------------------------------------------------*\
  |*			Implementation 					*|
@@ -32,9 +32,9 @@ static double piMonteCarloOMPEntrelacerPromotionTab(int n);
  |*		Public			*|
  \*-------------------------------------*/
 
-bool isPiMonteCarloOMPEntrelacerPromotionTab_Ok(int n)
+bool isPiMonteCarloOMPEntrelacerAtomic_Ok(int n)
     {
-    return isAlgoPIMonteCarlo_OK(piMonteCarloOMPEntrelacerPromotionTab, n, "Pi Montecarlo OMP Entrelacer promotionTab");
+    return isAlgoPIMonteCarlo_OK(piMonteCarloOMPEntrelacerAtomic, n, "Pi Montecarlo OMP Entrelacer atomic");
     }
 
 /*--------------------------------------*\
@@ -42,28 +42,23 @@ bool isPiMonteCarloOMPEntrelacerPromotionTab_Ok(int n)
  \*-------------------------------------*/
 
 /**
- * pattern cuda : excellent!
+ * Bonne performance, si!
  */
-double piMonteCarloOMPEntrelacerPromotionTab(int n)
+double piMonteCarloOMPEntrelacerAtomic(int n)
     {
     const int NBTHREAD = OmpTools::getNbThread();
-    int* tabSommeSousLaCourbeThread = new int[NBTHREAD];
+    int sommeSousLaCourbe = 0;
     double* xAlea = new double[n];
     double* yAlea = new double[n];
     double m = 1.0;
     double xmin = -1.0;
     double xmax = 1.0;
-    AleaTools aleaTools = AleaTools();
 
-    for (int i = 0; i < NBTHREAD; i++)
-	{
-	tabSommeSousLaCourbeThread[i] = 0;
-	}
     for (int i = 0; i < n; i++)
 	{
-
+	AleaTools aleaTools = AleaTools();
 	xAlea[i] = aleaTools.uniformeAB(xmin, xmax);
-		yAlea[i] = aleaTools.uniformeAB(0.0, m);
+	yAlea[i] = aleaTools.uniformeAB(0.0, m);
 	}
 
 #pragma omp parallel
@@ -77,20 +72,16 @@ double piMonteCarloOMPEntrelacerPromotionTab(int n)
 	    double y = yAlea[i];
 	    if (sqrt(1 - x * x) > y)
 		{
-		tabSommeSousLaCourbeThread[tid]++;
+#pragma omp atomic
+		sommeSousLaCourbe++;
+
 		}
 	    i += NBTHREAD;
 	    }
+
 	}
 
-    int sommeSousLaCourbe = 0;
-    for (int i = 0; i < NBTHREAD; i++)
-	{
-	sommeSousLaCourbe += tabSommeSousLaCourbeThread[i];
-	}
-    delete[] tabSommeSousLaCourbeThread;
     return 2 * ((((double) sommeSousLaCourbe) / n) * (xmax - xmin) * m);
-
     }
 
 /*----------------------------------------------------------------------*\

@@ -1,6 +1,4 @@
-#include "00_pi_tools.h"
-#include "AleaTools.h"
-#include "math.h"
+#include <limits.h>
 
 /*----------------------------------------------------------------------*\
  |*			Declaration 					*|
@@ -10,17 +8,20 @@
  |*		Imported	 	*|
  \*-------------------------------------*/
 
+extern bool isPiMontecarloSequentiel_OK(int n);
+extern bool isPiMonteCarloOMPEntrelacerPromotionTab_Ok(int n);
+extern bool isPiMonteCarloOMPEntrelacerAtomic_Ok(int n);
+extern bool isPiMonteCarloOMPforAtomic_Ok(int n);
+
 /*--------------------------------------*\
  |*		Public			*|
  \*-------------------------------------*/
 
-bool isPiMontecarloSequentiel_OK(int n);
+bool usePIMonteCarlo(void);
 
 /*--------------------------------------*\
  |*		Private			*|
  \*-------------------------------------*/
-
-static double piMontecarloSequentiel(int n);
 
 /*----------------------------------------------------------------------*\
  |*			Implementation 					*|
@@ -30,40 +31,22 @@ static double piMontecarloSequentiel(int n);
  |*		Public			*|
  \*-------------------------------------*/
 
-bool isPiMontecarloSequentiel_OK(int n)
+bool usePIMonteCarlo(void)
     {
-    return isAlgoPIMonteCarlo_OK(piMontecarloSequentiel, n, "Pi Montecarlo Sequentiel");
+    int n = INT_MAX / 10;
+    // int n = 1000000000;
+    bool isOk = true;
+    //isOk &= isPiMontecarloSequentiel_OK(n);
+    //isOk &= isPiMonteCarloOMPEntrelacerPromotionTab_Ok(n);
+    isOk &= isPiMonteCarloOMPEntrelacerAtomic_Ok(n);
+    //isOk &= isPiMonteCarloOMPforAtomic_Ok(n);
+
+    return isOk;
     }
 
 /*--------------------------------------*\
  |*		Private			*|
  \*-------------------------------------*/
-
-double piMontecarloSequentiel(int n)
-    {
-    double m = 1.0;
-    double xmin = -1.0;
-    double xmax = 1.0;
-
-    int i = 0;
-    int nbSousLaCourbe = 0;
-
-    AleaTools aleaTools = AleaTools();
-
-    while (i < n)
-	{
-	double x = aleaTools.uniformeAB(xmin, xmax);
-	double y = aleaTools.uniformeAB(0.0, m);
-	if (sqrt(1 - x * x) > y)
-	    {
-	    //nbSousLaCourbe+=(sqrt(1 - x * x) > y);
-	    nbSousLaCourbe++;
-	    }
-	i++;
-	}
-
-    return 2 * ((((double) nbSousLaCourbe) / n) * (xmax - xmin) * m);
-    }
 
 /*----------------------------------------------------------------------*\
  |*			End	 					*|

@@ -80,7 +80,7 @@ __global__ void kernelRef(void)
     i2 = i1;
 
     int temp;
-    HANDLE_ERROR(cudaMemcpy(&i2, &i1, sizeof(int), cudaMemcpyDeviceToDevice));
+    HANDLE_ERROR(cudaMemcpy(&i2, i1, sizeof(int), cudaMemcpyDeviceToDevice));
 
     doSomethingHello();
     }

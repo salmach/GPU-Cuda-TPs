@@ -1,6 +1,4 @@
-#include <omp.h>
 #include "00_pi_tools.h"
-#include "OmpTools.h"
 #include "AleaTools.h"
 #include "math.h"
 
@@ -16,13 +14,13 @@
  |*		Public			*|
  \*-------------------------------------*/
 
-bool isPiMonteCarloOMPforAtomic_Ok(int n);
+bool isPiMontecarloSequentiel_OK(int n);
 
 /*--------------------------------------*\
  |*		Private			*|
  \*-------------------------------------*/
 
-static double piMonteCarloOMPforAtomic(int n);
+static double piMontecarloSequentiel(int n);
 
 /*----------------------------------------------------------------------*\
  |*			Implementation 					*|
@@ -32,51 +30,38 @@ static double piMonteCarloOMPforAtomic(int n);
  |*		Public			*|
  \*-------------------------------------*/
 
-bool isPiMonteCarloOMPforAtomic_Ok(int n)
+bool isPiMontecarloSequentiel_OK(int n)
     {
-    return isAlgoPIMonteCarlo_OK(piMonteCarloOMPforAtomic, n, "Pi Montecarlo OMP for atomic");
+    return isAlgoPIMonteCarlo_OK(piMontecarloSequentiel, n, "Pi Montecarlo Sequentiel");
     }
 
 /*--------------------------------------*\
  |*		Private			*|
  \*-------------------------------------*/
 
-/**
- * synchronisation couteuse!
- */
-double piMonteCarloOMPforAtomic(int n)
+double piMontecarloSequentiel(int n)
     {
-
-    double somme = 0;
-    int sommeSousLaCourbe = 0;
-    double* xAlea = new double[n];
-    double* yAlea = new double[n];
     double m = 1.0;
     double xmin = -1.0;
     double xmax = 1.0;
-    AleaTools aleaTools = AleaTools();
-    for (int i = 0; i < n; i++)
+
+    int i = 0;
+    int nbSousLaCourbe = 0;
+    while (i < n)
 	{
 
-	xAlea[i] = aleaTools.uniformeAB(xmin, xmax);
-	yAlea[i] = aleaTools.uniformeAB(0.0, m);
-
-	}
-
-    // Par défaut tout est shared
-#pragma omp parallel for
-    for (int i = 0; i < n; i++)
-	{
-	double x = xAlea[i];
-	double y = yAlea[i];
+	AleaTools aleaTools = AleaTools();
+	double x = aleaTools.uniformeAB(xmin, xmax);
+	double y = aleaTools.uniformeAB(0.0, m);
 	if (sqrt(1 - x * x) > y)
 	    {
-#pragma omp atomic
-	    sommeSousLaCourbe++;
-
+	    //nbSousLaCourbe+=(sqrt(1 - x * x) > y);
+	    nbSousLaCourbe++;
 	    }
+	i++;
 	}
-    return 2 * ((((double) sommeSousLaCourbe) / n) * (xmax - xmin) * m);
+
+    return 2 * ((((double) nbSousLaCourbe) / n) * (xmax - xmin) * m);
     }
 
 /*----------------------------------------------------------------------*\

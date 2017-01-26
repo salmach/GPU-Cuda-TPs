@@ -6407,3 +6407,6 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp
 
 !ENTRY org.eclipse.core.resources 2 10035 2017-01-26 18:58:42.916
 !MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.debug.core 4 120 2017-01-26 23:54:47.500
+!MESSAGE Variable references empty selection: ${project_loc}

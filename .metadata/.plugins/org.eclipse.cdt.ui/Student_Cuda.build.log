@@ -1,4 +1,4 @@
-18:59:17 **** Build of configuration CudaGCC_parallel for project Student_Cuda ****
+22:56:16 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda ****
 cbicc cuda jall 
 
 --------------------------------------------------------
@@ -263,158 +263,21 @@ Cuda compilation tools, release 8.0, V8.0.44
 [CBI] ->              : nvrtc
 [CBI] ->              : nvrtc-builtins
 
-[CBI] -> Create folder : /tmp/ramdrive/mse4/Targets/Student_Cuda/bin
-[CBI] -> Create folder : /tmp/ramdrive/mse4/Targets/Student_Cuda/obj
-[CBI] -> Create folder : /tmp/ramdrive/mse4/Targets/Student_Cuda/cubin
 
 [CBI] -> Compilation parallel (32 threads)
 
-[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/main.cpp
-[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/test/mainTest.cpp
-[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/test/junit/01_Test_Hello/TestHello.cpp
-[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/test/junit/02_Test_Vector/TestVector.cpp
-[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/mainCore.cpp
-[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/reference/useReference.cpp
-[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/02_Hello_add_vector/00_tools/VectorTools.cpp
-[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/02_Hello_add_vector/01_objet/useAddVector.cpp
-[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/04_Montecarlo/useMontecarlo.cpp
-[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/01_Hello/useHello.cpp
-[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/03_Slice/useSlice.cpp
 [Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/reference/Reference.cu
-[Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/02_Hello_add_vector/01_objet/device/addVector_device.cu
-[Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/02_Hello_add_vector/01_objet/host/AddVector.cu
-[Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/00_Tools/ReductionTools.cu
-[Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/04_Montecarlo/device/MontecarloDevice.cu
-[Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/04_Montecarlo/moo/Montecarlo.cu
-[Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/01_Hello/01_helloCuda.cu
-[Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/01_Hello/02_hello_add.cu
-[Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/03_Slice/Slice.cu
-src/cpp/core/04_Montecarlo/device/MontecarloDevice.cu(82): warning: function "g" was declared but never referenced
+src/cpp/core/reference/Reference.cu(80): warning: variable "i1" is used before its value is set
 
-src/cpp/core/04_Montecarlo/device/MontecarloDevice.cu(82): warning: function "g" was declared but never referenced
+src/cpp/core/reference/Reference.cu(82): warning: variable "temp" was declared but never referenced
 
+src/cpp/core/reference/Reference.cu(83): error: calling a __host__ function("cudaHandleError") from a __global__ function("kernelRef") is not allowed
 
-[CBI] -> Linking to   : /tmp/ramdrive/mse4/Targets/Student_Cuda/bin/Student_Cuda_cuda_80_x86_64.run
+src/cpp/core/reference/Reference.cu(83): error: calling a __host__ function("cudaMemcpy") from a __global__ function("kernelRef") is not allowed
 
-[CBI] -> Library Link :
-[CBI] ->
-[CBI] ->              : -lBilatTools_CPP_002_gcc_x86_64
-[CBI] ->              : -lBilatTools_Cuda_002_cuda_80_x86_64
-[CBI] ->              : -lBilatTools_OMP_002_gcc_x86_64
-[CBI] ->              : -lCpp_Test_112_gcc_x86_64
-[CBI] ->              : -lOpenCL
-[CBI] ->              : -lboost_atomic-gcc484
-[CBI] ->              : -lboost_atomic-icc17
-[CBI] ->              : -lboost_chrono-gcc484
-[CBI] ->              : -lboost_chrono-icc17
-[CBI] ->              : -lboost_container-gcc484
-[CBI] ->              : -lboost_container-icc17
-[CBI] ->              : -lboost_date_time-gcc484
-[CBI] ->              : -lboost_date_time-icc17
-[CBI] ->              : -lboost_filesystem-gcc484
-[CBI] ->              : -lboost_filesystem-icc17
-[CBI] ->              : -lboost_graph-gcc484
-[CBI] ->              : -lboost_graph-icc17
-[CBI] ->              : -lboost_locale-gcc484
-[CBI] ->              : -lboost_locale-icc17
-[CBI] ->              : -lboost_log-gcc484
-[CBI] ->              : -lboost_log-icc17
-[CBI] ->              : -lboost_log_setup-gcc484
-[CBI] ->              : -lboost_log_setup-icc17
-[CBI] ->              : -lboost_math_c99-gcc484
-[CBI] ->              : -lboost_math_c99-icc17
-[CBI] ->              : -lboost_math_c99f-gcc484
-[CBI] ->              : -lboost_math_c99f-icc17
-[CBI] ->              : -lboost_math_c99l-gcc484
-[CBI] ->              : -lboost_math_c99l-icc17
-[CBI] ->              : -lboost_math_tr1-gcc484
-[CBI] ->              : -lboost_math_tr1-icc17
-[CBI] ->              : -lboost_math_tr1f-gcc484
-[CBI] ->              : -lboost_math_tr1f-icc17
-[CBI] ->              : -lboost_math_tr1l-gcc484
-[CBI] ->              : -lboost_math_tr1l-icc17
-[CBI] ->              : -lboost_prg_exec_monitor-gcc484
-[CBI] ->              : -lboost_prg_exec_monitor-icc17
-[CBI] ->              : -lboost_program_options-gcc484
-[CBI] ->              : -lboost_program_options-icc17
-[CBI] ->              : -lboost_random-gcc484
-[CBI] ->              : -lboost_random-icc17
-[CBI] ->              : -lboost_regex-gcc484
-[CBI] ->              : -lboost_regex-icc17
-[CBI] ->              : -lboost_serialization-gcc484
-[CBI] ->              : -lboost_serialization-icc17
-[CBI] ->              : -lboost_signals-gcc484
-[CBI] ->              : -lboost_signals-icc17
-[CBI] ->              : -lboost_system-gcc484
-[CBI] ->              : -lboost_system-icc17
-[CBI] ->              : -lboost_thread-gcc484
-[CBI] ->              : -lboost_thread-icc17
-[CBI] ->              : -lboost_timer-gcc484
-[CBI] ->              : -lboost_timer-icc17
-[CBI] ->              : -lboost_type_erasure-gcc484
-[CBI] ->              : -lboost_type_erasure-icc17
-[CBI] ->              : -lboost_unit_test_framework-gcc484
-[CBI] ->              : -lboost_unit_test_framework-icc17
-[CBI] ->              : -lboost_wave-gcc484
-[CBI] ->              : -lboost_wave-icc17
-[CBI] ->              : -lboost_wserialization-gcc484
-[CBI] ->              : -lboost_wserialization-icc17
-[CBI] ->              : -lcublas
-[CBI] ->              : -lcuda
-[CBI] ->              : -lcudart
-[CBI] ->              : -lcufft
-[CBI] ->              : -lcufftw
-[CBI] ->              : -lcuinj64
-[CBI] ->              : -lcurand
-[CBI] ->              : -lcusolver
-[CBI] ->              : -lcusparse
-[CBI] ->              : -lgomp
-[CBI] ->              : -lnppc
-[CBI] ->              : -lnppi
-[CBI] ->              : -lnppial
-[CBI] ->              : -lnppicc
-[CBI] ->              : -lnppicom
-[CBI] ->              : -lnppidei
-[CBI] ->              : -lnppif
-[CBI] ->              : -lnppig
-[CBI] ->              : -lnppim
-[CBI] ->              : -lnppist
-[CBI] ->              : -lnppisu
-[CBI] ->              : -lnppitc
-[CBI] ->              : -lnpps
-[CBI] ->              : -lnvToolsExt
-[CBI] ->              : -lnvblas
-[CBI] ->              : -lnvgraph
-[CBI] ->              : -lnvidia-ml
-[CBI] ->              : -lnvrtc
-[CBI] ->              : -lnvrtc-builtins
+2 errors detected in the compilation of "/tmp/tmpxft_00005823_00000000-7_Reference.cpp1.ii".
+make[1]: *** [/tmp/ramdrive/mse4/Targets/Student_Cuda/obj/Reference.o] Error 2
+make: *** [jall] Error 2
 
-
-==================================================================================
-[CBI] -> Target Name  : Student_Cuda_cuda_80_x86_64
-[CBI] -> Location     : /tmp/ramdrive/mse4/Targets/Student_Cuda/bin/Student_Cuda_cuda_80_x86_64.run
-[CBI] -> Deploy 	  : ../RELEASE/bin
-[CBI] ->
-[CBI] -> Type	 	  : EXE
-[CBI] -> Arch	 	  : x86_64
-[CBI] -> OS	 	      : Linux
-[CBI] -> User	 	  : mse4
-[CBI] ->
-[CBI] -> Compilateur  : g++ && nvcc
-[CBI] -> Task		  : End Compiling-Linking !
-[CBI] -> Time		  : 4 (s)
-==================================================================================
-
-
-[CBI] -> Deploying      : ../RELEASE/bin/Student_Cuda_cuda_80_x86_64.run
-
-[CBI] -> Symlink Project Inc
-[CBI] -> To update code completion : ctrl-shift-s   or   gui/index/rebuild
-
-
-
-[CBI] -> Student_Cuda_cuda_80_x86_64 : End ALL!
-
-
-18:59:21 Build Finished (took 4s.132ms)
+22:56:17 Build Finished (took 885ms)
 
