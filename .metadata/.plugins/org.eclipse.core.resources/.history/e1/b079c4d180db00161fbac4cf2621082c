@@ -1,0 +1,122 @@
+#include <iostream>
+#include "cudaTools.h"
+#include "Device.h"
+#include "math.h"
+#include "MathTools.h"
+
+
+
+bool isSliceCuda_Ok(int n);
+__device__ float workSlice(int s, float dx);
+__global__ void Slice(int s, float dx, float * ptrDevFinal);
+__device__ void reductionIntraSlice(float* tabSM, int n);
+__device__ void reductionInterSlice(float* tabSM, float* final);
+__device__ float fpi(float x);/*--------------------------------------*\
+ |*		Private			*|*-------------------------------------*/
+bool isSliceCuda_Ok(int n)
+    {
+    dim3 dg = dim3(256, 1, 1);
+    dim3 db = dim3(256, 1, 1);
+
+    Device::assertDim(dg, db);
+
+    float *ptrDevFinal;
+
+    HANDLE_ERROR(cudaMalloc((void** ) &ptrDevFinal, sizeof(float)));
+    HANDLE_ERROR(cudaMemset(ptrDevFinal, 0, sizeof(float)));
+
+    size_t sizeSM = db.x * sizeof(float);
+
+    float dx = 1. / n;
+    Slice<<<dg,dg,sizeSM>>>(n, dx, ptrDevFinal);
+    Device::checkKernelError("pi");
+
+    float final = 0;
+    HANDLE_ERROR(cudaMemcpy(&final, ptrDevFinal, 1 * sizeof(float), cudaMemcpyDeviceToHost));
+
+    final = final / n;
+
+    std::cout << "Pi Slice hat  = " << final << std::endl;
+    std::cout << "Pi Slice true = " << PI << std::endl;
+
+    bool isOk = MathTools::isEgale(final, (float) PI, (float) 1e-6);
+
+    std::cout << "Pi Slice isOK = " << isOk << std::endl;
+
+    return isOk;
+    }
+
+__global__
+void Slice(int n, float dx, float * ptrDevFinal)
+    {
+    const int blockSize = blockDim.x;
+    const int tid = threadIdx.x + blockIdx.x * gridDim.x;
+    const int NBTHREAD = blockDim.x * gridDim.x;
+    const int tidLocal = threadIdx.x;
+    extern __shared__
+    float tabSM[];
+
+    int s = tid;
+    float piLocal = 0;
+    while (s < n)
+	{
+	piLocal += workSlice(s, dx);
+	s += NBTHREAD;
+	}
+
+    tabSM[tidLocal] = piLocal;
+
+    __syncthreads();
+
+//// Reduction Intra
+    reductionIntraSlice(tabSM, blockSize);
+//
+//// Reduction Inter
+    reductionInterSlice(tabSM, ptrDevFinal);
+    }
+
+__device__
+void reductionIntraSlice(float* tabSM, int n)
+    {
+    int moitier = n / 2;
+
+    while (moitier >= 1)
+	{
+	int tidLocal = threadIdx.x;
+	while (tidLocal < moitier)
+	    {
+	    tabSM[tidLocal] += tabSM[tidLocal + moitier];
+	    tidLocal += blockDim.x;
+	    }
+	__syncthreads();
+	moitier = moitier / 2;
+	}
+    }
+
+__device__
+void reductionInterSlice(float* tabSM, float* finalGM)
+    {
+    int tidLocal = threadIdx.x;
+    if (tidLocal == 0)
+	{
+	atomicAdd(finalGM, tabSM[0]);
+	}
+    }
+
+__device__
+float fpi(float x)
+    {
+    return 4 / (1 + x * x);
+    }
+
+__device__
+float workSlice(int s, float dx)
+    {
+    float xs = s * dx;
+    return fpi(xs);
+    }
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/
+

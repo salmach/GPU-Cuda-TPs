@@ -1,4 +1,4 @@
-19:15:41 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda ****
+18:59:17 **** Build of configuration CudaGCC_parallel for project Student_Cuda ****
 cbicc cuda jall 
 
 --------------------------------------------------------
@@ -27,8 +27,6 @@ cbicc cuda jall
 [wic]         : /opt/api/ext/wic 
 
 [pleora]      : /opt/api/ext/pleora
-
-[gps]         : /opt/api/ext/gps
 
 [glm]      : /opt/api/ext/GLM
 
@@ -265,14 +263,35 @@ Cuda compilation tools, release 8.0, V8.0.44
 [CBI] ->              : nvrtc
 [CBI] ->              : nvrtc-builtins
 
+[CBI] -> Create folder : /tmp/ramdrive/mse4/Targets/Student_Cuda/bin
+[CBI] -> Create folder : /tmp/ramdrive/mse4/Targets/Student_Cuda/obj
+[CBI] -> Create folder : /tmp/ramdrive/mse4/Targets/Student_Cuda/cubin
 
 [CBI] -> Compilation parallel (32 threads)
 
+[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/main.cpp
+[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/test/mainTest.cpp
+[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/test/junit/01_Test_Hello/TestHello.cpp
+[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/test/junit/02_Test_Vector/TestVector.cpp
 [Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/mainCore.cpp
+[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/reference/useReference.cpp
+[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/02_Hello_add_vector/00_tools/VectorTools.cpp
+[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/02_Hello_add_vector/01_objet/useAddVector.cpp
+[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/04_Montecarlo/useMontecarlo.cpp
+[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/01_Hello/useHello.cpp
+[Student_Cuda_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/03_Slice/useSlice.cpp
+[Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/reference/Reference.cu
+[Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/02_Hello_add_vector/01_objet/device/addVector_device.cu
+[Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/02_Hello_add_vector/01_objet/host/AddVector.cu
+[Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/00_Tools/ReductionTools.cu
 [Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/04_Montecarlo/device/MontecarloDevice.cu
-src/cpp/core/04_Montecarlo/device/MontecarloDevice.cu(78): warning: function "g" was declared but never referenced
+[Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/04_Montecarlo/moo/Montecarlo.cu
+[Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/01_Hello/01_helloCuda.cu
+[Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/01_Hello/02_hello_add.cu
+[Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/03_Slice/Slice.cu
+src/cpp/core/04_Montecarlo/device/MontecarloDevice.cu(82): warning: function "g" was declared but never referenced
 
-src/cpp/core/04_Montecarlo/device/MontecarloDevice.cu(78): warning: function "g" was declared but never referenced
+src/cpp/core/04_Montecarlo/device/MontecarloDevice.cu(82): warning: function "g" was declared but never referenced
 
 
 [CBI] -> Linking to   : /tmp/ramdrive/mse4/Targets/Student_Cuda/bin/Student_Cuda_cuda_80_x86_64.run
@@ -397,5 +416,5 @@ src/cpp/core/04_Montecarlo/device/MontecarloDevice.cu(78): warning: function "g"
 [CBI] -> Student_Cuda_cuda_80_x86_64 : End ALL!
 
 
-19:15:45 Build Finished (took 4s.339ms)
+18:59:21 Build Finished (took 4s.132ms)
 

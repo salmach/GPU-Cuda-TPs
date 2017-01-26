@@ -1,1 +1,5 @@
 1484499556972	Delete resource 'Student_Cuda/src/cpp/core/04_MontecarloSOLO'
+1484526221941	Delete resource 'Student_Cuda/src/cpp/core/03_Slice/SliceCuda.cu'
+1484526227449	Delete resource 'Student_Cuda/src/cpp/core/03_Slice/useSlice.cpp'
+1484573949770	Delete resource 'Student_Cuda/histogrammeCuda.cu'
+1484574314277	Delete resource 'Student_Cuda/src/cpp/core/11_Histogramme'

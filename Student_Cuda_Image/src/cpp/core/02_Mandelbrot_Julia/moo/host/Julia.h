@@ -1,6 +1,7 @@
 #pragma once
 
 #include "FractaleMath.h"
+#include "JuliaMath.h"
 #include "Fractale.h"
 
 #include "Variateur_GPU.h"
@@ -19,7 +20,7 @@ class Julia: public Fractale
 	void process(uchar4* ptrDevPixels, uint w, uint h, const DomaineMath& domaineMath);
 
 	__device__
-	void workPixel(uchar4* ptrColorIJ, int i, int j, const DomaineMath& domaineMath, FractaleMath* ptrFractaleMath);
+	void workPixel(uchar4* ptrColorIJ, int i, int j, const DomaineMath& domaineMath, JuliaMath* ptrJuliaMath);
 
 
 /*----------------------------------------------------------------------*\

@@ -1,4 +1,4 @@
-19:21:17 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda_Image ****
+15:09:41 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda_Image ****
 cbicc cuda jall 
 
 --------------------------------------------------------
@@ -368,47 +368,10 @@ Cuda compilation tools, release 8.0, V8.0.44
 [CBI] ->              : opencv_videoio_gcc484
 [CBI] ->              : opencv_videostab_gcc484
 
-[CBI] -> Create folder : /tmp/ramdrive/mse4/Targets/Student_Cuda_Image/bin
-[CBI] -> Create folder : /tmp/ramdrive/mse4/Targets/Student_Cuda_Image/obj
-[CBI] -> Create folder : /tmp/ramdrive/mse4/Targets/Student_Cuda_Image/cubin
 
 [CBI] -> Compilation parallel (32 threads)
 
-[Student_Cuda_Image_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/main.cpp
-[Student_Cuda_Image_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/mainAnimable.cpp
-[Student_Cuda_Image_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/mainBarivox.cpp
-[Student_Cuda_Image_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/mainBruteForce.cpp
-[Student_Cuda_Image_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/mainImage.cpp
 [Student_Cuda_Image_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/03_RayTracing/provider/RayTracingProvider.cpp
-[Student_Cuda_Image_cuda_80_x86_64] -> g++ compiling .cpp : src/cpp/core/01_Rippling/02_provider/RipplingProvider.cpp
-[Student_Cuda_Image_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/03_RayTracing/device/RayTracingDevice.cu
-[Student_Cuda_Image_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/03_RayTracing/host/RayTracing.cu
-[Student_Cuda_Image_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/03_RayTracing/host/SphereCreator.cu
-[Student_Cuda_Image_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/01_Rippling/01_animable/device/ripplingDevice.cu
-[Student_Cuda_Image_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/01_Rippling/01_animable/host/Rippling.cu
-[Student_Cuda_Image_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/02_Mandelbrot_Julia/provider/JuliaProvider.cu
-[Student_Cuda_Image_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/02_Mandelbrot_Julia/provider/MandelbrotProvider.cu
-[Student_Cuda_Image_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/02_Mandelbrot_Julia/moo/device/JuliaDevice.cu
-[Student_Cuda_Image_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/02_Mandelbrot_Julia/moo/device/MandelbrotDevice.cu
-[Student_Cuda_Image_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/02_Mandelbrot_Julia/moo/host/Fractale.cu
-[Student_Cuda_Image_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/02_Mandelbrot_Julia/moo/host/Julia.cu
-[Student_Cuda_Image_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/02_Mandelbrot_Julia/moo/host/Mandelbrot.cu
-src/cpp/core/03_RayTracing/device/RayTracingDevice.cu(52): warning: variable "x" was declared but never referenced
-
-src/cpp/core/03_RayTracing/device/RayTracingDevice.cu(53): warning: variable "y" was declared but never referenced
-
-src/cpp/core/02_Mandelbrot_Julia/provider/MandelbrotProvider.cu(19): warning: variable "n" was declared but never referenced
-
-src/cpp/core/02_Mandelbrot_Julia/provider/JuliaProvider.cu(19): warning: variable "n" was declared but never referenced
-
-src/cpp/core/03_RayTracing/device/RayTracingDevice.cu(52): warning: variable "x" was declared but never referenced
-
-src/cpp/core/03_RayTracing/device/RayTracingDevice.cu(53): warning: variable "y" was declared but never referenced
-
-src/cpp/core/02_Mandelbrot_Julia/provider/MandelbrotProvider.cu(19): warning: variable "n" was declared but never referenced
-
-src/cpp/core/02_Mandelbrot_Julia/provider/JuliaProvider.cu(19): warning: variable "n" was declared but never referenced
-
 
 [CBI] -> Linking to   : /tmp/ramdrive/mse4/Targets/Student_Cuda_Image/bin/Student_Cuda_Image_cuda_80_x86_64.run
 
@@ -547,7 +510,7 @@ src/cpp/core/02_Mandelbrot_Julia/provider/JuliaProvider.cu(19): warning: variabl
 [CBI] ->
 [CBI] -> Compilateur  : g++ && nvcc
 [CBI] -> Task		  : End Compiling-Linking !
-[CBI] -> Time		  : 3 (s)
+[CBI] -> Time		  : 1 (s)
 ==================================================================================
 
 
@@ -561,5 +524,5 @@ src/cpp/core/02_Mandelbrot_Julia/provider/JuliaProvider.cu(19): warning: variabl
 [CBI] -> Student_Cuda_Image_cuda_80_x86_64 : End ALL!
 
 
-19:21:20 Build Finished (took 3s.374ms)
+15:09:43 Build Finished (took 1s.987ms)
 

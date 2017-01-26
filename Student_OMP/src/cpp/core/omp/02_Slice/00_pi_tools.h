@@ -18,7 +18,7 @@ typedef double (*AlgoPI)(int);
 
 double fpi(double x);
 bool isAlgoPI_OK(AlgoPI algoPI, int n, string title);
-
+bool isAlgoPIMonteCarlo_OK(AlgoPI algoPI, int n, string title);
 /*----------------------------------------------------------------------*\
  |*			End	 					*|
  \*---------------------------------------------------------------------*/

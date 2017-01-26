@@ -44,12 +44,15 @@ Animable_I<uchar4>* RayTracingProvider::createAnimable()
     int n=2;
 
     // Dimension
-    int dw = 16 * 60 * 2;
-    int dh = 16 * 60;
+    int dw =1000;  //16 * 60 * 2;
+    int dh = 1000;//16 * 60;
 
+
+    int mp = Device::getMPCount();
+    int cmp = Device::getCoreCountMP();
     // Grid Cuda
-    dim3 dg = dim3(8, 8, 1);  		// disons a optimiser, depend du gpu
-    dim3 db = dim3(16, 16, 1);   	// disons a optimiser, depend du gpu
+    dim3 dg = dim3(mp, 4, 1);  		// disons a optimiser, depend du gpu
+    dim3 db = dim3(cmp, 4, 1);   	// disons a optimiser, depend du gpu
     Grid grid(dg,db);
 
     int nbSphere = 300;

@@ -1,4 +1,4 @@
-20:15:02 **** Incremental Build of configuration GCC_parallel for project Student_OMP_Image ****
+14:08:50 **** Incremental Build of configuration GCC_parallel for project Student_OMP_Image ****
 cbicc gcc jall 
 
 --------------------------------------------------------
@@ -27,6 +27,8 @@ cbicc gcc jall
 [wic]         : /opt/api/ext/wic 
 
 [pleora]      : /opt/api/ext/pleora
+
+[gps]         : /opt/api/ext/gps
 
 [glm]      : /opt/api/ext/GLM
 
@@ -59,6 +61,7 @@ cbicc gcc jall
      BILAT_TAU2_HOME                  = /opt/api/cbi/capteur/bilat_tau2
      BILAT_SPEECH_HOME                = /opt/api/cbi/capteur/bilat_speech
      BILAT_GPS_HOME                   = /opt/api/cbi/capteur/bilat_gps
+     BILAT_PIPES_HOME                 = /opt/api/cbi/capteur/bilat_pipes
 
 --------------------------------------------------------
 [Runtime] : gcc x86 : Ready!
@@ -223,10 +226,21 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 [CBI] ->              : opencv_videoio_gcc484
 [CBI] ->              : opencv_videostab_gcc484
 
+[CBI] -> Create folder : /tmp/ramdrive/mse4/Targets/Student_OMP_Image/bin
+[CBI] -> Create folder : /tmp/ramdrive/mse4/Targets/Student_OMP_Image/obj
 
 [CBI] -> Compilation parallel (32 threads)
 
+[Student_OMP_Image_gcc_x86_64] -> g++ compiling .cpp : src/main.cpp
+[Student_OMP_Image_gcc_x86_64] -> g++ compiling .cpp : src/core/mainAnimable.cpp
 [Student_OMP_Image_gcc_x86_64] -> g++ compiling .cpp : src/core/mainImage.cpp
+[Student_OMP_Image_gcc_x86_64] -> g++ compiling .cpp : src/core/01_Rippling/a_animable/Rippling.cpp
+[Student_OMP_Image_gcc_x86_64] -> g++ compiling .cpp : src/core/01_Rippling/b_provider/RipplingProvider.cpp
+[Student_OMP_Image_gcc_x86_64] -> g++ compiling .cpp : src/core/02_Mandelbrot_Julia/a_animable/Fractale.cpp
+[Student_OMP_Image_gcc_x86_64] -> g++ compiling .cpp : src/core/02_Mandelbrot_Julia/a_animable/Julia.cpp
+[Student_OMP_Image_gcc_x86_64] -> g++ compiling .cpp : src/core/02_Mandelbrot_Julia/a_animable/Mandelbrot.cpp
+[Student_OMP_Image_gcc_x86_64] -> g++ compiling .cpp : src/core/02_Mandelbrot_Julia/b_provider/JuliaProvider.cpp
+[Student_OMP_Image_gcc_x86_64] -> g++ compiling .cpp : src/core/02_Mandelbrot_Julia/b_provider/MandelbrotProvider.cpp
 
 [CBI] -> Linking to   : /tmp/ramdrive/mse4/Targets/Student_OMP_Image/bin/Student_OMP_Image_gcc_x86_64.run
 
@@ -275,7 +289,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 [CBI] ->
 [CBI] -> Compilateur  : g++
 [CBI] -> Task	      : End Compiling-Linking !
-[CBI] -> Time		  : 1 (s)
+[CBI] -> Time		  : 2 (s)
 ==================================================================================
 
 
@@ -289,5 +303,5 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 [CBI] -> Student_OMP_Image_gcc_x86_64 : End ALL!
 
 
-20:15:03 Build Finished (took 1s.639ms)
+14:08:52 Build Finished (took 1s.834ms)
 

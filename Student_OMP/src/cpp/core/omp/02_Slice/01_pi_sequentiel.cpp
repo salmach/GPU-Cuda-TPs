@@ -42,8 +42,8 @@ double piSequentiel(int n)
     {
     const double DX= 1/(double)n;
     double somme = 0;
-    for(int i=0;i<n;i++)
 
+    for(int i=0;i<n;i++)
 	{
 	    double xi = i*DX;
 	    somme += fpi(xi);

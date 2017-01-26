@@ -27,18 +27,4 @@ void Mandelbrot::process(uchar4* ptrDevPixels, uint w, uint h, const DomaineMath
     Device::lastCudaError("Fractale rgba uchar4 (after)"); // facultatif, for debug only, remove for release
     }
 
-//__device__
-//void Mandelbrot::workPixel(uchar4* ptrColorIJ, int i, int j, const DomaineMath& domaineMath, FractaleMath* ptrFractaleMath)
-//    {
-//    // (i,j) domaine ecran dans N2
-//    // (x,y) domaine math dans R2
-//
-//    double x;
-//    double y;
-//    domaineMath.toXY(i, j, &x, &y); // fill (x,y) from (i,j)
-//
-//    // float t=variateurAnimation.get();
-//
-//    ptrFractaleMath->colorXY(ptrColorIJ, x, y); // in [01]
-//    }
 

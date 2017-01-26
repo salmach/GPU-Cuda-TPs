@@ -54,7 +54,7 @@ int mainImage(Settings& settings)
 
     //Viewer<RipplingProvider> rippling(nozoomable, 0, 0); //  imageOption px py
     Viewer<MandelbrotProvider> mandelbrot(zoomable, 25, 25); //  imageOption px py
-    Viewer<JuliaProvider> julia(zoomable, 25, 25); //  imageOption px py
+    //Viewer<JuliaProvider> julia(zoomable, 25, 25); //  imageOption px py
 
     GLUTImageViewers::runALL();  // Bloquant, Tant qu'une fenetre est ouverte
 

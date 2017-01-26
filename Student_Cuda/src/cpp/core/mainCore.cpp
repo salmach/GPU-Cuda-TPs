@@ -7,6 +7,7 @@ using std::endl;
 
 
 //extern bool useHello(void);
+extern bool useReference(void);
 //extern bool useAddVecteur(void);
 extern bool useSlice(void);
 extern bool testReductionTools(void);
@@ -40,7 +41,8 @@ int mainCore()
     //isOk &= useSlice();
     //isOk &=testReductionTools();
     //isOk &= useMontecarloMono();
-    isOk &= useMontecarloMulti();
+    //isOk &= useMontecarloMulti();
+    isOk &= useReference();
 
 
     cout << "\nisOK = " << isOk << endl;

@@ -1,0 +1,76 @@
+
+#include "Device.h"
+#include "MathTools.h"
+#include "cudaTools.h"
+#include "ReductionTools.h"
+
+using std::cout;
+using std::endl;
+
+
+__device__ float fpi(float x)
+    {
+    return 4.0 / (1.0 + x * x);
+    }
+
+__global__ void kernelSlice(float* ptrDevTotal, int n, float dx)
+    {
+    extern __shared__ float tabSM[];
+
+    const int NB_THREAD = Indice2D::nbThread();
+    const int TID = Indice2D::tid();
+
+    float sum = 0;
+    int s = TID;
+
+    while(s<n)
+	{
+	float xs = s*dx;
+	somme += fpi(xs);
+	s+=NB_THREAD;
+	}
+
+    tabSM[Indice2D::tidLocal()] = sum;
+
+    __syncthreads();
+
+    ReductionTools::reductionADD(tabSM, ptrDevTotal);
+    }
+
+__host__ void runSlice(float* resultat, int n)
+    {
+    const int MP = Device::getMPCount();
+    const int CORE_MP = Device::getCoreCountMP();
+    const int DIM = 4;
+
+    dim3 dg = dim3(MP, DIM, 1);
+    dim3 db = dim3(CORE_MP, DIM, 1);
+    Device::gridHeuristic(dg, db);
+    const size_t S = sizeof(float);
+    const size_t SIZE_SM = S * MP * CORE_MP * DIM;
+
+    float* ptrDevTotal;
+    float dx = 1.0/(float)n;
+
+    HANDLE_ERROR(cudaMalloc(&ptrDevTotal, S));
+    HANDLE_ERROR(cudaMemset(ptrDevTotal, 0, S));
+
+    Device::lastCudaError("kernelReductionTools (before)"); // temp debug
+    kernelSlice<<<dg,db,SIZE_SM>>>(ptrDevTotal, n, dx);
+    Device::lastCudaError("kernelReductionTools (after)"); // temp debug
+
+    HANDLE_ERROR(cudaMemcpy(resultat, ptrDevTotal, S, cudaMemcpyDeviceToHost));
+    HANDLE_ERROR(cudaFree(ptrDevTotal));
+    }
+
+
+__host__ bool slice(int n)
+    {
+    float result = 0;
+    runSlice(&result, n);
+
+    cout << " Result : " << PI_FLOAT << "." << endl;
+    cout << " Result obtained : " << result << "." << endl;
+
+    return true;
+    }

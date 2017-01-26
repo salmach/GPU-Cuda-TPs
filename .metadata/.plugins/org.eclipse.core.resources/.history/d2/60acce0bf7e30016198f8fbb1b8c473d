@@ -1,0 +1,71 @@
+#include "00_pi_tools.h"
+#include "AleaTools.h"
+#include "math.h"
+
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Imported	 	*|
+ \*-------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+bool isPiMontecarloSequentiel_OK(int n);
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+static double piMontecarloSequentiel(int n);
+
+/*----------------------------------------------------------------------*\
+ |*			Implementation 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Public			*|
+ \*-------------------------------------*/
+
+bool isPiMontecarloSequentiel_OK(int n)
+    {
+    return isAlgoPIMonteCarlo_OK(piMontecarloSequentiel, n, "Pi Montecarlo Sequentiel");
+    }
+
+/*--------------------------------------*\
+ |*		Private			*|
+ \*-------------------------------------*/
+
+double piMontecarloSequentiel(int n)
+    {
+    double m = 1.0;
+    double xmin = -1.0;
+    double xmax = 1.0;
+
+    int i = 0;
+    int nbSousLaCourbe = 0;
+    while (i < n)
+	{
+
+	AleaTools aleaTools = AleaTools();
+	double x = aleaTools.uniformeAB(xmin, xmax);
+	double y = aleaTools.uniformeAB(0.0, m);
+
+	if (sqrt(1 - x * x) > y)
+	    {
+	    //nbSousLaCourbe+=(sqrt(1 - x * x) > y);
+	    nbSousLaCourbe++;
+	    }
+	i++;
+	}
+
+
+    return 2 * ((((double) nbSousLaCourbe) / n) * (xmax - xmin) * m);
+    }
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/

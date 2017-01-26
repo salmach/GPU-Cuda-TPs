@@ -1,6 +1,6 @@
 #include "Fractale.h"
 #include "FractaleMath.h"
-#include "JuliaMath.h"
+
 #include "Julia.h"
 
 #include "IndiceTools_GPU.h"
@@ -17,15 +17,15 @@ Julia::~Julia(){}
 
 void Julia::process(uchar4* ptrDevPixels, uint w, uint h, const DomaineMath& domaineMath)
     {
-    Device::lastCudaError("Fractale rgba uchar4 (before)"); // facultatif, for debug only, remove for release
+    Device::lastCudaError("Fractale Julia rgba uchar4 (before)"); // facultatif, for debug only, remove for release
 
     JuliaKernel<<<dg,db>>>(ptrDevPixels,w,h,domaineMath,n,t);
 
-    Device::lastCudaError("Fractale rgba uchar4 (after)"); // facultatif, for debug only, remove for release
+    Device::lastCudaError("Fractale Julia rgba uchar4 (after)"); // facultatif, for debug only, remove for release
     }
 
 __device__
-void Julia::workPixel(uchar4* ptrColorIJ, int i, int j, const DomaineMath& domaineMath, FractaleMath* ptrFractaleMath)
+void Julia::workPixel(uchar4* ptrColorIJ, int i, int j, const DomaineMath& domaineMath, JuliaMath* ptrJuliaMath)
     {
     // (i,j) domaine ecran dans N2
     // (x,y) domaine math dans R2
@@ -36,6 +36,6 @@ void Julia::workPixel(uchar4* ptrColorIJ, int i, int j, const DomaineMath& domai
 
     // float t=variateurAnimation.get();
 
-    ptrFractaleMath->colorXY(ptrColorIJ, x, y); // in [01]
+    //ptrJuliaMath->colorXY(ptrColorIJ, x, y); // in [01]
     }
 

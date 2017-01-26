@@ -1,0 +1,122 @@
+#include <iostream>
+#include "cudaTools.h"
+#include "Device.h"
+#include "math.h"
+#include "histogramme_tools.h"
+#include "MathTools.h"
+#include <curand_kernel.h>
+
+/*----------------------------------------------------------------------*\
+ |*			Declaration 					*|
+ \*---------------------------------------------------------------------*/
+
+/*--------------------------------------*\
+ |*		Imported	 	*|
+
+ *-------------------------------------*/
+/*--------------------------------------*\
+ |*		Public			*|
+ *-------------------------------------*/
+
+__global__ void histogrammeKernel(int * ptrDevInput, int* ptrDevOutput, int n);
+__device__ void reductionInterHistogramme(int* tabSM, int* finalGM);
+bool isHistogrammeCuda_Ok(int n);
+
+bool isHistogrammeCuda_Ok(int n)
+    {
+
+    dim3 dg = dim3(256, 1, 1);
+    dim3 db = dim3(256, 1, 1);
+
+    Device::assertDim(dg, db);
+
+    int* ptrInput = new int[n];
+    int* ptrOutputReponse = new int[256];
+    int *ptrOutput = new int[256];
+
+    generateData(ptrInput, ptrOutputReponse, n);
+
+    int* ptrDevInput;
+    int* ptrDevOutput;
+
+    size_t sizeInput = n * sizeof(int);
+    HANDLE_ERROR(cudaMalloc((void** ) &ptrDevInput, sizeInput));
+    HANDLE_ERROR(cudaMemcpy(ptrDevInput, ptrInput, sizeInput, cudaMemcpyHostToDevice));
+
+    size_t sizeOutput = 256 * sizeof(int);
+    HANDLE_ERROR(cudaMalloc((void** ) &ptrDevOutput, sizeOutput));
+    HANDLE_ERROR(cudaMemset(ptrDevOutput, 0, sizeOutput));
+
+    size_t sizeSM = 256 * sizeof(int);
+    histogrammeKernel<<<dg,dg,sizeSM>>>(ptrDevInput,ptrDevOutput,n);
+
+    // Récupérer résultat
+    HANDLE_ERROR(cudaMemcpy(ptrOutput, ptrDevOutput, sizeOutput, cudaMemcpyDeviceToHost));
+
+    bool isOk=true;
+
+    // Verification
+    for(int i=0;i<256;i++){
+	isOk &= (ptrOutputReponse[i]==ptrOutput[i]);
+    }
+
+    delete[] ptrInput;
+       delete[] ptrOutputReponse;
+       delete[] ptrOutput;
+       HANDLE_ERROR(cudaFree(ptrDevInput));
+       HANDLE_ERROR(cudaFree(ptrDevOutput));
+
+       std::cout<<"Histogramme isOk = "<<isOk<<std::endl;
+
+    return isOk;
+    }
+
+__global__
+void histogrammeKernel(int * ptrDevInput, int* ptrDevOutput, int n)
+    {
+    const int tid = threadIdx.x + blockIdx.x * gridDim.x;
+    const int NBTHREAD = blockDim.x * gridDim.x;
+    const int tidLocal = threadIdx.x;
+    extern __shared__ int tabSM[];
+
+//Init SM
+    int s = tidLocal;
+    while (s < 256)
+	{
+	tabSM[s] = 0;
+	s += NBTHREAD;
+	}
+
+    __syncthreads();
+
+// Histogramme
+    s = tid;
+    while (s < n)
+	{
+	atomicAdd(&tabSM[ptrDevInput[s]], 1);
+	s += NBTHREAD;
+	}
+
+    __syncthreads();
+
+// Reduction Inter
+    reductionInterHistogramme(tabSM, ptrDevOutput);
+    }
+
+__device__
+void reductionInterHistogramme(int* tabSM, int* finalGM)
+    {
+    int tidLocal = threadIdx.x;
+    if (tidLocal == 0)
+	{
+	for(int i=0;i<256;i++)
+	    {
+	atomicAdd(&finalGM[i], tabSM[i]);
+	    }
+	}
+    }
+
+/*----------------------------------------------------------------------*\
+ |*			End	 					*|
+ \*---------------------------------------------------------------------*/
+

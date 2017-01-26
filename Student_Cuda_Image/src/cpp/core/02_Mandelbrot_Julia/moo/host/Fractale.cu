@@ -38,7 +38,7 @@ void Fractale::workPixel(uchar4* ptrColorIJ, int i, int j, const DomaineMath& do
 
     // float t=variateurAnimation.get();
 
-    ptrFractaleMath->colorXY(ptrColorIJ, x, y); // in [01]
+    //ptrFractaleMath->colorXY(ptrColorIJ, x, y); // in [01]
     }
 
 

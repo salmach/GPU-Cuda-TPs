@@ -44,7 +44,7 @@ Animable_I<uchar4>* RipplingProvider::createAnimable()
 
     // Grid Cuda
     Grid grid(32,32);  // definissez une grille cuda (dg, db)
-    //NOT sure of syntax !!
+
     //Grid(const dim3& dg = dim3(1, 1, 1), const dim3& db = dim3(1, 1, 1));
     //int grid::dg = 32 ;
     //int grid::db = 32 ;

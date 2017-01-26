@@ -24,8 +24,7 @@ RayTracing::RayTracing(const Grid& grid,int nbSphere, int w, int h, DomaineMath 
 
      HANDLE_ERROR(cudaMemcpy(ptrDevSpheres, ptrTabSphere, sizeTabSphere, cudaMemcpyHostToDevice));
 
-     // transfert to CM
-    //toCM(ptrTabSphere); // a implemneter
+
 
     } // shereCreator qui est sur la pile est détruit ici
 // ce qui détruit les sphères cotés host, via son destructeur

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Student_Cuda/src/cpp/core/11_Histogramme/Histogramme_tools.cpp&apos; to &apos;histogramme_tools.cpp&apos;" description="Rename resource &apos;Histogramme_tools.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/cpp/core/11_Histogramme/Histogramme_tools.cpp" name="histogramme_tools.cpp" stamp="1484573628767" updateReferences="true"/>
+</session>

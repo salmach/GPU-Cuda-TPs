@@ -1,5 +1,5 @@
-17:46:38 **** Build of configuration GCC_parallel for project Student_OMP ****
-cbicc gcc jall 
+19:59:25 **** Incremental Build of configuration GCC for project Student_OMP ****
+cbicc gcc all 
 
 --------------------------------------------------------
 [Runtime] : gcc x86
@@ -27,8 +27,6 @@ cbicc gcc jall
 [wic]         : /opt/api/ext/wic 
 
 [pleora]      : /opt/api/ext/pleora
-
-[gps]         : /opt/api/ext/gps
 
 [glm]      : /opt/api/ext/GLM
 
@@ -74,7 +72,7 @@ This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 
-[Make] : GCC : jall
+[Make] : GCC : all
 
 ==================================================================================
 [CBI] -> Target Name  : Student_OMP_gcc_x86_64
@@ -133,28 +131,8 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 [CBI] ->              : BilatTools_CPP_002_gcc_x86_64
 [CBI] ->              : BilatTools_OMP_002_gcc_x86_64
 
-[CBI] -> Create folder : /tmp/ramdrive/mse4/Targets/Student_OMP/bin
-[CBI] -> Create folder : /tmp/ramdrive/mse4/Targets/Student_OMP/obj
 
-[CBI] -> Compilation parallel (32 threads)
-
-[Student_OMP_gcc_x86_64] -> g++ compiling .cpp : src/main.cpp
-[Student_OMP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/test/mainTest.cpp
-[Student_OMP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/01_Test_Hello/TestHello.cpp
-[Student_OMP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/test/unit/02_Test_Pi/TestPi.cpp
-[Student_OMP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/02_Slice/00_pi_tools.cpp
-[Student_OMP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/mainCore.cpp
-[Student_OMP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/02_Slice/02_pi_entrelacer_promotionTab.cpp
-[Student_OMP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/02_Slice/01_pi_sequentiel.cpp
-[Student_OMP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/02_Slice/03_pi_entrelacer_critique.cpp
-[Student_OMP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/02_Slice/04_pi_entrelacer_atomic.cpp
-[Student_OMP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/02_Slice/05_pi_for_critical.cpp
-[Student_OMP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/02_Slice/06_pi_for_atomic.cpp
-[Student_OMP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/02_Slice/07_pi_for_promotionTab.cpp
-[Student_OMP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/02_Slice/08_pi_for_reduction.cpp
-[Student_OMP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/02_Slice/usePI.cpp
-[Student_OMP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/01_Hello/01_helloOMP.cpp
-[Student_OMP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/01_Hello/useHello.cpp
+[Student_OMP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/03_Montecarlo/usePIMonteCarlo.cpp
 
 [CBI] -> Linking to   : /tmp/ramdrive/mse4/Targets/Student_OMP/bin/Student_OMP_gcc_x86_64.run
 
@@ -180,15 +158,15 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ==================================================================================
 
 
+[CBI] -> Deploying    : ../RELEASE/bin/Student_OMP_gcc_x86_64.run
+
 [CBI] -> Symlink Project Inc
 [CBI] -> To update code completion : ctrl-shift-s   or   gui/index/rebuild
 
 
 
-[CBI] -> Deploying    : ../RELEASE/bin/Student_OMP_gcc_x86_64.run
-
 [CBI] -> Student_OMP_gcc_x86_64 : End ALL!
 
 
-17:46:39 Build Finished (took 921ms)
+19:59:25 Build Finished (took 377ms)
 

@@ -15,7 +15,7 @@ using std::endl;
 
 extern bool usePI(void);
 extern bool useHello(void);
-
+extern bool usePIMonteCarlo(void);
 /*--------------------------------------*\
  |*		Public			*|
  \*-------------------------------------*/
@@ -41,8 +41,10 @@ int mainCore(void)
     Chrono chrono;
     chrono.start();
 
-    isOk &= useHello();
-   isOk &= usePI();
+    //isOk &= useHello();
+   //isOk &= usePI();
+    cout<<"/***************** PI Montecarlo  OMP ****************/"<<endl;
+   isOk &= usePIMonteCarlo();
 
     cout << "\n-------------------------------------------------" << endl;
     cout << "End Main : isOk = " << isOk << endl;

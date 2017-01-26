@@ -1,0 +1,147 @@
+#pragma once
+
+#include <math.h>
+#include "MathTools.h"
+
+#include "Calibreur_GPU.h"
+#include "ColorTools_GPU.h"
+using namespace gpu;
+
+class MandelbrotMath: public FractaleMath
+    {
+
+    public:
+	__device__ MandelbrotMath(uint n) :
+		FractaleMath(n)
+	    {
+	    }
+
+	__device__
+    	  virtual ~MandelbrotMath()
+	    {
+	    }
+
+	__device__
+	void colorXY(uchar4* ptrColor, float x, float y)
+	    {
+
+	    int k =calculIndice(x, y); 	    //k indice
+	    //int k = 56;
+	    if (k < n)
+		{
+		float hue01 = k;
+		calibreur.calibrer(hue01);
+
+		ColorTools::HSB_TO_RVB(hue01, ptrColor); // update color
+		}
+	    else
+		{
+		ptrColor->x = 0;
+		ptrColor->y = 0;
+		ptrColor->z = 0;
+		}
+	    ptrColor->w = 255; // opaque
+	    }
+
+	__device__
+	void workonPixel(uchar4* ptrColorIJ, int i, int j, const DomaineMath& domaineMath)
+	    {
+	    // (i,j) domaine ecran dans N2
+	    // (x,y) domaine math dans R2
+
+	    double x;
+	    double y;
+	    domaineMath.toXY(i, j, &x, &y); // fill (x,y) from (i,j)
+
+	    // float t=variateurAnimation.get();
+
+	    colorXY(ptrColorIJ, x, y); // in [01]
+	    }
+
+	__device__
+	int calculIndice(float x, float y)
+	    {
+
+	    /*float a = 0;
+	    float b = 0;
+	    int i = 0;
+
+	    for (i = 0; i <= 1; i++)
+		{
+		float aCopy = a;
+		a = ((a * a) - (b * b)) + x;
+		b = 2 * aCopy * b + y;
+
+		if (isDivergent(a, b))
+		    {
+		    return i;
+		    }
+		}
+	    return i;*/
+
+	return 12;
+	    }
+//
+//    __device__
+//	void workonPixelMandelbrot(uchar4* ptrColorIJ, int i, int j, const DomaineMath& domaineMath)
+//	    {
+//	    // (i,j) domaine ecran dans N2
+//	    // (x,y) domaine math dans R2
+//
+//	    double x;
+//	    double y;
+//	    domaineMath.toXY(i, j, &x, &y); // fill (x,y) from (i,j)
+//
+//	    // float t=variateurAnimation.get();
+//
+//	    colorXYMandelbrot(ptrColorIJ, x, y); // in [01]
+//	    }
+//
+//
+//    	__device__
+//    	virtual  int calculIndiceMandelbrot(float x, float y)
+//    	    {
+//
+//    	    float a = 0;
+//    	    float b = 0;
+//    	    int i = 0;
+//
+//    	    for (i = 0; i <= n; i++)
+//    		{
+//    		float aCopy = a;
+//    		a = ((a * a) - (b * b)) + x;
+//    		b = 2 * aCopy * b + y;
+//
+//    		if (isDivergent(a, b))
+//    		    {
+//    		    return i;
+//    		    }
+//    		}
+//    	    return i;
+//
+//    	    }
+//
+//    __device__
+//    void colorXYMandelbrot(uchar4* ptrColor, float x, float y)
+//	{
+//
+//	int k = calculIndiceMandelbrot(x, y); 	    //k indice
+//	//    int k = 56;
+//	if (k < n)
+//	    {
+//	    float hue01 = k;
+//	    calibreur.calibrer(hue01);
+//
+//	    ColorTools::HSB_TO_RVB(hue01, ptrColor); // update color
+//	    }
+//	else
+//	    {
+//	    ptrColor->x = 0;
+//	    ptrColor->y = 0;
+//	    ptrColor->z = 0;
+//	    }
+//	ptrColor->w = 255; // opaque
+//	}
+//
+
+    };

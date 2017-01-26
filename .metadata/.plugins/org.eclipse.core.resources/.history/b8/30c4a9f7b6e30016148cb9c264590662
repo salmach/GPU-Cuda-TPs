@@ -1,0 +1,48 @@
+#pragma once
+#include "Indice2D.h"
+#include "Device.h"
+
+
+class ReductionTools
+    {
+    public:
+	template <typename T>
+	__device__ static void reductionADD(T* tabSM, T* ptrDevResultat)
+	    {
+
+	    reductionIntraBlock(tabSM);
+	    reductionInterBlock(tabSM,ptrDevResultat);
+	    }
+
+    private:
+
+	template <typename T>
+	__device__ static void reductionIntraBlock(T* tabSM)
+	    {
+	    int n = Indice2D::nbThreadLocal();
+	    int half = n/2;
+	    const int TIDLOCAL = Indice2D::tidLocal();
+
+	    while (n >= 1)
+		{
+		if (TIDLOCAL < half)
+		{
+		    tabSM[TIDLOCAL]+= tabSM[TIDLOCAL+half];
+		}
+		half/=2;
+		__syncthreads();
+		}
+	    }
+
+
+	template <typename T>
+	__device__ static void reductionInterBlock(T* tabSM, T* ptrDevResultat)
+	    {
+	    const int TIDLOCAL = Indice2D::tidLocal();
+
+	    if(TIDLOCAL == 0)
+		{
+		    atomicAdd(ptrDevResultat, tabSM[0] );
+		}
+	    }
+    };

@@ -7,10 +7,6 @@
 #include "RipplingMath.h"
 using namespace gpu;
 
-// Attention : 	Choix du nom est impotant!
-//		VagueDevice.cu et non Vague.cu
-// 		Dans ce dernier cas, probl�me de linkage, car le nom du .cu est le meme que le nom d'un .cpp (host)
-//		On a donc ajouter Device (ou n'importequoi) pour que les noms soient diff�rents!
 
 /*----------------------------------------------------------------------*\
  |*			Declaration 					*|
