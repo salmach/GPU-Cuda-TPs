@@ -33,8 +33,8 @@ bool usePIMonteCarlo(void);
 
 bool usePIMonteCarlo(void)
     {
-    int n = INT_MAX / 10;
-    // int n = 1000000000;
+    //int n = INT_MAX / 10;
+    int n = 1000000000;
     bool isOk = true;
     isOk &= isPiMontecarloSequentiel_OK(n);
     //isOk &= isPiMonteCarloOMPEntrelacerPromotionTab_Ok(n);

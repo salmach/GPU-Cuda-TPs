@@ -1,5 +1,5 @@
-23:59:09 **** Incremental Build of configuration GCC_parallel for project Student_OMP ****
-cbicc gcc jall 
+09:04:34 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda ****
+cbicc cuda jall 
 
 --------------------------------------------------------
 [Runtime] : gcc x86
@@ -72,20 +72,27 @@ This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 
-[Make] : GCC : jall
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2016 NVIDIA Corporation
+Built on Sun_Sep__4_22:14:01_CDT_2016
+Cuda compilation tools, release 8.0, V8.0.44
+
+
+[CUDA GCC] : jall
+
 
 ==================================================================================
-[CBI] -> Target Name  : Student_OMP_gcc_x86_64
+[CBI] -> Target Name  : Student_Cuda_cuda_80_x86_64
 [CBI] ->
-[CBI] -> Build     	  : /tmp/ramdrive/mse4/Targets/Student_OMP/bin/Student_OMP_gcc_x86_64.run
+[CBI] -> Build        : /tmp/ramdrive/mse4/Targets/Student_Cuda/bin/Student_Cuda_cuda_80_x86_64.run
 [CBI] -> Deploy       : ../RELEASE/bin
 [CBI] ->
-[CBI] -> Type	 	  : EXE
-[CBI] -> Arch	 	  : x86_64
+[CBI] -> Type	      : EXE
+[CBI] -> Arch	      : x86_64
 [CBI] -> OS	 		  : Linux
 [CBI] -> User	 	  : mse4
 [CBI] ->
-[CBI] -> Task		  : Compiling-Linking
+[CBI] -> Task		  : Compiling-Linking !
 ==================================================================================
 
 [CBI] -> SRC AUX (Recursif) :
@@ -94,81 +101,291 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 [CBI] -> CXXFLAGS (Partial) :
 [CBI] ->
-[CBI] ->              : -O3
-[CBI] ->              : -fomit-frame-pointer
 [CBI] ->              : -fopenmp
-[CBI] ->              : -frerun-loop-opt
-[CBI] ->              : -march=native
 [CBI] ->              : -std=c++11
+[CBI] ->              : -O3
+[CBI] ->              : -frerun-loop-opt
+[CBI] ->              : -fomit-frame-pointer
 
-[CBI] -> LDFLAGS (Partial) :
+[CBI] -> CXXLDFLAGS (Partial) :
 [CBI] ->
 
+[CBI] -> NVCCFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : --fmad=true
+[CBI] ->              : -arch=sm_52
+[CBI] ->              : -m64
+[CBI] ->              : -std=c++11
+[CBI] ->              : -use_fast_math
+
+[CBI] -> NVCCLDFLAGS (Partial) :
+[CBI] ->
+[CBI] ->              : -arch=sm_52
+
 [CBI] -> INC_PATH (auto detect):
-[CBI] ->              : src/cpp/core/omp/02_Slice/
-[CBI] ->              : src/cpp/test/unit/01_Test_Hello/
-[CBI] ->              : src/cpp/test/unit/02_Test_Pi/
+[CBI] ->              : src/cpp/core/00_Tools/
+[CBI] ->              : src/cpp/core/02_Hello_add_vector/00_tools/
+[CBI] ->              : src/cpp/core/02_Hello_add_vector/01_objet/host/
+[CBI] ->              : src/cpp/core/04_Montecarlo/moo/
+[CBI] ->              : src/cpp/test/junit/01_Test_Hello/
+[CBI] ->              : src/cpp/test/junit/02_Test_Vector/
+
+
+[CBI] -> LIB_PATH (auto detect):
 
 [CBI] -> LIB_PATH (auto detect):
 
 [CBI] -> API_INC :
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/002/INC
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/002/INC/namespace_cpu
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/002/INC
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/002/INC/cudatools
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/002/INC/cudatools/header
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/002/INC/cudatools/header/both
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/002/INC/cudatools/header/device
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/002/INC/cudatools/header/device/curand
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/002/INC/cudatools/header/device/reduction
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/002/INC/cudatools/header/device/synchronisation
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/002/INC/cudatools/header/host
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/002/INC/cudatools/header/mixte
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/002/INC/cudatools/nvidia
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/002/INC
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/002/INC/OMP_Tools
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/002/INC/OMP_Tools/header
+[CBI] ->              : /opt/api/ext/boost/1610/include
+[CBI] ->              : /opt/api/ext/boost/1610/include/boost
 [CBI] ->              : /opt/api/ext/cpptest/112/INC
 [CBI] ->              : /opt/api/ext/cpptest/112/INC/extension
+[CBI] ->              : /usr/local/cuda-8.0/include
+[CBI] ->              : /usr/local/cuda-8.0/include/CL
+[CBI] ->              : /usr/local/cuda-8.0/include/crt
 
 [CBI] -> API_BIN :
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_cpp/002/BIN/gcc
+[CBI] ->              : /opt/api/cbi/tools/bilat_tools_cuda/002/BIN/gcc
 [CBI] ->              : /opt/api/cbi/tools/bilat_tools_omp/002/BIN/gcc
+[CBI] ->              : /opt/api/ext/boost/1610/lib
+[CBI] ->              : /opt/api/ext/boost/1610/lib/gcc
+[CBI] ->              : /opt/api/ext/boost/1610/lib/icc
+[CBI] ->              : /usr/local/cuda-8.0/lib64
+[CBI] ->              : /usr/local/cuda-8.0/lib64/stubs
 
 [CBI] -> API_LIBRARIES_STATIC :
 [CBI] ->              : /opt/api/ext/cpptest/112/LIB_STATIC/gcc
 
 [CBI] -> API_LIBRARIES :
 [CBI] ->              : BilatTools_CPP_002_gcc_x86_64
+[CBI] ->              : BilatTools_Cuda_002_cuda_80_x86_64
 [CBI] ->              : BilatTools_OMP_002_gcc_x86_64
+[CBI] ->              : OpenCL
+[CBI] ->              : boost_atomic-gcc484
+[CBI] ->              : boost_atomic-icc17
+[CBI] ->              : boost_chrono-gcc484
+[CBI] ->              : boost_chrono-icc17
+[CBI] ->              : boost_container-gcc484
+[CBI] ->              : boost_container-icc17
+[CBI] ->              : boost_date_time-gcc484
+[CBI] ->              : boost_date_time-icc17
+[CBI] ->              : boost_filesystem-gcc484
+[CBI] ->              : boost_filesystem-icc17
+[CBI] ->              : boost_graph-gcc484
+[CBI] ->              : boost_graph-icc17
+[CBI] ->              : boost_locale-gcc484
+[CBI] ->              : boost_locale-icc17
+[CBI] ->              : boost_log-gcc484
+[CBI] ->              : boost_log-icc17
+[CBI] ->              : boost_log_setup-gcc484
+[CBI] ->              : boost_log_setup-icc17
+[CBI] ->              : boost_math_c99-gcc484
+[CBI] ->              : boost_math_c99-icc17
+[CBI] ->              : boost_math_c99f-gcc484
+[CBI] ->              : boost_math_c99f-icc17
+[CBI] ->              : boost_math_c99l-gcc484
+[CBI] ->              : boost_math_c99l-icc17
+[CBI] ->              : boost_math_tr1-gcc484
+[CBI] ->              : boost_math_tr1-icc17
+[CBI] ->              : boost_math_tr1f-gcc484
+[CBI] ->              : boost_math_tr1f-icc17
+[CBI] ->              : boost_math_tr1l-gcc484
+[CBI] ->              : boost_math_tr1l-icc17
+[CBI] ->              : boost_prg_exec_monitor-gcc484
+[CBI] ->              : boost_prg_exec_monitor-icc17
+[CBI] ->              : boost_program_options-gcc484
+[CBI] ->              : boost_program_options-icc17
+[CBI] ->              : boost_random-gcc484
+[CBI] ->              : boost_random-icc17
+[CBI] ->              : boost_regex-gcc484
+[CBI] ->              : boost_regex-icc17
+[CBI] ->              : boost_serialization-gcc484
+[CBI] ->              : boost_serialization-icc17
+[CBI] ->              : boost_signals-gcc484
+[CBI] ->              : boost_signals-icc17
+[CBI] ->              : boost_system-gcc484
+[CBI] ->              : boost_system-icc17
+[CBI] ->              : boost_thread-gcc484
+[CBI] ->              : boost_thread-icc17
+[CBI] ->              : boost_timer-gcc484
+[CBI] ->              : boost_timer-icc17
+[CBI] ->              : boost_type_erasure-gcc484
+[CBI] ->              : boost_type_erasure-icc17
+[CBI] ->              : boost_unit_test_framework-gcc484
+[CBI] ->              : boost_unit_test_framework-icc17
+[CBI] ->              : boost_wave-gcc484
+[CBI] ->              : boost_wave-icc17
+[CBI] ->              : boost_wserialization-gcc484
+[CBI] ->              : boost_wserialization-icc17
+[CBI] ->              : cublas
+[CBI] ->              : cuda
+[CBI] ->              : cudart
+[CBI] ->              : cufft
+[CBI] ->              : cufftw
+[CBI] ->              : cuinj64
+[CBI] ->              : curand
+[CBI] ->              : cusolver
+[CBI] ->              : cusparse
+[CBI] ->              : nppc
+[CBI] ->              : nppi
+[CBI] ->              : nppial
+[CBI] ->              : nppicc
+[CBI] ->              : nppicom
+[CBI] ->              : nppidei
+[CBI] ->              : nppif
+[CBI] ->              : nppig
+[CBI] ->              : nppim
+[CBI] ->              : nppist
+[CBI] ->              : nppisu
+[CBI] ->              : nppitc
+[CBI] ->              : npps
+[CBI] ->              : nvToolsExt
+[CBI] ->              : nvblas
+[CBI] ->              : nvgraph
+[CBI] ->              : nvidia-ml
+[CBI] ->              : nvrtc
+[CBI] ->              : nvrtc-builtins
 
 
 [CBI] -> Compilation parallel (32 threads)
 
-[Student_OMP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/03_Montecarlo/01_pi_montecarlo_sequentiel.cpp
-[Student_OMP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/03_Montecarlo/02_pi_montecarlo_entrelacer_promotionTab.cpp
-[Student_OMP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/03_Montecarlo/04_pi_montecarlo_entrelacer_atomic.cpp
-[Student_OMP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/03_Montecarlo/05_pi_montecarlo_for_atomic.cpp
+[Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/reference/Reference.cu
 
-[CBI] -> Linking to   : /tmp/ramdrive/mse4/Targets/Student_OMP/bin/Student_OMP_gcc_x86_64.run
+[CBI] -> Linking to   : /tmp/ramdrive/mse4/Targets/Student_Cuda/bin/Student_Cuda_cuda_80_x86_64.run
 
 [CBI] -> Library Link :
+[CBI] ->
 [CBI] ->              : -lBilatTools_CPP_002_gcc_x86_64
+[CBI] ->              : -lBilatTools_Cuda_002_cuda_80_x86_64
 [CBI] ->              : -lBilatTools_OMP_002_gcc_x86_64
 [CBI] ->              : -lCpp_Test_112_gcc_x86_64
+[CBI] ->              : -lOpenCL
+[CBI] ->              : -lboost_atomic-gcc484
+[CBI] ->              : -lboost_atomic-icc17
+[CBI] ->              : -lboost_chrono-gcc484
+[CBI] ->              : -lboost_chrono-icc17
+[CBI] ->              : -lboost_container-gcc484
+[CBI] ->              : -lboost_container-icc17
+[CBI] ->              : -lboost_date_time-gcc484
+[CBI] ->              : -lboost_date_time-icc17
+[CBI] ->              : -lboost_filesystem-gcc484
+[CBI] ->              : -lboost_filesystem-icc17
+[CBI] ->              : -lboost_graph-gcc484
+[CBI] ->              : -lboost_graph-icc17
+[CBI] ->              : -lboost_locale-gcc484
+[CBI] ->              : -lboost_locale-icc17
+[CBI] ->              : -lboost_log-gcc484
+[CBI] ->              : -lboost_log-icc17
+[CBI] ->              : -lboost_log_setup-gcc484
+[CBI] ->              : -lboost_log_setup-icc17
+[CBI] ->              : -lboost_math_c99-gcc484
+[CBI] ->              : -lboost_math_c99-icc17
+[CBI] ->              : -lboost_math_c99f-gcc484
+[CBI] ->              : -lboost_math_c99f-icc17
+[CBI] ->              : -lboost_math_c99l-gcc484
+[CBI] ->              : -lboost_math_c99l-icc17
+[CBI] ->              : -lboost_math_tr1-gcc484
+[CBI] ->              : -lboost_math_tr1-icc17
+[CBI] ->              : -lboost_math_tr1f-gcc484
+[CBI] ->              : -lboost_math_tr1f-icc17
+[CBI] ->              : -lboost_math_tr1l-gcc484
+[CBI] ->              : -lboost_math_tr1l-icc17
+[CBI] ->              : -lboost_prg_exec_monitor-gcc484
+[CBI] ->              : -lboost_prg_exec_monitor-icc17
+[CBI] ->              : -lboost_program_options-gcc484
+[CBI] ->              : -lboost_program_options-icc17
+[CBI] ->              : -lboost_random-gcc484
+[CBI] ->              : -lboost_random-icc17
+[CBI] ->              : -lboost_regex-gcc484
+[CBI] ->              : -lboost_regex-icc17
+[CBI] ->              : -lboost_serialization-gcc484
+[CBI] ->              : -lboost_serialization-icc17
+[CBI] ->              : -lboost_signals-gcc484
+[CBI] ->              : -lboost_signals-icc17
+[CBI] ->              : -lboost_system-gcc484
+[CBI] ->              : -lboost_system-icc17
+[CBI] ->              : -lboost_thread-gcc484
+[CBI] ->              : -lboost_thread-icc17
+[CBI] ->              : -lboost_timer-gcc484
+[CBI] ->              : -lboost_timer-icc17
+[CBI] ->              : -lboost_type_erasure-gcc484
+[CBI] ->              : -lboost_type_erasure-icc17
+[CBI] ->              : -lboost_unit_test_framework-gcc484
+[CBI] ->              : -lboost_unit_test_framework-icc17
+[CBI] ->              : -lboost_wave-gcc484
+[CBI] ->              : -lboost_wave-icc17
+[CBI] ->              : -lboost_wserialization-gcc484
+[CBI] ->              : -lboost_wserialization-icc17
+[CBI] ->              : -lcublas
+[CBI] ->              : -lcuda
+[CBI] ->              : -lcudart
+[CBI] ->              : -lcufft
+[CBI] ->              : -lcufftw
+[CBI] ->              : -lcuinj64
+[CBI] ->              : -lcurand
+[CBI] ->              : -lcusolver
+[CBI] ->              : -lcusparse
 [CBI] ->              : -lgomp
+[CBI] ->              : -lnppc
+[CBI] ->              : -lnppi
+[CBI] ->              : -lnppial
+[CBI] ->              : -lnppicc
+[CBI] ->              : -lnppicom
+[CBI] ->              : -lnppidei
+[CBI] ->              : -lnppif
+[CBI] ->              : -lnppig
+[CBI] ->              : -lnppim
+[CBI] ->              : -lnppist
+[CBI] ->              : -lnppisu
+[CBI] ->              : -lnppitc
+[CBI] ->              : -lnpps
+[CBI] ->              : -lnvToolsExt
+[CBI] ->              : -lnvblas
+[CBI] ->              : -lnvgraph
+[CBI] ->              : -lnvidia-ml
+[CBI] ->              : -lnvrtc
+[CBI] ->              : -lnvrtc-builtins
+
 
 ==================================================================================
-[CBI] -> Target Name  : Student_OMP_gcc_x86_64
-[CBI] -> Location     : /tmp/ramdrive/mse4/Targets/Student_OMP/bin/Student_OMP_gcc_x86_64.run
+[CBI] -> Target Name  : Student_Cuda_cuda_80_x86_64
+[CBI] -> Location     : /tmp/ramdrive/mse4/Targets/Student_Cuda/bin/Student_Cuda_cuda_80_x86_64.run
 [CBI] -> Deploy 	  : ../RELEASE/bin
 [CBI] ->
 [CBI] -> Type	 	  : EXE
 [CBI] -> Arch	 	  : x86_64
-[CBI] -> OS	 		  : Linux
+[CBI] -> OS	 	      : Linux
 [CBI] -> User	 	  : mse4
 [CBI] ->
-[CBI] -> Compilateur  : g++
-[CBI] -> Task	      : End Compiling-Linking !
-[CBI] -> Time		  : 0 (s)
+[CBI] -> Compilateur  : g++ && nvcc
+[CBI] -> Task		  : End Compiling-Linking !
+[CBI] -> Time		  : 2 (s)
 ==================================================================================
 
+
+[CBI] -> Deploying      : ../RELEASE/bin/Student_Cuda_cuda_80_x86_64.run
 
 [CBI] -> Symlink Project Inc
 [CBI] -> To update code completion : ctrl-shift-s   or   gui/index/rebuild
 
 
 
-[CBI] -> Deploying    : ../RELEASE/bin/Student_OMP_gcc_x86_64.run
-
-[CBI] -> Student_OMP_gcc_x86_64 : End ALL!
+[CBI] -> Student_Cuda_cuda_80_x86_64 : End ALL!
 

@@ -1,4 +1,4 @@
-23:59:09 **** Incremental Build of configuration GCC_parallel for project Student_OMP ****
+08:29:24 **** Incremental Build of configuration GCC_parallel for project Student_OMP ****
 cbicc gcc jall 
 
 --------------------------------------------------------
@@ -134,34 +134,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 [CBI] -> Compilation parallel (32 threads)
 
-[Student_OMP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/03_Montecarlo/01_pi_montecarlo_sequentiel.cpp
-[Student_OMP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/03_Montecarlo/02_pi_montecarlo_entrelacer_promotionTab.cpp
-[Student_OMP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/03_Montecarlo/04_pi_montecarlo_entrelacer_atomic.cpp
-[Student_OMP_gcc_x86_64] -> g++ compiling .cpp : src/cpp/core/omp/03_Montecarlo/05_pi_montecarlo_for_atomic.cpp
-
-[CBI] -> Linking to   : /tmp/ramdrive/mse4/Targets/Student_OMP/bin/Student_OMP_gcc_x86_64.run
-
-[CBI] -> Library Link :
-[CBI] ->              : -lBilatTools_CPP_002_gcc_x86_64
-[CBI] ->              : -lBilatTools_OMP_002_gcc_x86_64
-[CBI] ->              : -lCpp_Test_112_gcc_x86_64
-[CBI] ->              : -lgomp
-
-==================================================================================
-[CBI] -> Target Name  : Student_OMP_gcc_x86_64
-[CBI] -> Location     : /tmp/ramdrive/mse4/Targets/Student_OMP/bin/Student_OMP_gcc_x86_64.run
-[CBI] -> Deploy 	  : ../RELEASE/bin
-[CBI] ->
-[CBI] -> Type	 	  : EXE
-[CBI] -> Arch	 	  : x86_64
-[CBI] -> OS	 		  : Linux
-[CBI] -> User	 	  : mse4
-[CBI] ->
-[CBI] -> Compilateur  : g++
-[CBI] -> Task	      : End Compiling-Linking !
-[CBI] -> Time		  : 0 (s)
-==================================================================================
-
+make[1]: Nothing to be done for `compilelink'.
 
 [CBI] -> Symlink Project Inc
 [CBI] -> To update code completion : ctrl-shift-s   or   gui/index/rebuild
@@ -173,5 +146,5 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 [CBI] -> Student_OMP_gcc_x86_64 : End ALL!
 
 
-23:59:10 Build Finished (took 682ms)
+08:29:25 Build Finished (took 427ms)
 

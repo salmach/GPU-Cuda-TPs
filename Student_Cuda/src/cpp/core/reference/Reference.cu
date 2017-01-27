@@ -45,6 +45,15 @@ __host__ bool helloCudaRef(void) //__host__ facultatif
     {
     cout << endl << "[Hello Cuda 1 Ref] : kernel empty" << endl;
 
+    int *i1;
+    int i2;
+
+    HANDLE_ERROR(cudaMalloc(&i1, sizeof(int) ));
+  //  HANDLE_ERROR(cudaMalloc(&i2, sizeof(int) ));
+
+    HANDLE_ERROR(cudaMemset(i1, 0, sizeof(int)));
+
+
     const int MP = 24;
     const int CORE_MP = 256;
     const int DIM = 1;
@@ -57,11 +66,18 @@ __host__ bool helloCudaRef(void) //__host__ facultatif
 
     Device::lastCudaError("kernel Reference(before)"); // temp debug
     Chrono chrono;
-    chrono.start();
+
     kernelRef<<<dg,db>>>();  // asynchrone !!
+
+    chrono.start();
+    HANDLE_ERROR(cudaMemcpy(&i2, i1, sizeof(int), cudaMemcpyDeviceToDevice));
     chrono.stop();
+    chrono.print("\n Total time : ");
     Device::lastCudaError("kernel Reference(after)"); // temp debug
 
+
+    HANDLE_ERROR(cudaFree(i1));
+ //   HANDLE_ERROR(cudaFree(i2));
     return true;
     }
 
@@ -74,13 +90,6 @@ __host__ bool helloCudaRef(void) //__host__ facultatif
  */
 __global__ void kernelRef(void)
     {
-    int i1;
-    int i2;
-
-    i2 = i1;
-
-    int temp;
-    HANDLE_ERROR(cudaMemcpy(&i2, &i1, sizeof(int), cudaMemcpyDeviceToDevice));
 
     doSomethingHello();
     }
@@ -91,7 +100,8 @@ __global__ void kernelRef(void)
  */
 __device__ void doSomethingHello(void)
     {
-    // rien
+//rien
+
     }
 
 /*----------------------------------------------------------------------*\
