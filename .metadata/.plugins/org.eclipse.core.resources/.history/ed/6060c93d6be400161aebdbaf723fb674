@@ -63,7 +63,7 @@ double piMonteCarloOMPEntrelacerPromotionTab(int n)
 	{
 
 	xAlea[i] = aleaTools.uniformeAB(xmin, xmax);
-	yAlea[i] = aleaTools.uniformeAB(0.0, m);
+		yAlea[i] = aleaTools.uniformeAB(0.0, m);
 	}
 
 #pragma omp parallel

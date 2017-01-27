@@ -1,4 +1,4 @@
-09:04:34 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda ****
+11:01:26 **** Incremental Build of configuration CudaGCC_parallel for project Student_Cuda ****
 cbicc cuda jall 
 
 --------------------------------------------------------
@@ -267,6 +267,10 @@ Cuda compilation tools, release 8.0, V8.0.44
 [CBI] -> Compilation parallel (32 threads)
 
 [Student_Cuda_cuda_80_x86_64] -> nvcc compiling .cu : src/cpp/core/reference/Reference.cu
+src/cpp/core/reference/Reference.cu(96): warning: variable "i2" was set but never used
+
+src/cpp/core/reference/Reference.cu(96): warning: variable "i2" was set but never used
+
 
 [CBI] -> Linking to   : /tmp/ramdrive/mse4/Targets/Student_Cuda/bin/Student_Cuda_cuda_80_x86_64.run
 
@@ -390,5 +394,5 @@ Cuda compilation tools, release 8.0, V8.0.44
 [CBI] -> Student_Cuda_cuda_80_x86_64 : End ALL!
 
 
-09:04:36 Build Finished (took 2s.480ms)
+11:01:28 Build Finished (took 1s.975ms)
 

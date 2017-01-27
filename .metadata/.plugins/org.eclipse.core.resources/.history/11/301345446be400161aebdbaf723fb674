@@ -36,8 +36,8 @@ bool usePIMonteCarlo(void)
     //int n = INT_MAX / 10;
     int n = 1000000000;
     bool isOk = true;
-    //isOk &= isPiMontecarloSequentiel_OK(n);
-    isOk &= isPiMonteCarloOMPEntrelacerPromotionTab_Ok(n);
+    isOk &= isPiMontecarloSequentiel_OK(n);
+    //isOk &= isPiMonteCarloOMPEntrelacerPromotionTab_Ok(n);
     //isOk &= isPiMonteCarloOMPEntrelacerAtomic_Ok(n);
     //isOk &= isPiMonteCarloOMPforAtomic_Ok(n);
 

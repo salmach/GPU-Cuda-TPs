@@ -35,6 +35,10 @@
 		<item value="true" key="show_variables"/>
 		<item value="770" key="height"/>
 	</section>
+	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration.internal">
+		<item value="174" key="size.height"/>
+		<item value="806" key="size.width"/>
+	</section>
 	<section name="PDOMSearchPage">
 		<item value="false" key="caseSensitive"/>
 		<item value="227191" key="searchFlags"/>
